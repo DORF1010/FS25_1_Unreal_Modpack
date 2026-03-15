@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="blockOfCol.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+    </Asset>
+    <Files/>
+    <Materials>
+        <Material name="lambert1" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1"/>
+    </Materials>
+    <Shapes externalShapesFile="blockOfCol.i3d.shapes"/>
+    <Scene>
+        <Shape name="colPart01" translation="0.77092 0.080142 0" shapeId="1" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="74" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+    </Scene>
+</i3D>

@@ -18,7 +18,7 @@
         <rotation>0</rotation>
         <brand>KRONE</brand>
         <category>mowers</category>
-        <shopFoldingState>1</shopFoldingState>
+        <shopFoldingState>0</shopFoldingState>
         <shopTranslationOffset>0 -0.134 0</shopTranslationOffset>
         <shopRotationOffset>-0.099 0 0</shopRotationOffset>
         <vertexBufferMemoryUsage>5228032</vertexBufferMemoryUsage>
@@ -61,11 +61,11 @@
                         <physics rotSpeed="0" restLoad="4.8" repr="wheelFrontRight" forcePointRatio="0.3" initialCompression="40" suspTravel="0.12" spring="90" damper="45" yOffset="0.015"/>
                     </wheel>
                     <wheel dimensions="600_65R28" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="3.2" repr="axisBackLeft"  driveNode="wheelBackLeft"  forcePointRatio="0.3" initialCompression="40" suspTravel="0.12" spring="61" frictionScale="2.2" damper="30" yOffset="0.035"/>
+                        <physics rotSpeed="1" restLoad="3.2" repr="axisBackLeft"  driveNode="wheelBackLeft"  forcePointRatio="0.3" initialCompression="40" suspTravel="0.12" spring="61" frictionScale="3" damper="30" yOffset="0.035"/>
                         <steering node="steeringBar" nodeMinTransX="0.18" nodeMaxTransX="-0.18" />
                     </wheel>
                     <wheel dimensions="600_65R28" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="3.2" repr="axisBackRight" driveNode="wheelBackRight" forcePointRatio="0.3" initialCompression="40" suspTravel="0.12" spring="61" frictionScale="2.2" damper="30" yOffset="0.035"/>
+                        <physics rotSpeed="1" restLoad="3.2" repr="axisBackRight" driveNode="wheelBackRight" forcePointRatio="0.3" initialCompression="40" suspTravel="0.12" spring="61" frictionScale="3" damper="30" yOffset="0.035"/>
                     </wheel>
                 </wheels>
             </wheelConfiguration>
@@ -95,16 +95,34 @@
                     <wheel dimensions="600_65R28 600_65R28 600_65R28"/>
                 </wheels>
             </wheelConfiguration>
+			<wheelConfiguration name="%s %s" params="$l10n_configuration_valueTwinWheelsFront|$l10n_configuration_valueWheelMedium" saveId="MEDIUM_TWINS_FRONT">
+                <wheels baseConfig="MEDIUM" ackermannSteeringIndex="2">
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+					</wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+					</wheel>
+                    <wheel>
+					</wheel>
+                    <wheel>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
             <wheelConfiguration name="$l10n_configuration_valueWheelBroad" saveId="BROAD">
                 <wheels baseConfig="DEFAULT">
-                    <wheel dimensions="1050_50R32">
+                    <wheel dimensions="1050_50R32 1050_50R32">
                         <physics xOffset="0.2"/>
                     </wheel>
-                    <wheel dimensions="1050_50R32">
+                    <wheel dimensions="1050_50R32 1050_50R32">
                         <physics xOffset="0.2"/>
                     </wheel>
-                    <wheel/>
-                    <wheel/>
+                    <wheel dimensions="710_50R30_5 600_65R28"/>
+                    <wheel dimensions="710_50R30_5 600_65R28"/>
                 </wheels>
             </wheelConfiguration>
         </wheelConfigurations>
@@ -333,6 +351,9 @@
                 <transmission minForwardGearRatio="0.1" maxForwardGearRatio="100" minBackwardGearRatio="0.1" maxBackwardGearRatio="100" name="$l10n_info_transmission_cvt"/>
                 <xmlOverwrites>
                     <set path="vehicle.base.speedLimit#value" value="50" />
+                    <set path="vehicle.foldable.foldingConfigurations.foldingConfiguration(0).foldingParts.foldingPart(0)#speedScale" value="1.5" />
+                    <set path="vehicle.foldable.foldingConfigurations.foldingConfiguration(0).foldingParts.foldingPart(1)#speedScale" value="1.5" />
+                    <set path="vehicle.foldable.foldingConfigurations.foldingConfiguration(0).foldingParts.foldingPart(2)#speedScale" value="1.5" />
                 </xmlOverwrites>
             </motorConfiguration>
         </motorConfigurations>
