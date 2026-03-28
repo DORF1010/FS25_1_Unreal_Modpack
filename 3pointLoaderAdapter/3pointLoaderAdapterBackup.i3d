@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="3pointLoaderAdapterBackup.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="18" filename="$data/shared/assets/triangleAdapter_normal.png"/>
+    <File fileId="19" filename="$data/shared/assets/triangleAdapter_vmask.png"/>
+    <File fileId="23" filename="$data/shared/default_vmask.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="20" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="2" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="16" filename="$data/vehicles/claas/claasWeightsDecals_diffuse.png"/>
+    <File fileId="17" filename="$data/vehicles/claas/claasWeightsDecals_normal.png"/>
+    <File fileId="3" filename="$data/vehicles/claas/claasWeights_normal.png"/>
+    <File fileId="4" filename="$data/vehicles/claas/claasWeights_vmask.png"/>
+    <File fileId="24" filename="$data/vehicles/hauer/xb150/xb150_normal.png"/>
+    <File fileId="25" filename="$data/vehicles/hauer/xb150/xb150_vmask.png"/>
+    <File fileId="22" filename="$data/vehicles/quicke/frames/newHollandT6_caseIHMaxxum_steyrProfiCVT/newHollandT6_caseIHMaxxum_steyrProfiCVT_normal.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="claasWeights_base_mat" materialId="5" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.068 0.068 0.068"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="claasWeights_silverScratched_mat" materialId="6" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+    </Material>
+    <Material name="claasWeightsDecals_CLAAS_RED1_mat" materialId="7" alphaBlending="true" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.8374 0.0371 0.0028"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="newHollandT6_JOHNDEERE_GREEN1_mat" materialId="9" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="22"/>
+      <Glossmap fileId="23"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.0236 0.2133 0.027"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="triangleAdapter_metalPainted_mat" materialId="10" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+      <Custommap name="detailSpecular" fileId="20"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="21"/>
+      <CustomParameter name="colorScale" value="1 0 0"/>
+    </Material>
+    <Material name="triangleAdapter_silverScratched_mat" materialId="11" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+    </Material>
+    <Material name="xb150_JOHNDEERE_GREEN1_mat" materialId="12" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="25"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.0236 0.2133 0.027"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="xb150_silverScratched_mat" materialId="13" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="25"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="3pointLoaderAdapterBackup.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="w1800_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="3.69" clipDistance="300" nodeId="31" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8">
+      <TransformGroup name="attacherJoint" translation="-1.02302e-08 0.02 0" rotation="0 -90 0" nodeId="32"/>
+      <TransformGroup name="topReferenceNode" translation="0 0.55887 0.00277686" nodeId="33"/>
+      <TransformGroup name="trailerAttacherJoint" translation="0 0.322228 0.346711" rotation="0 -90 0" nodeId="34"/>
+      <Shape name="w1800_vis" shapeId="2" visibility="false" clipDistance="300" nodeId="35" castsShadows="true" receiveShadows="true" materialIds="6,5">
+        <Shape name="w1800_decal" translation="-0.007581 0.161456 0.307498" shapeId="3" visibility="false" clipDistance="30" nodeId="45" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="7"/>
+      </Shape>
+      <TransformGroup name="collisions" nodeId="46">
+        <Shape name="colPart" translation="0 0.654551 -0.170097" shapeId="4" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="47" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        <Shape name="tensionBeltMesh01" translation="0 0 0.08391" scale="1 1 0.491124" shapeId="5" clipDistance="300" nodeId="48" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+      </TransformGroup>
+      <TransformGroup name="semiAttacherJoint" translation="8.53266e-08 0.685365 1.52398" rotation="0 -90 0" nodeId="49"/>
+      <TransformGroup name="vehicleAttacherJoint" translation="-3.01394e-09 0.565207 0.310304" rotation="90.0001 86.7679 90.0001" nodeId="50"/>
+      <TransformGroup name="realVis" nodeId="51">
+        <Shape name="triangleAdapter" translation="0 0 0.000836" shapeId="6" clipDistance="300" nodeId="52" castsShadows="true" receiveShadows="true" materialIds="10,11"/>
+        <Shape name="quickeFrontloaderConsole" translation="0 0.661938 0.087436" shapeId="7" clipDistance="300" nodeId="53" castsShadows="true" receiveShadows="true" materialIds="9">
+          <TransformGroup name="attacherJointFrontloaderQuicke" translation="0 0.488952 0.036581" rotation="0 -90 0" nodeId="54"/>
+        </Shape>
+        <Shape name="hauerFrontloaderConsole" translation="0 0.803847 0.0992785" shapeId="8" clipDistance="300" nodeId="55" castsShadows="true" receiveShadows="true" materialIds="13,12">
+          <TransformGroup name="attacherJointFrontloaderHauer" translation="0 0.616313 0.098073" rotation="0 -90 0" nodeId="56"/>
+        </Shape>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

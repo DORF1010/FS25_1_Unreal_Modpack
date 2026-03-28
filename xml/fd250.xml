@@ -594,7 +594,7 @@
         </sounds>
     </cylindered>
 
-    <cutter fruitTypeCategories="grainHeader maizeHeader topliftingharvester">
+    <cutter fruitTypeCategories="grainHeader maizeHeader topliftingharvester bulk">
         <effect>
             <effectNode effectClass="CutterMotionPathEffect" effectType="CUTTER" linkNode="cutterEffectLinkNodeCenter">
                 <motionPathEffect textureFilename="$data/vehicles/macDon/fd250/beltXArrayCenter.dds" numRows="32" rowLength="42" minFade="0.06" textureRealWidth="16" speedScale="0.18"/>

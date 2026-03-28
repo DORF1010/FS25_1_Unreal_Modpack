@@ -50,6 +50,7 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 		<storeItem xmlFilename="ms261/ms261.xml"/>
 		<storeItem xmlFilename="k307/k307.xml"/>
 		<storeItem xmlFilename="xml/eckoFlex.xml"/>
+		<storeItem xmlFilename="3pointLoaderAdapter/3pointLoaderAdapter.xml"/>
 		<storeItem xmlFilename="q6M/q6M.xml"/>
 		<storeItem xmlFilename="frontloaderShovel/frontloaderShovel.xml"/>
 		<storeItem xmlFilename="frontloaderPalletFork/frontloaderPalletFork.xml"/>
@@ -68,7 +69,7 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 		<storeItem xmlFilename="extraContent/cr11GoldEdition.xml"/>
 		<storeItem xmlFilename="extraContent/fd250GoldEdition.xml"/>
 		<storeItem xmlFilename="extraContent/worldsFastest.xml"/>
-		<storeItem xmlFilename="extraContent/quadtrac715BlackEdition.xml"/>-->
+		<!--<storeItem xmlFilename="extraContent/quadtrac715BlackEdition.xml"/>-->
 	</storeItems>
 	
 	<multiplayer supported="true"/>
