@@ -38,19 +38,10 @@
         <mapHotspot type="TOOL" />
     </base>
 
-    <!--<attacherJoints>
-        <attacherJoint node="trailerAttacherJoint" jointType="trailer" lowerRotLimit="25 70 65" upperRotationOffset="0" allowsJointLimitMovement="false" >
-            <schema position="1 0" rotation="0" invertX="false" />
-        </attacherJoint>
-        <sounds>
-            <attach template="attach01" linkNode="w1800_main_component1" />
-        </sounds>
-    </attacherJoints>-->
-
     <attachable>
         <inputAttacherJoints>
             <inputAttacherJoint node="attacherJoint" jointType="implement" allowsLowering="false" topReferenceNode="topReferenceNode" lowerRotLimitScale="0 0 0" upperRotationOffset="-1" lowerRotationOffset="0" needsLowering="false">
-              <distanceToGround lower="0.55" upper="0.55" />
+              <distanceToGround lower="0" upper="0.55" />
               <bottomArm categories="2" ballType="2" />
 			  <objectChange node="triangleVis" visibilityInactive="true" visibilityActive="true"/>
             </inputAttacherJoint>
@@ -58,7 +49,7 @@
     </attachable>
 
     <frontloaderConfigurations>
-        <frontloaderConfiguration name="$l10n_ui_no" price="0">
+        <frontloaderConfiguration name="$l10n_ui_no">
         </frontloaderConfiguration>
         <frontloaderConfiguration name="Quicke" displayBrand="QUICKE">
             <attacherJoint node="attacherJointFrontloaderQuicke" jointType="attachableFrontloader" lowerTransLimit="0 0 0" lowerRotLimit="0 0 0" moveTime="2">
@@ -84,26 +75,82 @@
         </meshNodes>
     </tensionBeltObject>
 
-    <designConfigurations>
-		<designConfiguration name="$l10n_configuration_valueDefault">
-			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 0.087"/>
-			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 0.099"/>
-		</designConfiguration>
-		<designConfiguration name="$l10n_info_tipSideBack">
-			<objectChange node="quickeFrontloaderConsole" translationActive="0 1 -1"/>
-			<objectChange node="hauerFrontloaderConsole"  translationActive="0 1 -1"/>
+    <designConfigurations title="$l10n_configuration_attacherJoint">
+		<designConfiguration name="Q4M/XB 150">
             <xmlOverwrites>
-                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.55" />
             </xmlOverwrites>
 		</designConfiguration>
-		<designConfiguration name="$l10n_info_tipSideBack">
-			<objectChange node="quickeFrontloaderConsole" translationActive="0 1 -2"/>
-			<objectChange node="hauerFrontloaderConsole"  translationActive="0 1 -2"/>
+		<designConfiguration name="Q6M/XB 190">
             <xmlOverwrites>
-                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.8" />
+            </xmlOverwrites>
+		</designConfiguration>
+		<designConfiguration name="Q7M/M77/V7">
+            <xmlOverwrites>
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.775" />
             </xmlOverwrites>
 		</designConfiguration>
 	</designConfigurations>
+
+    <design2Configurations>
+		<design2Configuration name="$l10n_configuration_valueDefault">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 0.087"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 0.099"/>
+		</design2Configuration>
+		<design2Configuration name="-0.1">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 0"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 0"/>
+		</design2Configuration>
+		<design2Configuration name="-0.5">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 -0.5"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 -0.5"/>
+            <xmlOverwrites>
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <remove path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0)#topReferenceNode"/>
+            </xmlOverwrites>
+		</design2Configuration>
+		<design2Configuration name="-1">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 -1"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 -1"/>
+            <xmlOverwrites>
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <remove path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0)#topReferenceNode"/>
+            </xmlOverwrites>
+		</design2Configuration>
+		<design2Configuration name="-1.5">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 -1.5"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 -1.5"/>
+            <xmlOverwrites>
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <remove path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0)#topReferenceNode"/>
+            </xmlOverwrites>
+		</design2Configuration>
+		<design2Configuration name="-2">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 -2"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 -2"/>
+            <xmlOverwrites>
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <remove path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0)#topReferenceNode"/>
+            </xmlOverwrites>
+		</design2Configuration>
+		<design2Configuration name="-2.25">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 -2.25"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 -2.25"/>
+            <xmlOverwrites>
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <remove path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0)#topReferenceNode"/>
+            </xmlOverwrites>
+		</design2Configuration>
+		<design2Configuration name="-2.5">
+			<objectChange node="quickeFrontloaderConsole" translationActive="0 0.662 -2.5"/>
+			<objectChange node="hauerFrontloaderConsole"  translationActive="0 0.804 -2.5"/>
+            <xmlOverwrites>
+                <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).objectChange(0)#visibilityActive" value="false" />
+                <remove path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0)#topReferenceNode"/>
+            </xmlOverwrites>
+		</design2Configuration>
+	</design2Configurations>
 
     <baseColorConfigurations useDefaultColors="true">
         <material materialSlotName="metalPainted_mat"/>

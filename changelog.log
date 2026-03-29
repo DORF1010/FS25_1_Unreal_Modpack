@@ -251,3 +251,8 @@ Minor tweaks to bigM450
 
 Mar 28, 2026
 Added 3point frontloader adapter for putting frontloaders on the front 3point of tractors (or back if you so desire...)
+
+Mar 29, 2026
+Added configs to 3point frontloader adapter
+	Attacher joint --> changes how height of adapter when connected to tractors
+	Design configuration --> changes how far back attacher is, can be used for a 'real' looking attachment of the loader arms. Has no collision
