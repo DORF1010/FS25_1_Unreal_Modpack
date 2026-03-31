@@ -13,14 +13,23 @@
     <File fileId="20" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
     <File fileId="19" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
     <File fileId="18" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="26" filename="$data/shared/detailLibrary/calibrated/castIron_normal.png"/>
+    <File fileId="25" filename="$data/shared/detailLibrary/calibrated/castIron_specular.png"/>
     <File fileId="8" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="27" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
     <File fileId="15" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
     <File fileId="14" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
     <File fileId="9" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
     <File fileId="7" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="31" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticGraniteGrainSmall_diffuse.png"/>
+    <File fileId="30" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticGraniteGrainSmall_specular.png"/>
+    <File fileId="29" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png"/>
+    <File fileId="28" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png"/>
     <File fileId="3" filename="$data/shared/white_diffuse.png"/>
     <File fileId="21" filename="$data/vehicles/hauer/xb150/xb150_normal.png"/>
     <File fileId="22" filename="$data/vehicles/hauer/xb150/xb150_vmask.png"/>
+    <File fileId="23" filename="$data/vehicles/johnDeere/series6R/series6R_normal.png"/>
+    <File fileId="24" filename="$data/vehicles/johnDeere/series6R/series6R_vmask.png"/>
     <File fileId="16" filename="$data/vehicles/quicke/frames/newHollandT6_caseIHMaxxum_steyrProfiCVT/newHollandT6_caseIHMaxxum_steyrProfiCVT_normal.png"/>
   </Files>
 
@@ -40,9 +49,47 @@
       <CustomParameter name="clearCoatIntensity" value="0.1"/>
       <CustomParameter name="clearCoatSmoothness" value="0.2"/>
     </Material>
-    <Material name="standardSurface1" materialId="7" diffuseColor="1 1 1 1">
+    <Material name="series6R_calibratedCastIron_JOHNDEERE_GREEN1_mat" materialId="7" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+      <Custommap name="detailSpecular" fileId="25"/>
+      <Custommap name="detailNormal" fileId="26"/>
+      <Custommap name="detailDiffuse" fileId="27"/>
+      <CustomParameter name="colorScale" value="0.0236 0.2133 0.027"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
     </Material>
-    <Material name="triangleAdapter_metalPainted_mat" materialId="8" customShaderId="6">
+    <Material name="series6R_plasticGraniteGrainSmall_JOHNDEERE_BROWN2_mat" materialId="8" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+      <Custommap name="detailSpecular" fileId="30"/>
+      <Custommap name="detailNormal" fileId="8"/>
+      <Custommap name="detailDiffuse" fileId="31"/>
+      <CustomParameter name="colorScale" value="0.386 0.296 0.227"/>
+    </Material>
+    <Material name="series6R_plasticPainted_05_mat" materialId="9" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+      <Custommap name="detailSpecular" fileId="28"/>
+      <Custommap name="detailNormal" fileId="8"/>
+      <Custommap name="detailDiffuse" fileId="29"/>
+      <CustomParameter name="colorScale" value="0.6038 0.0232 0.0232"/>
+    </Material>
+    <Material name="series6R_silverScratched_mat" materialId="10" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="8"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+    </Material>
+    <Material name="standardSurface1" materialId="11" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="triangleAdapter_metalPainted_mat" materialId="12" customShaderId="6">
       <Texture fileId="3"/>
       <Normalmap fileId="4"/>
       <Glossmap fileId="5"/>
@@ -51,7 +98,7 @@
       <Custommap name="detailDiffuse" fileId="9"/>
       <CustomParameter name="colorScale" value="1 0 0"/>
     </Material>
-    <Material name="triangleAdapter_silverScratched_mat" materialId="9" customShaderId="6">
+    <Material name="triangleAdapter_silverScratched_mat" materialId="13" customShaderId="6">
       <Texture fileId="3"/>
       <Normalmap fileId="4"/>
       <Glossmap fileId="5"/>
@@ -59,7 +106,7 @@
       <Custommap name="detailNormal" fileId="8"/>
       <Custommap name="detailDiffuse" fileId="15"/>
     </Material>
-    <Material name="xb150_JOHNDEERE_GREEN1_mat" materialId="10" customShaderId="6">
+    <Material name="xb150_JOHNDEERE_GREEN1_mat" materialId="14" customShaderId="6">
       <Texture fileId="3"/>
       <Normalmap fileId="21"/>
       <Glossmap fileId="22"/>
@@ -71,7 +118,7 @@
       <CustomParameter name="clearCoatIntensity" value="0.1"/>
       <CustomParameter name="clearCoatSmoothness" value="0.2"/>
     </Material>
-    <Material name="xb150_silverScratched_mat" materialId="11" customShaderId="6">
+    <Material name="xb150_silverScratched_mat" materialId="15" customShaderId="6">
       <Texture fileId="3"/>
       <Normalmap fileId="21"/>
       <Glossmap fileId="22"/>
@@ -86,20 +133,23 @@
   </Shapes>
 
   <Scene>
-    <Shape name="w600_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="19" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
-      <TransformGroup name="attacherJoint" translation="0 0.02 -0.075" rotation="0 -90 0" nodeId="20"/>
-      <TransformGroup name="topReferenceNode" translation="0 0.563851 -0.079" nodeId="21"/>
-      <TransformGroup name="collisions" nodeId="22">
-        <Shape name="collision" translation="0 0.432913 0.041768" rotation="3.55941 -0 0" shapeId="2" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="23" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-        <Shape name="tensionBeltMesh01" translation="0.004575 0.416861 0.159177" shapeId="3" clipDistance="150" nodeId="24" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7"/>
+    <Shape name="w600_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="24" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
+      <TransformGroup name="attacherJoint" translation="-1.14159e-08 0.02 -0.05" rotation="0 -90 0" nodeId="25"/>
+      <TransformGroup name="topReferenceNode" translation="0 0.563851 -0.0475343" nodeId="26"/>
+      <TransformGroup name="collisions" nodeId="27">
+        <Shape name="collision" translation="0 0.432913 0.041768" rotation="3.55941 -0 0" shapeId="2" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="28" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="tensionBeltMesh01" translation="0.004575 0.416861 0.159177" shapeId="3" clipDistance="150" nodeId="29" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="11"/>
       </TransformGroup>
-      <TransformGroup name="vis" nodeId="25">
-        <Shape name="triangleAdapter" translation="0 0 -0.075" shapeId="4" clipDistance="300" nodeId="26" castsShadows="true" receiveShadows="true" materialIds="8,9"/>
-        <Shape name="quickeFrontloaderConsole" shapeId="5" clipDistance="300" nodeId="27" castsShadows="true" receiveShadows="true" materialIds="6">
-          <TransformGroup name="attacherJointFrontloaderQuicke" translation="0 0.488952 0.036581" rotation="0 -90 0" nodeId="28"/>
+      <TransformGroup name="vis" nodeId="30">
+        <Shape name="triangleAdapter" translation="0 0 -0.05" shapeId="4" clipDistance="300" nodeId="31" castsShadows="true" receiveShadows="true" materialIds="12,13"/>
+        <Shape name="quickeFrontloaderConsole" shapeId="5" clipDistance="300" nodeId="32" castsShadows="true" receiveShadows="true" materialIds="6">
+          <TransformGroup name="attacherJointFrontloaderQuicke" translation="0 0.488952 0.036581" rotation="0 -90 0" nodeId="33"/>
         </Shape>
-        <Shape name="hauerFrontloaderConsole" shapeId="6" clipDistance="300" nodeId="29" castsShadows="true" receiveShadows="true" materialIds="11,10">
-          <TransformGroup name="attacherJointFrontloaderHauer" translation="0 0.616313 0.098073" rotation="0 -90 0" nodeId="30"/>
+        <Shape name="hauerFrontloaderConsole" shapeId="6" clipDistance="300" nodeId="34" castsShadows="true" receiveShadows="true" materialIds="15,14">
+          <TransformGroup name="attacherJointFrontloaderHauer" translation="0 0.616313 0.098073" rotation="0 -90 0" nodeId="35"/>
+        </Shape>
+        <Shape name="frontloaderConsoleJohnDeere" translation="-0.094807 0.642951 0" shapeId="7" clipDistance="300" nodeId="36" castsShadows="true" receiveShadows="true" materialIds="10,7,9,8">
+          <TransformGroup name="attacherJointFrontloaderJohnDeere" translation="0.094807 0.286451 0.139876" rotation="0 -90 0" nodeId="37"/>
         </Shape>
       </TransformGroup>
     </Shape>

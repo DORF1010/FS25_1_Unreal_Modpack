@@ -256,3 +256,8 @@ Mar 29, 2026
 Added configs to 3point frontloader adapter
 	Attacher joint --> changes how height of adapter when connected to tractors
 	Design configuration --> changes how far back attacher is, can be used for a 'real' looking attachment of the loader arms. Has no collision
+
+Mar 30, 2026
+Added John Deere 6r extra large front loader config to 3point frontloader adapter
+Added John Deere colors to color config of 3point frontloader adapter
+Added more positioning configs (spread out between attacher joint config (vertical) and design (front/back))
