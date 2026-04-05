@@ -51,7 +51,6 @@
     <wheels>
         <wheelConfigurations>
             <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT">
-                <tireCombination brand="BKT" names="agrimaxForce agrimaxFactor"/>
                 <wheels autoRotateBackSpeed="2.1">
                     <wheel dimensions="600_70R28 600_70R30" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="2.4" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  forcePointRatio="0.3" initialCompression="25" suspTravel="0.11" spring="78" damper="45" yOffset="0.04" xOffset="0.015"/>
@@ -59,18 +58,32 @@
                         <fender node="fenderLeft" rotMax="25"/>
                         <outerRim filename="$data/shared/wheels/rims/rim006.i3d" node="0|0"/>
                         <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="1|0"/>
+                        <additionalWheel configId="dual" offset="0.15">
+                            <innerRim filename="$data/shared/wheels/rims/rim011.i3d" node="1|0" offset="-0.15"/>
+                            <connector filename="$data/shared/wheels/hubs/dual004.i3d" node="0|0" usePosAndScale="true" startPos="2.5" endPos="23.8" uniformScale="0.25"/>
+                        </additionalWheel>
                     </wheel>
                     <wheel dimensions="600_70R286 600_70R30" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="2.4" repr="wheelFrontRightRepr" driveNode="wheelFrontRight" forcePointRatio="0.3" initialCompression="25" suspTravel="0.11" spring="78" damper="45" yOffset="0.04" xOffset="0.015"/>
                         <fender node="fenderRight" rotMin="-25"/>
                         <outerRim filename="$data/shared/wheels/rims/rim006.i3d" node="0|1"/>
                         <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="1|0"/>
+                        <additionalWheel configId="dual" offset="0.15">
+                            <innerRim filename="$data/shared/wheels/rims/rim011.i3d" node="1|1" offset="-0.15"/>
+                            <connector filename="$data/shared/wheels/hubs/dual004.i3d" node="0|1" usePosAndScale="true" startPos="2.5" endPos="23.8" uniformScale="0.25"/>
+                        </additionalWheel>
                     </wheel>
                     <wheel dimensions="650_85R38 710_70R42" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="0" restLoad="2.4" repr="wheelBackLeft"  forcePointRatio="0.3" initialCompression="22" suspTravel="0.13" spring="70" damper="45" yOffset="0.03" zOffset="-0.03"/>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <innerRim filename="$data/shared/wheels/rims/rim012.i3d" node="1|0"/>
+                        </additionalWheel>
                     </wheel>
                     <wheel dimensions="650_85R38 710_70R42" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="0" restLoad="2.4" repr="wheelBackRight" forcePointRatio="0.3" initialCompression="22" suspTravel="0.13" spring="70" damper="45" yOffset="0.03" zOffset="-0.03"/>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <innerRim filename="$data/shared/wheels/rims/rim012.i3d" node="1|1"/>
+                        </additionalWheel>
                     </wheel>
                 </wheels>
                 <objectChange node="fenderLeftPart"  translationInactive="0 0 0" translationActive="0.03 0 0"  scaleActive="1.2 1 1" scaleInactive="1 1 1"/>
@@ -166,7 +179,7 @@
                 <objectChange node="fenderRightPart" translationInactive="0 0 0" translationActive="-0.01 0 0" scaleActive="0.9 1 1" scaleInactive="1 1 1"/>
             </wheelConfiguration>
 
-            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBackNarrow" saveId="TWIN_BACK_NARROW">
+            <!--<wheelConfiguration name="$l10n_configuration_valueTwinWheelsBackNarrow" saveId="TWIN_BACK_NARROW">
                 <wheels baseConfig="NARROW">
                     <wheel/>
                     <wheel/>
@@ -263,7 +276,7 @@
                 </wheels>
                 <objectChange node="wheelBackLeftTwin"  visibilityActive="true" visibilityInactive="false" translationActive="0.45 0 0"/>
                 <objectChange node="wheelBackRightTwin" visibilityActive="true" visibilityInactive="false" translationActive="-0.45 0 0"/>
-            </wheelConfiguration>
+            </wheelConfiguration>-->
 			<wheelConfiguration name="$l10n_configuration_valueWheelCommunal" saveId="COMMAUNAL">
                 <wheels baseConfig="DEFAULT">
                     <wheel dimensions="480_80R34"/>
@@ -841,17 +854,44 @@
         <collisionTrigger useSize="true"/>
     </ai>
 
-    <designConfigurations title="$l10n_configuration_fender" isYesNoOption="true">
+    <designConfigurations title="$l10n_configuration_valueTwinWheelsAll">
         <designConfiguration name="$l10n_configuration_valueNo">
+            <xmlOverwrites>
+                <remove path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel(0).additionalWheel"/>
+                <remove path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel(1).additionalWheel"/>
+                <remove path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel(2).additionalWheel"/>
+                <remove path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel(3).additionalWheel"/>
+            </xmlOverwrites>
 		</designConfiguration>
-        <designConfiguration name="$l10n_configuration_valueYes" isDefault="true">
-			<objectChange node="fenderLeft" visibilityActive="true" visibilityInactive="false"/>
-			<objectChange node="fenderRight" visibilityActive="true" visibilityInactive="false"/>
+        <designConfiguration name="$l10n_configuration_valueTwinWheelsBack">
+            <xmlOverwrites>
+                <remove path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel(0).additionalWheel"/>
+                <remove path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel(1).additionalWheel"/>
+            </xmlOverwrites>
+                <objectChange node="wheelBackLeftTwin"  visibilityActive="true" visibilityInactive="false" translationActive="0.4 0 0"/>
+                <objectChange node="wheelBackRightTwin" visibilityActive="true" visibilityInactive="false" translationActive="-0.4 0 0"/>
+                <objectChange node="wheelBackLeftTwinExtension"  translationInactive="0 0 0" translationActive="0.14 0 0"/>
+                <objectChange node="wheelBackRightTwinExtension" translationInactive="0 0 0" translationActive="-0.14 0 0"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_valueTwinWheelsAll">
+                <objectChange node="wheelBackLeftTwin"  visibilityActive="true" visibilityInactive="false" translationActive="0.4 0 0"/>
+                <objectChange node="wheelBackRightTwin" visibilityActive="true" visibilityInactive="false" translationActive="-0.4 0 0"/>
+                <objectChange node="wheelBackLeftTwinExtension"  translationInactive="0 0 0" translationActive="0.14 0 0"/>
+                <objectChange node="wheelBackRightTwinExtension" translationInactive="0 0 0" translationActive="-0.14 0 0"/>
         </designConfiguration>
     </designConfigurations>
 
-    <design2Configurations title="$l10n_configuration_decals">
-        <design2Configuration name="CHALLENGER" displayBrand="CHALLENGER">
+    <design2Configurations title="$l10n_configuration_fender" isYesNoOption="true">
+        <design2Configuration name="$l10n_configuration_valueNo">
+		</design2Configuration>
+        <design2Configuration name="$l10n_configuration_valueYes" isDefault="true">
+			<objectChange node="fenderLeft" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="fenderRight" visibilityActive="true" visibilityInactive="false"/>
+        </design2Configuration>
+    </design2Configurations>
+
+    <design3Configurations title="$l10n_configuration_decals">
+        <design3Configuration name="CHALLENGER" displayBrand="CHALLENGER">
             <objectChange node="challenger_160hp_decals"       visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="challenger_180hp_decals"       visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="challenger_200hp_decals"       visibilityActive="true" visibilityInactive="false"/>
@@ -861,9 +901,9 @@
             <objectChange node="steeringWheelChallanger_decal" visibilityActive="true" visibilityInactive="false"/>
 
             <!--<material materialSlotName="mt655_chassis_mat" materialTemplateName="CHALLENGER_YELLOW1" materialTemplateUseColorOnly="true"/>-->
-        </design2Configuration>
+        </design3Configuration>
 
-        <design2Configuration name="AGCO ALLIS" displayBrand="AGCO">
+        <design3Configuration name="AGCO ALLIS" displayBrand="AGCO">
             <objectChange node="agcoAllis_9755_decals"    visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="agcoAllis_9765_decals"    visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="agcoAllis_9775_decals"    visibilityActive="true" visibilityInactive="false"/>
@@ -873,9 +913,9 @@
             <objectChange node="steeringWheelAllis_decal" visibilityActive="true" visibilityInactive="false"/>
 
             <!--<material materialSlotName="mt655_chassis_mat" materialTemplateName="CHALLENGER_RED1" materialTemplateUseColorOnly="true"/>-->
-        </design2Configuration>
+        </design3Configuration>
 
-        <design2Configuration name="AGCO ALLIS WHITE" displayBrand="AGCOWHITE">
+        <design3Configuration name="AGCO ALLIS WHITE" displayBrand="AGCOWHITE">
             <objectChange node="agcoAllisWhite_8510_decals" visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="agcoAllisWhite_8610_decals" visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="agcoAllisWhite_8710_decals" visibilityActive="true" visibilityInactive="false"/>
@@ -885,9 +925,9 @@
             <objectChange node="steeringWheelAGCO_decal"    visibilityActive="true" visibilityInactive="false"/>
 
             <!--<material materialSlotName="mt655_chassis_mat" materialTemplateName="FENDT_WHITE1" materialTemplateUseColorOnly="true"/>-->
-        </design2Configuration>
+        </design3Configuration>
 		
-        <design2Configuration name="FENDT" displayBrand="FENDT" isSelectable="false">
+        <design3Configuration name="FENDT" displayBrand="FENDT" isSelectable="false">
             <objectChange node="fendt_1038_decal"              visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="fendt_1042_decal"              visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="fendt_1046_decal"              visibilityActive="true" visibilityInactive="false"/>
@@ -896,19 +936,19 @@
             <objectChange node="steeringWheelChallanger_decal" visibilityActive="true" visibilityInactive="false"/>
 
             <!--<material materialSlotName="mt655_chassis_mat" materialTemplateName="FENDT_NEWGREEN1" materialTemplateUseColorOnly="true"/>-->
-        </design2Configuration>
+        </design3Configuration>
 
-        <design2Configuration name="$l10n_configuration_valueNo"/>
+        <design3Configuration name="$l10n_configuration_valueNo"/>
 
-    </design2Configurations>
+    </design3Configurations>
 
-	<design3Configurations title="$l10n_configuration_warningSigns" isYesNoOption="true">
-		<design3Configuration name="$l10n_configuration_valueDefault"/>
-		<design3Configuration name="$l10n_configuration_valueWheelBroad">
+	<design4Configurations title="$l10n_configuration_warningSigns" isYesNoOption="true">
+		<design4Configuration name="$l10n_configuration_valueDefault"/>
+		<design4Configuration name="$l10n_configuration_valueWheelBroad">
             <objectChange node="warningSignLeft"  rotationActive="0 0 0" rotationInactive="0 90 0"/>
             <objectChange node="warningSignRight" rotationActive="0 0 0" rotationInactive="0 -90 0"/>
-		</design3Configuration>
-	</design3Configurations>
+		</design4Configuration>
+	</design4Configurations>
 
     <foliageBending>
         <bendingNode wheelIndices="1 2" minZ="1.10" maxZ="2.75" yOffset="0.5"/>

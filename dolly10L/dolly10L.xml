@@ -95,6 +95,42 @@
                     </wheel>
                 </wheels>
             </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="0" saveId="NARROW">
+                <wheels baseConfig="DEFAULT" isCareWheelConfiguration="true">
+                    <wheel dimensions="9_5R24 9_5__24">
+						<physics xOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="9_5R24 9_5__24">
+						<physics xOffset="-0.1"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="0" saveId="NARROW_EXCAVATOR">
+                <wheels baseConfig="DEFAULT" isCareWheelConfiguration="true">
+                    <wheel dimensions="12_00R24">
+						<physics xOffset="-0.1" yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="12_00R24">
+						<physics xOffset="-0.1" yOffset="-0.1"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsNarrow" price="0" saveId="NARROW_TWIN">
+                <wheels baseConfig="NARROW" isCareWheelConfiguration="true">
+                    <wheel>
+						<physics xOffset="-0.15"/>
+                        <additionalWheel configId="dual" offset="0.08">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                    <wheel>
+						<physics xOffset="-0.15"/>
+                        <additionalWheel configId="dual" offset="0.08">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
             
         </wheelConfigurations>
 

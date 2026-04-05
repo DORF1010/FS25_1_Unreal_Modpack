@@ -177,10 +177,10 @@
             </wheelConfiguration>
 			<wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="0" saveId="NARROW">
                 <wheels baseConfig="DEFAULT" ackermannSteeringIndex="1" isCareWheelConfiguration="true">
-                    <wheel dimensions="420_85R34 270_95R48 300_95R46"/>
-                    <wheel dimensions="420_85R34 270_95R48 300_95R46"/>
-                    <wheel dimensions="480_80R50 380_90R54 380_90R54" rimOffset="0.05"/>
-                    <wheel dimensions="480_80R50 380_90R54 380_90R54" rimOffset="0.05"/>
+                    <wheel dimensions="420_85R34 270_95R48 300_95R46 320_90R50_rc 320_90R50"/>
+                    <wheel dimensions="420_85R34 270_95R48 300_95R46 320_90R50_rc 320_90R50"/>
+                    <wheel dimensions="480_80R50 380_90R54 380_90R54 480_95R50 480_95R50" rimOffset="0.05"/>
+                    <wheel dimensions="480_80R50 380_90R54 380_90R54 480_95R50 480_95R50" rimOffset="0.05"/>
                 </wheels>
                 
             </wheelConfiguration>
@@ -203,7 +203,47 @@
                 <!--<objectChange node="wheelFrontLeftFender"  visibilityActive="false"/>
                 <objectChange node="wheelFrontRightFender" visibilityActive="false"/>-->
             </wheelConfiguration>
-
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsBackNarrow" price="0" saveId="NARROW_TWIN_BACK">
+                <wheels baseConfig="NARROW" isCareWheelConfiguration="true">
+					<wheel/>
+					<wheel/>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.2">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.2">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsNarrow" price="0" saveId="NARROW_TWIN_ALL">
+                <wheels baseConfig="NARROW" isCareWheelConfiguration="true">
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.25">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.2">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.2">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            
             <wheelConfiguration name="$l10n_ui_colorSpecial" price="0" saveId="SPECIAL">
                 <wheels baseConfig="DEFAULT" ackermannSteeringIndex="4">
                     <wheel dimensions="520_85R30_engravings"/>
