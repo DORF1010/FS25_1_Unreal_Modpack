@@ -177,26 +177,26 @@
             </wheelConfiguration>
 			<wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="0" saveId="NARROW">
                 <wheels baseConfig="DEFAULT" ackermannSteeringIndex="1" isCareWheelConfiguration="true">
-                    <wheel dimensions="420_85R34 270_95R48 300_95R46 320_90R50_rc 320_90R50"/>
-                    <wheel dimensions="420_85R34 270_95R48 300_95R46 320_90R50_rc 320_90R50"/>
-                    <wheel dimensions="480_80R50 380_90R54 380_90R54 480_95R50 480_95R50" rimOffset="0.05"/>
-                    <wheel dimensions="480_80R50 380_90R54 380_90R54 480_95R50 480_95R50" rimOffset="0.05"/>
+                    <wheel dimensions="420_85R34 270_95R48 300_95R46 320_90R50_rc 320_90R50 420_80R46 480_80R42"/>
+                    <wheel dimensions="420_85R34 270_95R48 300_95R46 320_90R50_rc 320_90R50 420_80R46 480_80R42"/>
+                    <wheel dimensions="480_80R50 380_90R54 380_90R54 480_95R50 480_95R50 480_95R54_PT 480_95R54_PT" rimOffset="0.05"/>
+                    <wheel dimensions="480_80R50 380_90R54 380_90R54 480_95R50 480_95R50 480_95R54_PT 480_95R54_PT" rimOffset="0.05"/>
                 </wheels>
                 
             </wheelConfiguration>
 			
             <wheelConfiguration name="$l10n_configuration_valueWheelNarrow1500mm" price="0" saveId="NARROW_1500">
                 <wheels baseConfig="DEFAULT" isCareWheelConfiguration="true" ackermannSteeringIndex="2">
-                    <wheel dimensions="270_95R48 300_95R46" rimOffset="-0.3">
+                    <wheel dimensions="270_95R48 300_95R46 320_90R50" rimOffset="-0.3">
                         <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="6|1" offset="-0.01" scale="1.1 1 1"/>
                     </wheel>
-                    <wheel dimensions="270_95R48 300_95R46" rimOffset="-0.3">
+                    <wheel dimensions="270_95R48 300_95R46 320_90R50" rimOffset="-0.3">
                         <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="6|0" offset="-0.01" scale="1.1 1 1"/>
                     </wheel>
-                    <wheel dimensions="380_90R54 380_90R54" rimOffset="-0.2395">
+                    <wheel dimensions="380_90R54 380_90R54 480_95R50" rimOffset="-0.2395">
                         <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="6|1" offset="0.006"/>
                     </wheel>
-                    <wheel dimensions="380_90R54 380_90R54" rimOffset="-0.2395">
+                    <wheel dimensions="380_90R54 380_90R54 480_95R50" rimOffset="-0.2395">
                         <innerRim filename="$data/shared/wheels/rims/rim001.i3d" node="6|0" offset="0.006"/>
                     </wheel>
                 </wheels>
@@ -208,13 +208,15 @@
 					<wheel/>
 					<wheel/>
                     <wheel>
-                        <additionalWheel configId="dual" offset="0.2">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        <additionalWheel configId="dual" offset="0.3">
+                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|0" offset="-0.05" scale="1.1 1 1"/>
+                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|0" scale="0.405 0.15 0.15"/>
                         </additionalWheel>
 					</wheel>
                     <wheel>
-                        <additionalWheel configId="dual" offset="0.2">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        <additionalWheel configId="dual" offset="0.3">
+                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|1" offset="-0.05" scale="1.1 1 1"/>
+                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|1" scale="0.405 0.15 0.15"/>
                         </additionalWheel>
 					</wheel>
                 </wheels>
@@ -222,23 +224,25 @@
             <wheelConfiguration name="$l10n_configuration_valueTwinWheelsNarrow" price="0" saveId="NARROW_TWIN_ALL">
                 <wheels baseConfig="NARROW" isCareWheelConfiguration="true">
                     <wheel>
-                        <additionalWheel configId="dual" offset="0.25">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        <additionalWheel configId="dual" offset="0.3">
+                            <connector filename="shared/rim014Connector.i3d" node="0" offset="0" useWidthAndDiam="true"/>
                         </additionalWheel>
 					</wheel>
                     <wheel>
-                        <additionalWheel configId="dual" offset="0.25">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        <additionalWheel configId="dual" offset="0.3">
+                            <connector filename="shared/rim014Connector.i3d" node="0" offset="0" useWidthAndDiam="true"/>
                         </additionalWheel>
 					</wheel>
                     <wheel>
-                        <additionalWheel configId="dual" offset="0.2">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        <additionalWheel configId="dual" offset="0.3">
+                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|0" offset="-0.2"/>
+                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|0" usePosAndScale="true" startPos="3" endPos="27.5" uniformScale="0.24"/>
                         </additionalWheel>
 					</wheel>
                     <wheel>
-                        <additionalWheel configId="dual" offset="0.2">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        <additionalWheel configId="dual" offset="0.3">
+                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|1" offset="-0.2"/>
+                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|1" usePosAndScale="true" startPos="3" endPos="27.5" uniformScale="0.24"/>
                         </additionalWheel>
 					</wheel>
                 </wheels>
@@ -970,10 +974,10 @@
         </exhaustEffects>
 
         <animationNodes>
-            <animationNode node="fanEngine" rotSpeed="-400" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="2" />
+            <animationNode node="fanEngine" rotSpeed="-400" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="5" />
         </animationNodes>
 
-        <motorStartDuration>35</motorStartDuration>
+        <motorStartDuration>3500</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="ignitionKey" doInterpolation="true" groups="MOTOR_ACTIVE">
