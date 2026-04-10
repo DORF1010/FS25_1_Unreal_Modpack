@@ -209,14 +209,14 @@
 					<wheel/>
                     <wheel>
                         <additionalWheel configId="dual" offset="0.3">
-                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|0" offset="-0.05" scale="1.1 1 1"/>
-                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|0" scale="0.405 0.15 0.15"/>
+                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|0" offset="-0.2"/>
+                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|0" usePosAndScale="true" startPos="3" endPos="27.5" uniformScale="0.24"/>
                         </additionalWheel>
 					</wheel>
                     <wheel>
                         <additionalWheel configId="dual" offset="0.3">
-                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|1" offset="-0.05" scale="1.1 1 1"/>
-                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|1" scale="0.405 0.15 0.15"/>
+                            <innerRim filename="$data/shared/wheels/rims/rim010.i3d" node="0|1" offset="-0.2"/>
+                            <connector filename="$data/shared/wheels/hubs/dual003.i3d" node="0|1" usePosAndScale="true" startPos="3" endPos="27.5" uniformScale="0.24"/>
                         </additionalWheel>
 					</wheel>
                 </wheels>

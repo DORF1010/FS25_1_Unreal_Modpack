@@ -267,12 +267,12 @@
 			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
         </attacherJoint>
-        <attacherJoint node="attacherJointHookliftShort" jointType="hookLift" lowerRotLimit="0 0 40" upperRotLimit="0 0 40" allowsLowering="false" enableCollision="true">
+        <attacherJoint node="attacherJointHookliftShort" jointType="hookLift" lowerRotLimit="0 0 0" upperRotLimit="0 0 0" allowsLowering="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
 			<!--<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
         </attacherJoint>
-        <attacherJoint node="attacherJointHookliftLong" jointType="hookLift" lowerRotLimit="0 0 40" upperRotLimit="0 0 40" allowsLowering="false" enableCollision="true">
+        <attacherJoint node="attacherJointHookliftLong" jointType="hookLift" lowerRotLimit="0 0 0" upperRotLimit="0 0 0" allowsLowering="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
 			<!--<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->

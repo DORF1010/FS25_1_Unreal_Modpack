@@ -307,7 +307,7 @@
 
   <Scene>
     <Shape name="series200_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="77" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
-      <Shape name="series200_vis" shapeId="2" clipDistance="300" nodeId="78" castsShadows="true" receiveShadows="true" skinBindNodeIds="78 157 161 163 170 172 176 178 180 187 188 189 190 192 193 197 199 201 203 205 207 213 215 222 224 226 227 228 229 233 235 237 239 243 247 253 255 259 264 267 269 270 271 274 276 293 295 297 314 317 343" materialIds="25,24,8,9,23,7,11,20,13,21,19,18,22,12">
+      <Shape name="series200_vis" shapeId="2" clipDistance="300" nodeId="78" castsShadows="true" receiveShadows="true" skinBindNodeIds="78 157 161 163 170 172 176 178 180 187 188 189 190 192 193 197 199 201 203 205 207 213 215 222 224 226 227 228 229 233 235 237 239 243 247 255 257 261 266 269 271 272 273 276 278 295 297 299 316 319 345" materialIds="25,24,8,9,23,7,11,20,13,21,19,18,22,12">
         <TransformGroup name="wheels" nodeId="79">
           <TransformGroup name="wheelFrontLeftReprPhysRot" translation="0.668 0.3856 1.9064" rotation="0 0 4.47284" nodeId="80">
             <TransformGroup name="wheelFrontLeftReprPhys" nodeId="81">
@@ -355,7 +355,7 @@
         </TransformGroup>
         <TransformGroup name="cameras" nodeId="114">
           <TransformGroup name="outdoorCameraTarget" translation="0 1.09 0" rotation="-24 180 0" nodeId="115">
-            <Camera name="outdoorCamera" translation="2.22897 1.6919 2.10592" rotation="46.7441 66.0027 89.4919" nodeId="116" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+            <Camera name="outdoorCamera" translation="-1.16157 -0.566176 4.69288" rotation="11.4698 -13.2069 -6.00396" nodeId="116" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
           </TransformGroup>
           <Camera name="indoorCamera" translation="0.446691 1.8 0.44" rotation="-18 180 0" nodeId="117" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
           <TransformGroup name="cameraRaycastNode1" translation="0 1.40522 2.65477" nodeId="118"/>
@@ -549,207 +549,213 @@
             </TransformGroup>
             <TransformGroup name="doorBack" translation="0 0.873286 -2.70935" clipDistance="300" nodeId="247">
               <Shape name="colPart07" translation="0.000242 0.284686 -0.033002" shapeId="10" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="248" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-              <TransformGroup name="tensionBeltStart07" translation="0.798 0.536015 0" rotation="90 0 -90" nodeId="397">
-                <TransformGroup name="tensionBeltEnd07" translation="0 0 1.5964" nodeId="398"/>
+              <TransformGroup name="tensionBeltStart07" translation="0.798 0.536015 0" rotation="90 0 -90" nodeId="249">
+                <TransformGroup name="tensionBeltEnd07" translation="0 0 1.5964" nodeId="250"/>
               </TransformGroup>
             </TransformGroup>
           </TransformGroup>
-          <TransformGroup name="wipers" nodeId="249">
-            <TransformGroup name="wiperLeftBaseRot" translation="0.559138 1.4786 1.05553" rotation="-23.0712 -12.5155 -40.3934" nodeId="250">
-              <TransformGroup name="wiperLeftBaseDummy" nodeId="251">
-                <TransformGroup name="wiperLeftRot" translation="-0.291914 -0.13726 0.016855" rotation="0.254423 -1.12724 41.7235" nodeId="252">
-                  <TransformGroup name="wiperLeft" clipDistance="160" nodeId="253">
-                    <TransformGroup name="wiperLeftArmRef" translation="0.000259 0.00019 0.004208" rotation="91.8797 -2.39881 -106.728" nodeId="254"/>
+          <TransformGroup name="wipers" nodeId="251">
+            <TransformGroup name="wiperLeftBaseRot" translation="0.559138 1.4786 1.05553" rotation="-23.0712 -12.5155 -40.3934" nodeId="252">
+              <TransformGroup name="wiperLeftBaseDummy" nodeId="253">
+                <TransformGroup name="wiperLeftRot" translation="-0.291914 -0.13726 0.016855" rotation="0.254423 -1.12724 41.7235" nodeId="254">
+                  <TransformGroup name="wiperLeft" clipDistance="160" nodeId="255">
+                    <TransformGroup name="wiperLeftArmRef" translation="0.000259 0.00019 0.004208" rotation="91.8797 -2.39881 -106.728" nodeId="256"/>
                   </TransformGroup>
                 </TransformGroup>
               </TransformGroup>
-              <TransformGroup name="wiperLeftBase" clipDistance="160" nodeId="255">
-                <TransformGroup name="wiperLeftArmRefFrame" translation="-0.012378 -0.006355 0.036618" rotation="92.8865 -1.8304 -65.0387" nodeId="256">
-                  <Shape name="wiperLeftArm" shapeId="11" clipDistance="160" nodeId="257" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <TransformGroup name="wiperLeftBase" clipDistance="160" nodeId="257">
+                <TransformGroup name="wiperLeftArmRefFrame" translation="-0.012378 -0.006355 0.036618" rotation="92.8865 -1.8304 -65.0387" nodeId="258">
+                  <Shape name="wiperLeftArm" shapeId="11" clipDistance="160" nodeId="259" castsShadows="true" receiveShadows="true" materialIds="9"/>
                 </TransformGroup>
               </TransformGroup>
             </TransformGroup>
-            <TransformGroup name="wiperRightBaseRot" translation="-0.190964 1.49745 1.09977" rotation="-36.3819 -4.83699 0" nodeId="258">
-              <TransformGroup name="wiperRightBase" clipDistance="160" nodeId="259">
-                <TransformGroup name="wiperRightArmRefFrame" translation="-0.013517 0.002522 0.037007" rotation="92.8697 -6.91151 -107.117" nodeId="260">
-                  <Shape name="wiperRightArm" shapeId="12" clipDistance="160" nodeId="261" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <TransformGroup name="wiperRightBaseRot" translation="-0.190964 1.49745 1.09977" rotation="-36.3819 -4.83699 0" nodeId="260">
+              <TransformGroup name="wiperRightBase" clipDistance="160" nodeId="261">
+                <TransformGroup name="wiperRightArmRefFrame" translation="-0.013517 0.002522 0.037007" rotation="92.8697 -6.91151 -107.117" nodeId="262">
+                  <Shape name="wiperRightArm" shapeId="12" clipDistance="160" nodeId="263" castsShadows="true" receiveShadows="true" materialIds="9"/>
                 </TransformGroup>
               </TransformGroup>
-              <TransformGroup name="wiperRightBaseDummy" nodeId="262">
-                <TransformGroup name="wiperRightRot" translation="-0.309678 0.091574 0.015915" rotation="-0.371307 -5.01158 0.088349" nodeId="263">
-                  <TransformGroup name="wiperRight" clipDistance="160" nodeId="264">
-                    <TransformGroup name="wiperRightArmRef" translation="0.000808 7e-05 0.005667" rotation="87.9244 -8.01194 -106.546" nodeId="265"/>
+              <TransformGroup name="wiperRightBaseDummy" nodeId="264">
+                <TransformGroup name="wiperRightRot" translation="-0.309678 0.091574 0.015915" rotation="-0.371307 -5.01158 0.088349" nodeId="265">
+                  <TransformGroup name="wiperRight" clipDistance="160" nodeId="266">
+                    <TransformGroup name="wiperRightArmRef" translation="0.000808 7e-05 0.005667" rotation="87.9244 -8.01194 -106.546" nodeId="267"/>
                   </TransformGroup>
                 </TransformGroup>
               </TransformGroup>
             </TransformGroup>
           </TransformGroup>
-          <TransformGroup name="animationNodes" nodeId="266">
-            <TransformGroup name="engineRoll01" translation="0 0.839725 1.9342" clipDistance="300" nodeId="267">
-              <TransformGroup name="series200_decals" translation="0.001291 0.001899 0.08655" clipDistance="300" nodeId="268"/>
+          <TransformGroup name="animationNodes" nodeId="268">
+            <TransformGroup name="engineRoll01" translation="0 0.839725 1.9342" clipDistance="300" nodeId="269">
+              <TransformGroup name="series200_decals" translation="0.001291 0.001899 0.08655" clipDistance="300" nodeId="270"/>
             </TransformGroup>
-            <TransformGroup name="engineRoll02" translation="-0.176676 1.01199 1.92476" clipDistance="300" nodeId="269"/>
-            <TransformGroup name="engineRoll03" translation="0.176423 0.998124 1.92341" clipDistance="300" nodeId="270"/>
-            <TransformGroup name="engineRoll" translation="0.025475 1.04165 1.92372" clipDistance="300" nodeId="271"/>
+            <TransformGroup name="engineRoll02" translation="-0.176676 1.01199 1.92476" clipDistance="300" nodeId="271"/>
+            <TransformGroup name="engineRoll03" translation="0.176423 0.998124 1.92341" clipDistance="300" nodeId="272"/>
+            <TransformGroup name="engineRoll" translation="0.025475 1.04165 1.92372" clipDistance="300" nodeId="273"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="interiorParts" nodeId="272">
-          <TransformGroup name="steeringBaseRot" translation="0.442104 1.39738 1.32534" rotation="23.61 0 0" nodeId="273">
-            <TransformGroup name="steeringBase" translation="0.004587 -0.165955 0.361231" clipDistance="300" nodeId="274">
-              <TransformGroup name="steeringWheelRot" translation="0 -0.003011 -0.782373" rotation="-89.61 3e-06 -1e-06" nodeId="275">
-                <TransformGroup name="steeringWheel" clipDistance="300" nodeId="276">
-                  <TransformGroup name="playerRightHandTarget" translation="-0.213833 0.122297 -0.069662" rotation="-3.35758 13.0647 94.431" nodeId="277"/>
-                  <TransformGroup name="series200_decals" translation="0 0.057674 -1e-06" rotation="66.6103 -2.4e-05 6e-06" clipDistance="300" nodeId="278"/>
+        <TransformGroup name="interiorParts" nodeId="274">
+          <TransformGroup name="steeringBaseRot" translation="0.442104 1.39738 1.32534" rotation="23.61 0 0" nodeId="275">
+            <TransformGroup name="steeringBase" translation="0.004587 -0.165955 0.361231" clipDistance="300" nodeId="276">
+              <TransformGroup name="steeringWheelRot" translation="0 -0.003011 -0.782373" rotation="-89.61 3e-06 -1e-06" nodeId="277">
+                <TransformGroup name="steeringWheel" clipDistance="300" nodeId="278">
+                  <TransformGroup name="playerRightHandTarget" translation="-0.213833 0.122297 -0.069662" rotation="-3.35758 13.0647 94.431" nodeId="279"/>
+                  <TransformGroup name="series200_decals" translation="0 0.057674 -1e-06" rotation="66.6103 -2.4e-05 6e-06" clipDistance="300" nodeId="280"/>
                 </TransformGroup>
               </TransformGroup>
-              <TransformGroup name="dashboards" translation="-0.004587 0.165955 -0.361231" nodeId="279">
-                <TransformGroup name="needleMovingDirectionRot" translation="0.00428 -0.137542 -0.372944" rotation="0.424397 0 0" nodeId="280">
-                  <Shape name="needleMovingDirection_decal" translation="-7e-06 -0.024 0.00664" shapeId="13" clipDistance="20" nodeId="281" castsShadows="true" receiveShadows="true" materialIds="28"/>
+              <TransformGroup name="dashboards" translation="-0.004587 0.165955 -0.361231" nodeId="281">
+                <TransformGroup name="needleMovingDirectionRot" translation="0.00428 -0.137542 -0.372944" rotation="0.424397 0 0" nodeId="282">
+                  <Shape name="needleMovingDirection_decal" translation="-7e-06 -0.024 0.00664" shapeId="13" clipDistance="20" nodeId="283" castsShadows="true" receiveShadows="true" materialIds="28"/>
                 </TransformGroup>
-                <TransformGroup name="levers" translation="-0.442104 -1.81122 -0.654739" rotation="-23.61 0 0" nodeId="282">
-                  <TransformGroup name="leverTurnlightRot" translation="0.495834 1.39334 0.896419" rotation="-66.6102 0 0" nodeId="283">
-                    <Shape name="leverTurnlight" shapeId="14" clipDistance="80" nodeId="284" castsShadows="true" receiveShadows="true" materialIds="8,9,23">
-                      <TransformGroup name="series200_decals" translation="0.190789 0.005337 -0.000334" rotation="66.6102 0 0" clipDistance="300" nodeId="285"/>
+                <TransformGroup name="levers" translation="-0.442104 -1.81122 -0.654739" rotation="-23.61 0 0" nodeId="284">
+                  <TransformGroup name="leverTurnlightRot" translation="0.495834 1.39334 0.896419" rotation="-66.6102 0 0" nodeId="285">
+                    <Shape name="leverTurnlight" shapeId="14" clipDistance="80" nodeId="286" castsShadows="true" receiveShadows="true" materialIds="8,9,23">
+                      <TransformGroup name="series200_decals" translation="0.190789 0.005337 -0.000334" rotation="66.6102 0 0" clipDistance="300" nodeId="287"/>
                     </Shape>
                   </TransformGroup>
-                  <TransformGroup name="leverMovingDirectionRot" translation="0.397155 1.39829 0.972493" rotation="20.688 11.4487 -27.9196" nodeId="286">
-                    <Shape name="leverMovingDirection" shapeId="15" clipDistance="80" nodeId="287" castsShadows="true" receiveShadows="true" materialIds="8,9"/>
+                  <TransformGroup name="leverMovingDirectionRot" translation="0.397155 1.39829 0.972493" rotation="20.688 11.4487 -27.9196" nodeId="288">
+                    <Shape name="leverMovingDirection" shapeId="15" clipDistance="80" nodeId="289" castsShadows="true" receiveShadows="true" materialIds="8,9"/>
                   </TransformGroup>
                 </TransformGroup>
               </TransformGroup>
-              <TransformGroup name="visuals" translation="-0.004587 0.165955 -0.361231" nodeId="288">
-                <TransformGroup name="series200_decals" translation="0.004587 -0.104361 -0.366061" rotation="-23.61 0 0" clipDistance="300" nodeId="289"/>
-                <Shape name="windowsInterior" translation="0.004587 -0.104359 -0.365724" rotation="-23.61 0 0" shapeId="16" clipDistance="300" nodeId="290" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+              <TransformGroup name="visuals" translation="-0.004587 0.165955 -0.361231" nodeId="290">
+                <TransformGroup name="series200_decals" translation="0.004587 -0.104361 -0.366061" rotation="-23.61 0 0" clipDistance="300" nodeId="291"/>
+                <Shape name="windowsInterior" translation="0.004587 -0.104359 -0.365724" rotation="-23.61 0 0" shapeId="16" clipDistance="300" nodeId="292" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
               </TransformGroup>
             </TransformGroup>
           </TransformGroup>
-          <TransformGroup name="dashboards" nodeId="291">
-            <TransformGroup name="pedals" nodeId="292">
-              <TransformGroup name="pedalGas" translation="0.348147 1.24162 1.51956" clipDistance="300" nodeId="293">
-                <TransformGroup name="playerRightFootTargetGas" translation="-0.008975 -0.505259 -0.372647" rotation="-47.4724 0 0" nodeId="294"/>
+          <TransformGroup name="dashboards" nodeId="293">
+            <TransformGroup name="pedals" nodeId="294">
+              <TransformGroup name="pedalGas" translation="0.348147 1.24162 1.51956" clipDistance="300" nodeId="295">
+                <TransformGroup name="playerRightFootTargetGas" translation="-0.008975 -0.505259 -0.372647" rotation="-47.4724 0 0" nodeId="296"/>
               </TransformGroup>
-              <TransformGroup name="pedalBrake" translation="0.396435 1.28485 1.36583" clipDistance="300" nodeId="295">
-                <TransformGroup name="playerRightFootTargetBrake" translation="0.090021 -0.548496 -0.218911" rotation="-47.4724 0 0" nodeId="296"/>
+              <TransformGroup name="pedalBrake" translation="0.396435 1.28485 1.36583" clipDistance="300" nodeId="297">
+                <TransformGroup name="playerRightFootTargetBrake" translation="0.090021 -0.548496 -0.218911" rotation="-47.4724 0 0" nodeId="298"/>
               </TransformGroup>
-              <TransformGroup name="pedalClutch" translation="0.655875 1.288 1.35471" clipDistance="300" nodeId="297"/>
+              <TransformGroup name="pedalClutch" translation="0.655875 1.288 1.35471" clipDistance="300" nodeId="299"/>
             </TransformGroup>
-            <TransformGroup name="needles" nodeId="298">
-              <TransformGroup name="needleTemperatureRot" translation="0.690574 1.43868 1.07819" rotation="-75.8946 5.15539 -19.6768" nodeId="299">
-                <Shape name="needleTemperature_decal" shapeId="17" clipDistance="20" nodeId="300" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
+            <TransformGroup name="needles" nodeId="300">
+              <TransformGroup name="needleTemperatureRot" translation="0.690574 1.43868 1.07819" rotation="-75.8946 5.15539 -19.6768" nodeId="301">
+                <Shape name="needleTemperature_decal" shapeId="17" clipDistance="20" nodeId="302" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
               </TransformGroup>
-              <TransformGroup name="needleOilPressureRot" translation="0.628256 1.43734 1.07787" rotation="-75.7971 4.87513 -18.5612" nodeId="301">
-                <Shape name="needleOilPressure_decal" shapeId="18" clipDistance="20" nodeId="302" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
+              <TransformGroup name="needleOilPressureRot" translation="0.628256 1.43734 1.07787" rotation="-75.7971 4.87513 -18.5612" nodeId="303">
+                <Shape name="needleOilPressure_decal" shapeId="18" clipDistance="20" nodeId="304" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
               </TransformGroup>
-              <TransformGroup name="needleAlternatorRot" translation="0.262195 1.44914 1.08273" rotation="-76.4571 6.51011 -25.2064" nodeId="303">
-                <Shape name="needleAlternator_decal" shapeId="19" clipDistance="20" nodeId="304" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
+              <TransformGroup name="needleAlternatorRot" translation="0.262195 1.44914 1.08273" rotation="-76.4571 6.51011 -25.2064" nodeId="305">
+                <Shape name="needleAlternator_decal" shapeId="19" clipDistance="20" nodeId="306" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
               </TransformGroup>
-              <TransformGroup name="needleSpeedRot" translation="0.444018 1.05394 0.972746" rotation="14.7355 2.83606 -10.6543" nodeId="305">
-                <Shape name="needleSpeed_decal" shapeId="20" clipDistance="20" nodeId="306" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
+              <TransformGroup name="needleSpeedRot" translation="0.444018 1.05394 0.972746" rotation="14.7355 2.83606 -10.6543" nodeId="307">
+                <Shape name="needleSpeed_decal" shapeId="20" clipDistance="20" nodeId="308" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
               </TransformGroup>
-              <TransformGroup name="needleFuelRot" translation="0.202876 1.44297 1.08109" rotation="-75.823 4.95126 -18.8634" nodeId="307">
-                <Shape name="needleFuel_decal" shapeId="21" clipDistance="20" nodeId="308" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
+              <TransformGroup name="needleFuelRot" translation="0.202876 1.44297 1.08109" rotation="-75.823 4.95126 -18.8634" nodeId="309">
+                <Shape name="needleFuel_decal" shapeId="21" clipDistance="20" nodeId="310" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="28"/>
               </TransformGroup>
-              <TransformGroup name="needleTimeHoursRot" translation="-0.294315 1.46002 1.08261" rotation="165.7 0 -180" nodeId="309">
-                <Shape name="needleTimeHours" shapeId="22" nodeId="310" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
+              <TransformGroup name="needleTimeHoursRot" translation="-0.294315 1.46002 1.08261" rotation="165.7 0 -180" nodeId="311">
+                <Shape name="needleTimeHours" shapeId="22" nodeId="312" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
               </TransformGroup>
-              <TransformGroup name="needleTimeMinutesRot" translation="-0.294315 1.46002 1.08261" rotation="165.7 0 -180" nodeId="311">
-                <Shape name="needleTimeMinutes" shapeId="23" nodeId="312" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
-              </TransformGroup>
-            </TransformGroup>
-            <TransformGroup name="keyIgnitionRot" translation="0.250557 1.37 1.07536" rotation="0 0 -2.50972" nodeId="313">
-              <TransformGroup name="keyIgnition" clipDistance="300" nodeId="314">
-                <TransformGroup name="series200_decals" translation="-0.0009 -0.000215 -0.007376" rotation="0 0 2.50972" clipDistance="300" nodeId="315"/>
+              <TransformGroup name="needleTimeMinutesRot" translation="-0.294315 1.46002 1.08261" rotation="165.7 0 -180" nodeId="313">
+                <Shape name="needleTimeMinutes" shapeId="23" nodeId="314" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
               </TransformGroup>
             </TransformGroup>
-            <TransformGroup name="buttonLightsRot" translation="0.706894 1.36944 1.05226" rotation="-1.42957 0.015033 0.590093" nodeId="316">
-              <TransformGroup name="buttonLights" clipDistance="300" nodeId="317">
-                <TransformGroup name="series200_decals" rotation="1.42965 -0.000306 -0.590284" clipDistance="300" nodeId="318"/>
+            <TransformGroup name="keyIgnitionRot" translation="0.250557 1.37 1.07536" rotation="0 0 -2.50972" nodeId="315">
+              <TransformGroup name="keyIgnition" clipDistance="300" nodeId="316">
+                <TransformGroup name="series200_decals" translation="-0.0009 -0.000215 -0.007376" rotation="0 0 2.50972" clipDistance="300" nodeId="317"/>
               </TransformGroup>
             </TransformGroup>
-            <Shape name="iconStarting_decals" translation="0.44684 1.44946 1.07996" shapeId="24" clipDistance="20" nodeId="319" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
-            <Shape name="display_decals" translation="0.194192 1.46064 1.08313" shapeId="25" clipDistance="140" nodeId="320" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
+            <TransformGroup name="buttonLightsRot" translation="0.706894 1.36944 1.05226" rotation="-1.42957 0.015033 0.590093" nodeId="318">
+              <TransformGroup name="buttonLights" clipDistance="300" nodeId="319">
+                <TransformGroup name="series200_decals" rotation="1.42965 -0.000306 -0.590284" clipDistance="300" nodeId="320"/>
+              </TransformGroup>
+            </TransformGroup>
+            <Shape name="iconStarting_decals" translation="0.44684 1.44946 1.07996" shapeId="24" clipDistance="20" nodeId="321" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
+            <Shape name="display_decals" translation="0.194192 1.46064 1.08313" shapeId="25" clipDistance="140" nodeId="322" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
           </TransformGroup>
-          <TransformGroup name="characterTargets" nodeId="321">
-            <TransformGroup name="playerSkin" translation="0.446418 1.02137 0.422994" nodeId="322"/>
-            <TransformGroup name="playerLeftHandTarget" translation="0.773515 1.30161 0.727708" rotation="286.555 -86.6096 -280.497" nodeId="323"/>
-            <TransformGroup name="playerLeftFootTarget" translation="0.750327 0.7 0.95" nodeId="324"/>
-            <TransformGroup name="playerRightFootTarget" translation="0.347107 0.7 0.95" nodeId="325"/>
+          <TransformGroup name="characterTargets" nodeId="323">
+            <TransformGroup name="playerSkin" translation="0.446418 1.02137 0.422994" nodeId="324"/>
+            <TransformGroup name="playerLeftHandTarget" translation="0.773515 1.30161 0.727708" rotation="286.555 -86.6096 -280.497" nodeId="325"/>
+            <TransformGroup name="playerLeftFootTarget" translation="0.750327 0.7 0.95" nodeId="326"/>
+            <TransformGroup name="playerRightFootTarget" translation="0.347107 0.7 0.95" nodeId="327"/>
           </TransformGroup>
-          <TransformGroup name="passengerSeat" nodeId="326">
-            <TransformGroup name="passengerSeatPlayerSkin" translation="-0.491693 1.02137 0.422994" nodeId="327"/>
-            <TransformGroup name="passengerSeatPlayerLeftHand" translation="-0.332258 1.33097 0.81128" rotation="-162.621 -58.4265 161.359" nodeId="328"/>
-            <TransformGroup name="passengerSeatPlayerRightHand" translation="-0.76946 1.31684 0.734122" rotation="-50.7387 86.4814 -41.2732" nodeId="329"/>
-            <TransformGroup name="passengerSeatPlayerLeftFoot" translation="-0.233266 0.727891 0.95" nodeId="330"/>
-            <TransformGroup name="passengerSeatPlayerRightFoot" translation="-0.636486 0.727891 0.95" nodeId="331"/>
-            <Camera name="passengerSeatCamera" translation="-0.447 1.8 0.44" rotation="162 0 180" nodeId="332" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
-            <TransformGroup name="exítPointPassenger" translation="-1.68 0 0.725601" nodeId="333"/>
+          <TransformGroup name="passengerSeat" nodeId="328">
+            <TransformGroup name="passengerSeatPlayerSkin" translation="-0.491693 1.02137 0.422994" nodeId="329"/>
+            <TransformGroup name="passengerSeatPlayerLeftHand" translation="-0.332258 1.33097 0.81128" rotation="-162.621 -58.4265 161.359" nodeId="330"/>
+            <TransformGroup name="passengerSeatPlayerRightHand" translation="-0.76946 1.31684 0.734122" rotation="-50.7387 86.4814 -41.2732" nodeId="331"/>
+            <TransformGroup name="passengerSeatPlayerLeftFoot" translation="-0.233266 0.727891 0.95" nodeId="332"/>
+            <TransformGroup name="passengerSeatPlayerRightFoot" translation="-0.636486 0.727891 0.95" nodeId="333"/>
+            <Camera name="passengerSeatCamera" translation="-0.447 1.8 0.44" rotation="162 0 180" nodeId="334" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
+            <TransformGroup name="exítPointPassenger" translation="-1.68 0 0.725601" nodeId="335"/>
           </TransformGroup>
-          <TransformGroup name="mirrors" nodeId="334">
-            <Shape name="mirrorLeft" translation="0.951 1.51 0.7" rotation="-74.3872 27.3898 0" shapeId="26" clipDistance="100" nodeId="335" castsShadows="true" receiveShadows="true" materialIds="6"/>
-            <Shape name="mirrorRight" translation="-0.951 1.5 0.7" rotation="-82.4988 -37.3746 0" shapeId="27" clipDistance="100" nodeId="336" castsShadows="true" receiveShadows="true" materialIds="6"/>
-            <Shape name="mirrorInterior" translation="-1.7e-05 1.85102 1.0283" rotation="-94.4377 -17.5726 0" shapeId="28" clipDistance="160" nodeId="337" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          <TransformGroup name="mirrors" nodeId="336">
+            <Shape name="mirrorLeft" translation="0.951 1.51 0.7" rotation="-74.3872 27.3898 0" shapeId="26" clipDistance="100" nodeId="337" castsShadows="true" receiveShadows="true" materialIds="6"/>
+            <Shape name="mirrorRight" translation="-0.951 1.5 0.7" rotation="-82.4988 -37.3746 0" shapeId="27" clipDistance="100" nodeId="338" castsShadows="true" receiveShadows="true" materialIds="6"/>
+            <Shape name="mirrorInterior" translation="-1.7e-05 1.85102 1.0283" rotation="-94.4377 -17.5726 0" shapeId="28" clipDistance="160" nodeId="339" castsShadows="true" receiveShadows="true" materialIds="6"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="configurations" nodeId="338">
-          <Shape name="trailerAttacherBack" translation="0 0.57409 -2.37226" shapeId="29" nodeId="339" castsShadows="true" receiveShadows="true" materialIds="22">
-            <TransformGroup name="trailerAttacherJoint" translation="0 0.003068 -0.431119" rotation="0 90 0" nodeId="340"/>
-            <TransformGroup name="socket_electricBack" translation="0.126451 0.044806 -0.037644" nodeId="341"/>
-            <Shape name="colTrailerAttacher" translation="0 0.007108 -0.130137" shapeId="30" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="342" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <TransformGroup name="configurations" nodeId="340">
+          <Shape name="trailerAttacherBack" translation="0 0.57409 -2.37226" shapeId="29" nodeId="341" castsShadows="true" receiveShadows="true" materialIds="22">
+            <TransformGroup name="trailerAttacherJoint" translation="0 0.003068 -0.431119" rotation="0 90 0" nodeId="342"/>
+            <TransformGroup name="socket_electricBack" translation="0.126451 0.044806 -0.037644" nodeId="343"/>
+            <Shape name="colTrailerAttacher" translation="0 0.007108 -0.130137" shapeId="30" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="344" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
           </Shape>
-          <TransformGroup name="toolBox" translation="0 1.38045 -0.321851" clipDistance="300" nodeId="343">
-            <Shape name="colToolBox" translation="0 -0.120515 -0.000535" shapeId="31" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="344" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+          <TransformGroup name="toolBox" translation="0 1.38045 -0.321851" clipDistance="300" nodeId="345">
+            <Shape name="colToolBox" translation="0 -0.120515 -0.000535" shapeId="31" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="346" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="tensionBelts" nodeId="345">
-          <TransformGroup name="tensionBeltStart01" translation="0.798202 0.917352 -0.29" rotation="0 -90 0" nodeId="346">
-            <TransformGroup name="tensionBeltEnd01" translation="0 0 1.5964" nodeId="347"/>
+        <TransformGroup name="tensionBelts" nodeId="347">
+          <TransformGroup name="tensionBeltStart01" translation="0.798202 0.917352 -0.29" rotation="0 -90 0" nodeId="348">
+            <TransformGroup name="tensionBeltEnd01" translation="0 0 1.5964" nodeId="349"/>
           </TransformGroup>
-          <TransformGroup name="tensionBeltStart02" translation="0.798202 0.917352 -0.691024" rotation="0 -90 0" nodeId="348">
-            <TransformGroup name="tensionBeltEnd02" translation="0 0 1.5964" nodeId="349"/>
+          <TransformGroup name="tensionBeltStart02" translation="0.798202 0.917352 -0.691024" rotation="0 -90 0" nodeId="350">
+            <TransformGroup name="tensionBeltEnd02" translation="0 0 1.5964" nodeId="351"/>
           </TransformGroup>
-          <TransformGroup name="tensionBeltStart03" translation="0.57008 0.917352 -1.17925" rotation="0 -90 0" nodeId="350">
-            <TransformGroup name="tensionBeltEnd03" translation="0 0 1.14016" nodeId="351"/>
+          <TransformGroup name="tensionBeltStart03" translation="0.57008 0.917352 -1.17925" rotation="0 -90 0" nodeId="352">
+            <TransformGroup name="tensionBeltEnd03" translation="0 0 1.14016" nodeId="353"/>
           </TransformGroup>
-          <TransformGroup name="tensionBeltStart04" translation="0.57008 0.917352 -1.66575" rotation="0 -90 0" nodeId="352">
-            <TransformGroup name="tensionBeltEnd04" translation="0 0 1.14016" nodeId="353"/>
+          <TransformGroup name="tensionBeltStart04" translation="0.57008 0.917352 -1.66575" rotation="0 -90 0" nodeId="354">
+            <TransformGroup name="tensionBeltEnd04" translation="0 0 1.14016" nodeId="355"/>
           </TransformGroup>
-          <TransformGroup name="tensionBeltStart05" translation="0.798202 0.917352 -2.08904" rotation="0 -90 0" nodeId="354">
-            <TransformGroup name="tensionBeltEnd05" translation="0 0 1.5964" nodeId="355"/>
+          <TransformGroup name="tensionBeltStart05" translation="0.798202 0.917352 -2.08904" rotation="0 -90 0" nodeId="356">
+            <TransformGroup name="tensionBeltEnd05" translation="0 0 1.5964" nodeId="357"/>
           </TransformGroup>
-          <Shape name="beltActivationTrigger" translation="0 1.29789 -1.36792" shapeId="32" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="356" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-          <TransformGroup name="tensionBeltStart06" translation="0.798202 0.917352 -2.45673" rotation="0 -90 0" nodeId="450">
-            <TransformGroup name="tensionBeltEnd06" translation="0 0 1.5964" nodeId="451"/>
+          <Shape name="beltActivationTrigger" translation="0 1.29789 -1.36792" shapeId="32" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="358" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+          <TransformGroup name="tensionBeltStart06" translation="0.798202 0.917352 -2.45673" rotation="0 -90 0" nodeId="359">
+            <TransformGroup name="tensionBeltEnd06" translation="0 0 1.5964" nodeId="360"/>
+          </TransformGroup>
+          <TransformGroup name="tensionBeltStart08" translation="0.664841 2.04981 0.232283" rotation="0 -90 0" nodeId="384">
+            <TransformGroup name="tensionBeltEnd08" translation="0 0 1.332" nodeId="385"/>
+          </TransformGroup>
+          <TransformGroup name="tensionBeltStart09" translation="0.664841 2.04981 0.790544" rotation="0 -90 0" nodeId="386">
+            <TransformGroup name="tensionBeltEnd09" translation="0 0 1.332" nodeId="387"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="fillUnit" nodeId="357">
-          <Shape name="exactFillRootNodeFuel" translation="-0.655582 0.631287 0.307676" shapeId="33" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="358" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <TransformGroup name="fillUnit" nodeId="361">
+          <Shape name="exactFillRootNodeFuel" translation="-0.655582 0.631287 0.307676" shapeId="33" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="362" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
         </TransformGroup>
-        <TransformGroup name="visuals" nodeId="359">
-          <TransformGroup name="windows" nodeId="360">
-            <Shape name="window01" translation="0 1.74198 1.12277" shapeId="34" clipDistance="300" nodeId="361" castsShadows="true" receiveShadows="true" materialIds="31"/>
-            <Shape name="window03" translation="0 1.72556 0.089998" shapeId="35" clipDistance="300" nodeId="362" castsShadows="true" receiveShadows="true" materialIds="31"/>
-            <Shape name="windowsInterior" shapeId="36" clipDistance="300" nodeId="363" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+        <TransformGroup name="visuals" nodeId="363">
+          <TransformGroup name="windows" nodeId="364">
+            <Shape name="window01" translation="0 1.74198 1.12277" shapeId="34" clipDistance="300" nodeId="365" castsShadows="true" receiveShadows="true" materialIds="31"/>
+            <Shape name="window03" translation="0 1.72556 0.089998" shapeId="35" clipDistance="300" nodeId="366" castsShadows="true" receiveShadows="true" materialIds="31"/>
+            <Shape name="windowsInterior" shapeId="36" clipDistance="300" nodeId="367" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
           </TransformGroup>
-          <TransformGroup name="licensePlateFront" translation="0 0.810966 2.67423" rotation="10.6571 0 0" nodeId="364">
-            <TransformGroup name="licensePlateFront_decals" translation="0 0.023539 0.001221" rotation="-10.6571 0 0" clipDistance="300" nodeId="365"/>
+          <TransformGroup name="licensePlateFront" translation="0 0.810966 2.67423" rotation="10.6571 0 0" nodeId="368">
+            <TransformGroup name="licensePlateFront_decals" translation="0 0.023539 0.001221" rotation="-10.6571 0 0" clipDistance="300" nodeId="369"/>
           </TransformGroup>
-          <TransformGroup name="licensePlateBack" translation="0 0.793383 -2.50136" rotation="0 180 0" nodeId="366"/>
-          <Shape name="series200_decals" translation="0.005607 1.1098 0.051788" shapeId="37" clipDistance="300" nodeId="367" castsShadows="true" receiveShadows="true" skinBindNodeIds="367 167 185 220 242 246 268 278 285 289 315 318 365" materialIds="27,30,26,29"/>
-          <Shape name="series200_decals1" translation="0 1.13004 2.49113" shapeId="38" clipDistance="140" nodeId="368" castsShadows="true" receiveShadows="true" materialIds="27"/>
+          <TransformGroup name="licensePlateBack" translation="0 0.793383 -2.50136" rotation="0 180 0" nodeId="370"/>
+          <Shape name="series200_decals" translation="0.005607 1.1098 0.051788" shapeId="37" clipDistance="300" nodeId="371" castsShadows="true" receiveShadows="true" skinBindNodeIds="371 167 185 220 242 246 270 280 287 291 317 320 369" materialIds="27,30,26,29"/>
+          <Shape name="series200_decals1" translation="0 1.13004 2.49113" shapeId="38" clipDistance="140" nodeId="372" castsShadows="true" receiveShadows="true" materialIds="27"/>
         </TransformGroup>
-        <TransformGroup name="rootJoint" nodeId="369"/>
+        <TransformGroup name="rootJoint" nodeId="373"/>
       </Shape>
-      <TransformGroup name="collisions" nodeId="370">
-        <Shape name="colPart01" translation="0 1.20231 1.3293" shapeId="39" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="371" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-        <Shape name="colPart02" translation="0.003255 1.77619 0.688476" shapeId="3" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="372" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-        <Shape name="colPart03" translation="0.893979 1.20231 -1.29346" shapeId="40" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="373" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-        <Shape name="colPart04" translation="-0.893979 1.20231 -1.29346" shapeId="41" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="374" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-        <Shape name="colPart05" translation="0.690997 1.09825 -1.45741" shapeId="42" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="375" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-        <Shape name="colPart06" translation="-0.67684 1.09825 -1.45741" shapeId="42" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="376" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      <TransformGroup name="collisions" nodeId="374">
+        <Shape name="colPart01" translation="0 1.20231 1.3293" shapeId="39" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="375" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart02" translation="0.003255 1.77619 0.688476" shapeId="3" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="376" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart03" translation="0.893979 1.20231 -1.29346" shapeId="40" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="377" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart04" translation="-0.893979 1.20231 -1.29346" shapeId="41" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="378" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart05" translation="0.690997 1.09825 -1.45741" shapeId="42" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="379" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart06" translation="-0.67684 1.09825 -1.45741" shapeId="42" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="380" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
       </TransformGroup>
-      <TransformGroup name="skinnedMeshes" nodeId="377">
-        <Shape name="springs" shapeId="43" clipDistance="300" nodeId="378" castsShadows="true" receiveShadows="true" skinBindNodeIds="369 186 159 225" materialIds="8"/>
-        <Shape name="hoses" shapeId="44" clipDistance="300" nodeId="379" castsShadows="true" receiveShadows="true" skinBindNodeIds="186 225 369 168 174" materialIds="24"/>
+      <TransformGroup name="skinnedMeshes" nodeId="381">
+        <Shape name="springs" shapeId="43" clipDistance="300" nodeId="382" castsShadows="true" receiveShadows="true" skinBindNodeIds="373 186 159 225" materialIds="8"/>
+        <Shape name="hoses" shapeId="44" clipDistance="300" nodeId="383" castsShadows="true" receiveShadows="true" skinBindNodeIds="186 225 373 168 174" materialIds="24"/>
       </TransformGroup>
     </Shape>
   </Scene>
@@ -770,7 +776,7 @@
     <UserAttribute nodeId="225">
       <Attribute name="liw" type="boolean" value="false"/>
     </UserAttribute>
-    <UserAttribute nodeId="369">
+    <UserAttribute nodeId="373">
       <Attribute name="liw" type="boolean" value="false"/>
     </UserAttribute>
   </UserAttributes>

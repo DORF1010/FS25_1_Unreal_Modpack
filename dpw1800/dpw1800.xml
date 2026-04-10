@@ -374,14 +374,16 @@
         <tensionBeltsConfigurations>
             <tensionBeltsConfiguration>
                 <tensionBelts linkNode="tensionBelts" jointNode="dpw1800_main_component3" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0.1" defaultOffsetSide="0.1" defaultHeight="10" activationTrigger="beltActivationTrigger">
-                    <tensionBelt startNode="startPoint01" endNode="startPoint01End" offsetLeft="0.2" />
-                    <tensionBelt startNode="startPoint02" endNode="startPoint02End" />
-                    <tensionBelt startNode="startPoint03" endNode="startPoint03End" />
-                    <tensionBelt startNode="startPoint04" endNode="startPoint04End" />
-                    <tensionBelt startNode="startPoint05" endNode="startPoint05End" />
-                    <tensionBelt startNode="startPoint06" endNode="startPoint06End" />
-                    <tensionBelt startNode="startPoint07" endNode="startPoint07End" />
-                    <tensionBelt startNode="startPoint08" endNode="startPoint08End" offsetRight="0.2"/>
+                    <tensionBelt startNode="startPoint01" endNode="startPoint01End"/>
+                    <tensionBelt startNode="startPoint02" endNode="startPoint02End"/>
+                    <tensionBelt startNode="startPoint03" endNode="startPoint03End"/>
+                    <tensionBelt startNode="startPoint04" endNode="startPoint04End"/>
+                    <tensionBelt startNode="startPoint05" endNode="startPoint05End"/>
+                    <tensionBelt startNode="startPoint06" endNode="startPoint06End"/>
+                    <tensionBelt startNode="startPoint07" endNode="startPoint07End"/>
+                    <tensionBelt startNode="startPoint08" endNode="startPoint08End"/>
+                    <tensionBelt startNode="startPoint09" endNode="startPoint09End"/><!--end to end-->
+                    <tensionBelt startNode="startPoint10" endNode="startPoint10End"/><!--end to end-->
 
                     <sounds>
                         <addBelt template="beltOpen" />
@@ -504,7 +506,11 @@
         <i3dMapping id="startPoint07End" node="0>0|3|6|0" />
         <i3dMapping id="startPoint08" node="0>0|3|7" />
         <i3dMapping id="startPoint08End" node="0>0|3|7|0" />
-        <i3dMapping id="beltActivationTrigger" node="0>0|3|8" />
+        <i3dMapping id="startPoint09" node="0>0|3|8" />
+        <i3dMapping id="startPoint09End" node="0>0|3|8|0" />
+        <i3dMapping id="startPoint10" node="0>0|3|9" />
+        <i3dMapping id="startPoint10End" node="0>0|3|9|0" />
+        <i3dMapping id="beltActivationTrigger" node="0>0|3|10" />
         <i3dMapping id="componentJointFront" node="0>0|5" />
         <i3dMapping id="dpw1800_axis_component2" node="1>" />
         <i3dMapping id="componentJointDrawbar" node="1>0" />

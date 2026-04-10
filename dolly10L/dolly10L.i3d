@@ -427,7 +427,7 @@
             <TransformGroup name="WIAx2" translation="-3.5 -1.25 4.03055e-07" rotation="3.56654e-17 -90 -6.39152e-11" nodeId="106"/>
             <TransformGroup name="WIAx3" translation="-4.75 -1.19264 1.79135e-07" rotation="3.56654e-17 -90 -6.39152e-11" nodeId="107"/>
             <TransformGroup name="hookliftShort" translation="-3.5 1.4 -2.22045e-16" nodeId="108"/>
-            <TransformGroup name="hookliftLong" translation="-5 1.60559 -2.22045e-16" nodeId="109"/>
+            <TransformGroup name="hookliftLong" translation="-5 1.4 -2.22045e-16" nodeId="109"/>
             <TransformGroup name="u1450" translation="0.05 -0.3 1.33126e-22" nodeId="110"/>
             <TransformGroup name="u1450Crane" translation="-1.1 3.09652e-07 -3.34392e-07" rotation="1.2905e-12 -90 -1.72881e-05" nodeId="111"/>
           </TransformGroup>
@@ -554,17 +554,17 @@
             <Shape name="plastic" translation="0.00407072 0.982537 -1.53616" shapeId="30" nodeId="220" castsShadows="true" receiveShadows="true" materialIds="28"/>
             <Shape name="chromeConnector" translation="-0.0255167 1.07736 -1.54303" shapeId="31" nodeId="221" castsShadows="true" receiveShadows="true" materialIds="7"/>
           </TransformGroup>
-          <TransformGroup name="beaconlights" nodeId="227">
-            <TransformGroup name="beaconlight" translation="0.410047 1.01058 0.18265" rotation="90 -0 0" nodeId="229"/>
-            <TransformGroup name="beaconlight" translation="-0.400711 1.01583 -2.12088" rotation="-30 -0 0" nodeId="228"/>
+          <TransformGroup name="beaconlights" nodeId="222">
+            <TransformGroup name="beaconlight" translation="0.410047 1.01058 0.18265" rotation="90 -0 0" nodeId="223"/>
+            <TransformGroup name="beaconlight" translation="-0.400711 1.01583 -2.12088" rotation="-30 -0 0" nodeId="224"/>
           </TransformGroup>
         </TransformGroup>
       </Shape>
-      <TransformGroup name="skinnedMeshes" visibility="false" nodeId="222">
-        <Shape name="hoses" shapeId="32" clipDistance="100" nodeId="223" castsShadows="true" receiveShadows="true" materialIds="15"/>
+      <TransformGroup name="skinnedMeshes" visibility="false" nodeId="225">
+        <Shape name="hoses" shapeId="32" clipDistance="100" nodeId="226" castsShadows="true" receiveShadows="true" materialIds="15"/>
       </TransformGroup>
-      <TransformGroup name="other" nodeId="224">
-        <Shape name="dolly10L_vis" shapeId="33" visibility="false" nodeId="225" castsShadows="true" receiveShadows="true" materialIds="8,16,12,7,15,13,14,9"/>
+      <TransformGroup name="other" nodeId="227">
+        <Shape name="dolly10L_vis" shapeId="33" visibility="false" nodeId="228" castsShadows="true" receiveShadows="true" materialIds="8,16,12,7,15,13,14,9"/>
       </TransformGroup>
     </Shape>
   </Scene>
