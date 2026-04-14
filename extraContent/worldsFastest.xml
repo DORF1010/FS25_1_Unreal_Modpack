@@ -9,6 +9,7 @@
             <!--<set path="vehicle.storeData.image" value="extraContent/store_wft.png"/>-->
             <set path="vehicle.rimColorConfigurations#useDefaultColors"  value="true"/>
             <set path="vehicle.rimColorConfigurations#defaultColorIndex"  value="9"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(0)#materialTemplateName"  value="RIM_CONFIGURATION_CHROME"/>
             <set path="vehicle.base.sounds#volumeFactor"  value="0.6"/>
 			
 			<!--wheel configs-->

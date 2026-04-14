@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="106">
     <author>DORF1010</author>
-    <version>0.26.04.9</version>
+    <version>0.26.04.13</version>
     <title>
         <en>1 Unreal modpack</en>
     </title>
@@ -47,6 +47,7 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 		<storeItem xmlFilename="tga560/tga560.xml"/>
 		<storeItem xmlFilename="ns3030/ns3030.xml"/>
 		<storeItem xmlFilename="bigM450/bigM450.xml"/>
+		<storeItem xmlFilename="xt390/xt390.xml"/>
 		<storeItem xmlFilename="ms261/ms261.xml"/>
 		<storeItem xmlFilename="k307/k307.xml"/>
 		<storeItem xmlFilename="xml/eckoFlex.xml"/>

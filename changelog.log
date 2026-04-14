@@ -279,3 +279,14 @@ Apr 9, 2026
 Adjusted hook lift/IT runner attacher on dolly10L
 Added more tension belts to dpw1800
 Added more tension belts to series200
+
+Apr 12, 2026
+Added samasz xt390 mower, likely to changes into something else...
+	it is now xt390 implement arm for attaching extra tools in weird places
+	unihyd is suggested for proper use (available on modhub)
+
+Apr 13, 2026
+Added new store icon for dolly10L
+Added chrome rim color config to jcb wft
+Reworked color configs on vario1000, will require a trip to the workshop for a new paint job (more color options added)
+Added work width configs to bigM450

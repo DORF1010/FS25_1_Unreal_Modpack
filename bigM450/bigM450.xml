@@ -916,7 +916,7 @@
 
     <ai>
         <agent frontWheelNodes="wheelBackLeft wheelBackRight"/>
-        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
+        <areaMarkers leftNode="leftWorkAreaStart" rightNode="rightWorkAreaStart" backNode="aiMarkerBack"/>
         <sizeMarkers leftNode="aiSizeMarkerLeft" rightNode="aiSizeMarkerRight" backNode="aiSizeMarkerBack"/>
         <hasNoFullCoverageArea value="true"/>
         <collisionTrigger node="aiCollisionNode" width="10.5" height="4.2" length="8"/>
@@ -929,10 +929,22 @@
         <bendingNode minX="-2.15" maxX="1.9" minZ="-1.2" maxZ="1.1" yOffset="-0.2" node="bigm450_rightArm_component4"/>
     </foliageBending>
 
-    <designConfigurations title="$l10n_configuration_workWidth">
-        <designConfiguration name="10MPH / 17KPH">
-        </designConfiguration>
-    </designConfigurations>        
+	<designConfigurations title="$l10n_configuration_workWidth">
+		<designConfiguration name="$l10n_configuration_valueDefault">
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value20M">
+			<objectChange node="leftWorkAreaStart" translationActive= "10 0 -0.483"/>
+			<objectChange node="rightWorkAreaStart" translationActive="-10 0 -0.483"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value25M">
+			<objectChange node="leftWorkAreaStart" translationActive= "12.5 0 -0.483"/>
+			<objectChange node="rightWorkAreaStart" translationActive="-12.5 0 -0.483"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value50M">
+			<objectChange node="leftWorkAreaStart" translationActive= "25 0 -0.483"/>
+			<objectChange node="rightWorkAreaStart" translationActive="-25 0 -0.483"/>
+		</designConfiguration>
+	</designConfigurations>
 
     <baseColorConfigurations useDefaultColors="true">
         <material materialSlotName="KRONE_YELLOW1_02_mat"/>

@@ -2,7 +2,7 @@
 
 <i3D name="xt390.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.4"/>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
   </Asset>
 
   <Files>
@@ -43,7 +43,7 @@
 
 
   <Materials>
-    <Material name="clearGlass_glassClear01_mat" materialId="20" alphaBlending="true" customShaderId="5">
+    <Material name="clearGlass_glassClear01_mat" materialId="5" alphaBlending="true" customShaderId="5">
       <Texture fileId="35"/>
       <Normalmap fileId="36"/>
       <Glossmap fileId="37"/>
@@ -52,9 +52,9 @@
       <Custommap name="detailDiffuse" fileId="24"/>
       <CustomParameter name="alphaBlendingClipThreshold" value="0"/>
     </Material>
-    <Material name="lambert1" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1">
+    <Material name="lambert1" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
-    <Material name="xt390_calibratedPaint_01_mat" materialId="8" customShaderId="5">
+    <Material name="xt390_calibratedPaint_01_mat" materialId="7" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -66,7 +66,7 @@
       <CustomParameter name="clearCoatIntensity" value="0.1"/>
       <CustomParameter name="clearCoatSmoothness" value="0.2"/>
     </Material>
-    <Material name="xt390_calibratedPaint_SAMASZ_WHITE_01_mat" materialId="7" customShaderId="5">
+    <Material name="xt390_calibratedPaint_02_mat" materialId="8" customShaderId="5" customShaderVariation="windBend_vtxColor">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -78,7 +78,19 @@
       <CustomParameter name="clearCoatIntensity" value="0.1"/>
       <CustomParameter name="clearCoatSmoothness" value="0.2"/>
     </Material>
-    <Material name="xt390_chrome_mat" materialId="13" customShaderId="5">
+    <Material name="xt390_calibratedPaint_SAMASZ_WHITE_01_mat" materialId="9" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.5 0.5 0.5"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="xt390_chrome_mat" materialId="10" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -86,7 +98,7 @@
       <Custommap name="detailNormal" fileId="7"/>
       <Custommap name="detailDiffuse" fileId="24"/>
     </Material>
-    <Material name="xt390_metalPaintedBlack_mat" materialId="15" customShaderId="5">
+    <Material name="xt390_metalPaintedBlack_mat" materialId="11" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -104,7 +116,7 @@
       <Custommap name="detailDiffuse" fileId="22"/>
       <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
     </Material>
-    <Material name="xt390_reflectorRed_mat" materialId="10" customShaderId="5">
+    <Material name="xt390_reflectorRed_mat" materialId="13" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -115,7 +127,7 @@
       <CustomParameter name="clearCoatIntensity" value="0.25"/>
       <CustomParameter name="clearCoatSmoothness" value="1"/>
     </Material>
-    <Material name="xt390_reflectorWhite_mat" materialId="11" customShaderId="5">
+    <Material name="xt390_reflectorWhite_mat" materialId="14" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -126,7 +138,7 @@
       <CustomParameter name="clearCoatIntensity" value="0.25"/>
       <CustomParameter name="clearCoatSmoothness" value="1"/>
     </Material>
-    <Material name="xt390_rubberBlack_mat" materialId="9" customShaderId="5">
+    <Material name="xt390_rubberBlack_mat" materialId="15" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -135,7 +147,7 @@
       <Custommap name="detailDiffuse" fileId="18"/>
       <CustomParameter name="porosity" value="0.5"/>
     </Material>
-    <Material name="xt390_SAMASZ_GREEN_01_mat" materialId="6" customShaderId="5">
+    <Material name="xt390_SAMASZ_GREEN_01_mat" materialId="16" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -147,7 +159,19 @@
       <CustomParameter name="clearCoatIntensity" value="0.1"/>
       <CustomParameter name="clearCoatSmoothness" value="0.2"/>
     </Material>
-    <Material name="xt390_silverScratched_mat" materialId="14" customShaderId="5">
+    <Material name="xt390_SAMASZ_GREEN_02_mat" materialId="17" customShaderId="5" customShaderVariation="windBend_vtxColor">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.1202 0.3609 0.0904"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="xt390_silverScratched_mat" materialId="18" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -155,7 +179,7 @@
       <Custommap name="detailNormal" fileId="7"/>
       <Custommap name="detailDiffuse" fileId="26"/>
     </Material>
-    <Material name="xt390Decal_decal_alphaBlending_mat" materialId="21" alphaBlending="true" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+    <Material name="xt390Decal_decal_alphaBlending_mat" materialId="19" alphaBlending="true" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
       <Texture fileId="31"/>
       <Normalmap fileId="32"/>
       <Glossmap fileId="4"/>
@@ -163,7 +187,7 @@
       <Custommap name="detailNormal" fileId="7"/>
       <Custommap name="detailDiffuse" fileId="24"/>
     </Material>
-    <Material name="xt390Decal_decal_opaque_mat" materialId="17" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+    <Material name="xt390Decal_decal_opaque_mat" materialId="20" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
       <Texture fileId="31"/>
       <Normalmap fileId="32"/>
       <Glossmap fileId="4"/>
@@ -171,7 +195,16 @@
       <Custommap name="detailNormal" fileId="7"/>
       <Custommap name="detailDiffuse" fileId="24"/>
     </Material>
-    <Material name="xt390Decal_plasticPainted_BIGBUD_YELLOW1_mat" materialId="19" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+    <Material name="xt390Decal_decal_SAMASZ_GREEN_mat" materialId="21" alphaBlending="true" customShaderId="5" customShaderVariation="windBend_vtxColor_vmaskUV2">
+      <Texture fileId="31"/>
+      <Normalmap fileId="36"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="33"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="24"/>
+      <CustomParameter name="colorScale" value="0.1202 0.3609 0.0904"/>
+    </Material>
+    <Material name="xt390Decal_plasticPainted_BIGBUD_YELLOW1_mat" materialId="22" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
       <Texture fileId="31"/>
       <Normalmap fileId="32"/>
       <Glossmap fileId="4"/>
@@ -180,7 +213,7 @@
       <Custommap name="detailDiffuse" fileId="22"/>
       <CustomParameter name="colorScale" value="1 0.7612 0"/>
     </Material>
-    <Material name="xt390Decal_silverScratched_mat" materialId="18" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+    <Material name="xt390Decal_silverScratched_mat" materialId="23" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
       <Texture fileId="31"/>
       <Normalmap fileId="32"/>
       <Glossmap fileId="4"/>
@@ -188,7 +221,7 @@
       <Custommap name="detailNormal" fileId="7"/>
       <Custommap name="detailDiffuse" fileId="26"/>
     </Material>
-    <Material name="xt390Hoses_rubberBlackHoses_mat" materialId="16" customShaderId="5" customShaderVariation="vmaskUV2">
+    <Material name="xt390Hoses_rubberBlackHoses_mat" materialId="24" customShaderId="5" customShaderVariation="vmaskUV2">
       <Texture fileId="2"/>
       <Normalmap fileId="29"/>
       <Glossmap fileId="30"/>
@@ -205,8 +238,8 @@
   </Shapes>
 
   <Scene>
-    <Shape name="xt390_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="48" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
-      <Shape name="xt390_vis" shapeId="2" clipDistance="300" nodeId="49" castsShadows="true" receiveShadows="true" skinBindNodeIds="49 87 101 102 109 111 114 116 118 120 122 124 126 128 130 132 133 142 167 168 171 172 176 180 183 184 186 187" materialIds="15,6,7,9,10,11,12,13,14,7,8">
+    <Shape name="xt390_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="48" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6">
+      <Shape name="xt390_vis" shapeId="2" clipDistance="300" nodeId="49" castsShadows="true" receiveShadows="true" skinBindNodeIds="49 87 101 102 109 111 114 116 118 120 122 124 126 128 130 132 133 142 167 168 171 172 176 180 183 184 186 187" materialIds="11,16,9,15,13,14,12,10,18,9,7">
         <TransformGroup name="lights" nodeId="50">
           <TransformGroup name="sharedLights" nodeId="51">
             <ReferenceNode name="redRound05" translation="-1.17313 1.19084 -0.839161" rotation="-90 0 0" referenceId="27" nodeId="56"/>
@@ -231,7 +264,7 @@
             <TransformGroup name="ptoLocalStart" translation="-0.063594 0.635689 -0.317185" rotation="0 90 0" nodeId="86"/>
             <TransformGroup name="ptoHolder" translation="0.209999 0.985006 0.513748" clipDistance="300" nodeId="87"/>
           </TransformGroup>
-          <Shape name="connectionHoses" shapeId="3" nodeId="88" castsShadows="true" receiveShadows="true" skinBindNodeIds="90 93 96 99" materialIds="16">
+          <Shape name="connectionHoses" shapeId="3" nodeId="88" castsShadows="true" receiveShadows="true" skinBindNodeIds="90 93 96 99" materialIds="24">
             <TransformGroup name="electric" translation="0.016336 1.4115 0.514856" rotation="0 0 45" nodeId="89">
               <TransformGroup name="electric_detached" translation="-0.030595 -0.297436 0.072524" rotation="0 0 -45" clipDistance="300" nodeId="90">
                 <TransformGroup name="electric_connector" translation="0.194866 -0.091626 -0.060072" rotation="90 0 0" nodeId="91"/>
@@ -255,82 +288,83 @@
             <TransformGroup name="hydraulicIn01_cover" translation="0.056893 1.24064 0.47412" clipDistance="300" nodeId="101"/>
             <TransformGroup name="hydraulicOut01_cover" translation="0.056156 1.21623 0.424178" clipDistance="300" nodeId="102"/>
           </Shape>
+          <TransformGroup name="left" translation="0.607879 0.986809 0.0642382" rotation="2.6282e-16 45 2.02268e-09" nodeId="222"/>
         </TransformGroup>
         <TransformGroup name="movingParts" nodeId="103">
           <TransformGroup name="componentJointMowerZRot" translation="-1.09027 0.830742 0.158222" nodeId="104">
-            <TransformGroup name="componentJointMower" translation="-1.78564 -0.174876 -0.413633" rotation="8.66999e-06 0 -1.49397e-05" nodeId="105"/>
-            <Shape name="colPart03" translation="0.188356 -0.102295 -0.000288" shapeId="4" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="106" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-            <Shape name="colPart04" translation="-1.05647 0.008882 -0.223859" shapeId="5" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="107" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+            <TransformGroup name="componentJointMower" translation="-1.78564 -0.174876 -0.413633" nodeId="105"/>
+            <Shape name="colPart03" translation="0.188356 -0.102295 -0.000288" shapeId="4" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="106" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+            <Shape name="colPart04" translation="-1.05647 0.008882 -0.223859" shapeId="5" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="107" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
           </TransformGroup>
           <TransformGroup name="armMowerRefFrame" translation="-1.0903 0.830706 0.16" rotation="-45 -90 0" nodeId="108">
             <TransformGroup name="armMower" rotation="50.5911 0 0" clipDistance="300" nodeId="109">
               <TransformGroup name="mowerRefFrame" translation="-0.415 -6e-06 1.79414" rotation="-5.59111 0 0" nodeId="110">
-                <TransformGroup name="mower" translation="1.30006e-08 0 0" rotation="-1.33465e-20 4.07111e-13 2.42657e-20" visibility="false" clipDistance="300" nodeId="111">
+                <TransformGroup name="mower" clipDistance="300" nodeId="111">
                   <TransformGroup name="animationNodes" visibility="false" nodeId="112">
-                    <TransformGroup name="cutterDrum01Rot" translation="0.088963 -0.603149 -1.52062" rotation="0 90 0" visibility="false" nodeId="113">
-                      <TransformGroup name="cutterDrum01" visibility="false" clipDistance="300" nodeId="114"/>
+                    <TransformGroup name="cutterDrum01Rot" translation="0.088963 -0.603149 -1.52062" rotation="0 90 0" nodeId="113">
+                      <TransformGroup name="cutterDrum01" clipDistance="300" nodeId="114"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum02Rot" translation="0.088963 -0.603149 -1.09737" rotation="0 90 0" visibility="false" nodeId="115">
-                      <TransformGroup name="cutterDrum02" visibility="false" clipDistance="300" nodeId="116"/>
+                    <TransformGroup name="cutterDrum02Rot" translation="0.088963 -0.603149 -1.09737" rotation="0 90 0" nodeId="115">
+                      <TransformGroup name="cutterDrum02" clipDistance="300" nodeId="116"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum03Rot" translation="0.08555 -0.603149 -0.677715" rotation="0 90 0" visibility="false" nodeId="117">
-                      <TransformGroup name="cutterDrum03" visibility="false" clipDistance="300" nodeId="118"/>
+                    <TransformGroup name="cutterDrum03Rot" translation="0.08555 -0.603149 -0.677715" rotation="0 90 0" nodeId="117">
+                      <TransformGroup name="cutterDrum03" clipDistance="300" nodeId="118"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum04Rot" translation="0.08555 -0.603149 -0.256838" visibility="false" nodeId="119">
-                      <TransformGroup name="cutterDrum04" visibility="false" clipDistance="300" nodeId="120"/>
+                    <TransformGroup name="cutterDrum04Rot" translation="0.08555 -0.603149 -0.256838" nodeId="119">
+                      <TransformGroup name="cutterDrum04" clipDistance="300" nodeId="120"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum05Rot" translation="0.087952 -0.603149 0.161997" rotation="0 90 0" visibility="false" nodeId="121">
-                      <TransformGroup name="cutterDrum05" visibility="false" clipDistance="300" nodeId="122"/>
+                    <TransformGroup name="cutterDrum05Rot" translation="0.087952 -0.603149 0.161997" rotation="0 90 0" nodeId="121">
+                      <TransformGroup name="cutterDrum05" clipDistance="300" nodeId="122"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum06Rot" translation="0.088963 -0.603334 0.57823" rotation="0 90 0" visibility="false" nodeId="123">
-                      <TransformGroup name="cutterDrum06" visibility="false" clipDistance="300" nodeId="124"/>
+                    <TransformGroup name="cutterDrum06Rot" translation="0.088963 -0.603334 0.57823" rotation="0 90 0" nodeId="123">
+                      <TransformGroup name="cutterDrum06" clipDistance="300" nodeId="124"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum07Rot" translation="0.087951 -0.554482 1.00035" rotation="0 90 0" visibility="false" nodeId="125">
-                      <TransformGroup name="cutterDrum07" visibility="false" clipDistance="300" nodeId="126"/>
+                    <TransformGroup name="cutterDrum07Rot" translation="0.087951 -0.554482 1.00035" rotation="0 90 0" nodeId="125">
+                      <TransformGroup name="cutterDrum07" clipDistance="300" nodeId="126"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum08Rot" translation="0.088963 -0.603334 1.42054" rotation="0 90 0" visibility="false" nodeId="127">
-                      <TransformGroup name="cutterDrum08" visibility="false" clipDistance="300" nodeId="128"/>
+                    <TransformGroup name="cutterDrum08Rot" translation="0.088963 -0.603334 1.42054" rotation="0 90 0" nodeId="127">
+                      <TransformGroup name="cutterDrum08" clipDistance="300" nodeId="128"/>
                     </TransformGroup>
-                    <TransformGroup name="cutterDrum09Rot" translation="0.088963 -0.476582 1.83713" rotation="0 90 0" visibility="false" nodeId="129">
-                      <TransformGroup name="cutterDrum09" visibility="false" clipDistance="300" nodeId="130"/>
+                    <TransformGroup name="cutterDrum09Rot" translation="0.088963 -0.476582 1.83713" rotation="0 90 0" nodeId="129">
+                      <TransformGroup name="cutterDrum09" clipDistance="300" nodeId="130"/>
                     </TransformGroup>
                   </TransformGroup>
-                  <TransformGroup name="mowerFlapRot" translation="0.153226 -0.357712 2.1239" rotation="0 90 0" visibility="false" nodeId="131">
-                    <TransformGroup name="mowerFlap" translation="0.187852 0.223231 -8.5e-05" visibility="false" clipDistance="300" nodeId="132">
-                      <TransformGroup name="mowerFlapBolt" translation="-0.05341 0.048721 0.001544" visibility="false" clipDistance="300" nodeId="133">
-                        <TransformGroup name="xt390_decals" translation="0 0 0.001691" visibility="false" clipDistance="30" nodeId="134"/>
+                  <TransformGroup name="mowerFlapRot" translation="0.153226 -0.357712 2.1239" rotation="0 90 0" nodeId="131">
+                    <TransformGroup name="mowerFlap" translation="0.187852 0.223231 -8.5e-05" clipDistance="300" nodeId="132">
+                      <TransformGroup name="mowerFlapBolt" translation="-0.05341 0.048721 0.001544" clipDistance="300" nodeId="133">
+                        <TransformGroup name="xt390_decals" translation="0 0 0.001691" clipDistance="30" nodeId="134"/>
                       </TransformGroup>
-                      <TransformGroup name="xt390_decals" translation="-0.338291 -0.00265 0.003741" visibility="false" clipDistance="30" nodeId="135"/>
-                      <Shape name="xt390_decals1" translation="-0.196935 -0.008973 0.145409" shapeId="6" visibility="false" clipDistance="30" nodeId="136" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="21"/>
-                      <TransformGroup name="mowerFlap_joint" translation="-0.004648 0.008419 -7.9e-05" visibility="false" nodeId="137"/>
-                      <TransformGroup name="mowerAnimJoint06" translation="-0.077439 -0.101882 0.588902" rotation="0 -39.4894 0" visibility="false" nodeId="138"/>
-                      <TransformGroup name="mowerAnimJoint07" translation="-0.384404 -0.105373 0.101938" visibility="false" nodeId="139"/>
-                      <TransformGroup name="mowerAnimJoint08" translation="-0.077634 -0.101377 -0.595181" rotation="0 -135.683 0" visibility="false" nodeId="140"/>
+                      <TransformGroup name="xt390_decals" translation="-0.338291 -0.00265 0.003741" clipDistance="30" nodeId="135"/>
+                      <Shape name="xt390_decals1" translation="-0.196935 -0.008973 0.145409" shapeId="6" clipDistance="30" nodeId="136" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="19"/>
+                      <TransformGroup name="mowerFlap_joint" translation="-0.004648 0.008419 -7.9e-05" nodeId="137"/>
+                      <TransformGroup name="mowerAnimJoint06" translation="-0.077439 -0.101882 0.588902" rotation="0 -39.4894 0" nodeId="138"/>
+                      <TransformGroup name="mowerAnimJoint07" translation="-0.384404 -0.105373 0.101938" nodeId="139"/>
+                      <TransformGroup name="mowerAnimJoint08" translation="-0.077634 -0.101377 -0.595181" rotation="0 -135.683 0" nodeId="140"/>
                     </TransformGroup>
                   </TransformGroup>
-                  <TransformGroup name="mowerWheelRot" translation="-0.497297 -0.439119 1.65505" rotation="6.29726 54.7925 8.69505" visibility="false" nodeId="141">
-                    <TransformGroup name="mowerWheel" visibility="false" clipDistance="300" nodeId="142">
-                      <TransformGroup name="xt390_decals" translation="0.008015 -0.000567 0.001247" rotation="1.00327 34.964 -4.42571" visibility="false" clipDistance="30" nodeId="143"/>
+                  <TransformGroup name="mowerWheelRot" translation="-0.497297 -0.439119 1.65505" rotation="6.29726 54.7925 8.69505" nodeId="141">
+                    <TransformGroup name="mowerWheel" clipDistance="300" nodeId="142">
+                      <TransformGroup name="xt390_decals" translation="0.008015 -0.000567 0.001247" rotation="1.00327 34.964 -4.42571" clipDistance="30" nodeId="143"/>
                     </TransformGroup>
                   </TransformGroup>
-                  <TransformGroup name="effects" rotation="0 90 0" visibility="false" nodeId="144">
-                    <Shape name="smokeEmitter" translation="-0.154663 -0.647034 0.013153" shapeId="7" visibility="false" clipDistance="300" nodeId="145" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-                    <TransformGroup name="mowerEffectNode" translation="-0.343695 -0.759257 -0.064389" visibility="false" nodeId="146"/>
+                  <TransformGroup name="effects" rotation="0 90 0" nodeId="144">
+                    <Shape name="smokeEmitter" translation="-0.154663 -0.647034 0.013153" shapeId="7" clipDistance="300" nodeId="145" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+                    <TransformGroup name="mowerEffectNode" translation="-0.343695 -0.759257 -0.064389" nodeId="146"/>
                   </TransformGroup>
                   <ReferenceNode name="sideMarker06White" translation="0.792097 -0.218286 -1.33367" rotation="77.6421 90 0" referenceId="34" referenceRuntimeLoaded="false" nodeId="152"/>
-                  <TransformGroup name="ptoLocalEnd" translation="-0.297022 -0.294379 -1.29906" rotation="0 180 0" visibility="false" nodeId="153"/>
-                  <TransformGroup name="xt390_decals" translation="0.063964 -0.329106 0.048672" rotation="0 90 0" visibility="false" clipDistance="30" nodeId="154"/>
-                  <TransformGroup name="mower_joint" visibility="false" nodeId="155"/>
-                  <TransformGroup name="mowerAnimJoint01" translation="-0.239585 -0.238175 -1.58762" visibility="false" nodeId="156"/>
-                  <TransformGroup name="mowerAnimJoint02" translation="-0.47248 -0.643566 1.06301" visibility="false" nodeId="157"/>
-                  <TransformGroup name="mowerAnimJoint03" translation="0.775919 -0.643566 1.06301" visibility="false" nodeId="158"/>
-                  <TransformGroup name="mowerAnimJoint04" translation="0.048488 -0.653108 -2.02508" visibility="false" nodeId="159"/>
-                  <TransformGroup name="mowerAnimJoint05" translation="-0.509447 -0.506417 1.92656" rotation="0 17.0219 0" visibility="false" nodeId="160"/>
+                  <TransformGroup name="ptoLocalEnd" translation="-0.297022 -0.294379 -1.29906" rotation="0 180 0" nodeId="153"/>
+                  <TransformGroup name="xt390_decals" translation="0.063964 -0.329106 0.048672" rotation="0 90 0" clipDistance="30" nodeId="154"/>
+                  <TransformGroup name="mower_joint" nodeId="155"/>
+                  <TransformGroup name="mowerAnimJoint01" translation="-0.239585 -0.238175 -1.58762" nodeId="156"/>
+                  <TransformGroup name="mowerAnimJoint02" translation="-0.47248 -0.643566 1.06301" nodeId="157"/>
+                  <TransformGroup name="mowerAnimJoint03" translation="0.775919 -0.643566 1.06301" nodeId="158"/>
+                  <TransformGroup name="mowerAnimJoint04" translation="0.048488 -0.653108 -2.02508" nodeId="159"/>
+                  <TransformGroup name="mowerAnimJoint05" translation="-0.509447 -0.506417 1.92656" rotation="0 17.0219 0" nodeId="160"/>
                 </TransformGroup>
               </TransformGroup>
               <TransformGroup name="visuals" nodeId="161">
                 <TransformGroup name="xt390_decals" translation="-0.330427 0.227618 1.30554" rotation="-90 84.4089 -90" clipDistance="30" nodeId="162"/>
-                <Shape name="xt390_decals1" translation="-0.218716 0.136112 0.949597" rotation="-90 84.4089 -90" shapeId="8" visibility="false" clipDistance="30" nodeId="163" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="21"/>
+                <Shape name="xt390_decals1" translation="-0.218716 0.136112 0.949597" rotation="-90 84.4089 -90" shapeId="8" clipDistance="30" nodeId="163" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="19"/>
               </TransformGroup>
               <TransformGroup name="armMowerHydraulic01Ref" translation="-0.0635 -0.160645 -0.210148" rotation="-17.9432 0 0" nodeId="164"/>
               <TransformGroup name="armMowerHydraulic02Ref" translation="0.06 -0.163311 -0.214811" rotation="26.0027 0 0" nodeId="165"/>
@@ -351,13 +385,13 @@
           <TransformGroup name="support" nodeId="174">
             <TransformGroup name="supportArm01Rot" translation="0.032758 0.417973 0.30972" nodeId="175">
               <TransformGroup name="supportArm01" clipDistance="300" nodeId="176">
-                <Shape name="supportCol01" translation="0.687873 0.003373 -0.044225" shapeId="9" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="177" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-                <Shape name="supportCol02" translation="-0.687873 0.003373 0.044225" shapeId="10" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="178" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+                <Shape name="supportCol01" translation="0.687873 0.003373 -0.044225" shapeId="9" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="177" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+                <Shape name="supportCol02" translation="-0.687873 0.003373 0.044225" shapeId="10" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="178" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
               </TransformGroup>
             </TransformGroup>
             <TransformGroup name="supportArm02Rot" translation="0.392023 0.429187 -0.30653" rotation="-65.0309 0.113271 0.107812" nodeId="179">
               <TransformGroup name="supportArm02" clipDistance="300" nodeId="180">
-                <Shape name="supportCol03" translation="-0.556866 0.001296 -0.008097" rotation="65.031 0.049921 -0.148194" shapeId="11" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="181" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+                <Shape name="supportCol03" translation="-0.556866 0.001296 -0.008097" rotation="65.031 0.049921 -0.148194" shapeId="11" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="181" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
               </TransformGroup>
             </TransformGroup>
             <TransformGroup name="supportArm03Rot" translation="-0.655747 0.429422 -0.275891" rotation="-65.8316 24.3562 -1.02055" nodeId="182">
@@ -371,21 +405,23 @@
           <TransformGroup name="armMowerBoltUnlocked" translation="-0.095863 1.20347 0.012173" clipDistance="300" nodeId="187"/>
         </TransformGroup>
         <TransformGroup name="visuals" nodeId="188">
-          <Shape name="xt390_decals" translation="-0.185202 0.882917 0.048814" shapeId="12" clipDistance="30" nodeId="189" castsShadows="false" receiveShadows="true" decalLayer="1" skinBindNodeIds="189 134 135 143 154 162 185" materialIds="17,18,19"/>
-          <Shape name="xt390_decals1" translation="0.214546 0.957555 0.057105" shapeId="13" clipDistance="30" nodeId="190" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="21"/>
-          <Shape name="xt390_glass" translation="-0.193897 1.23056 0.174748" shapeId="14" clipDistance="60" nodeId="191" castsShadows="true" receiveShadows="true" materialIds="20"/>
+          <Shape name="xt390_decals" translation="-0.185202 0.882917 0.048814" shapeId="12" clipDistance="30" nodeId="189" castsShadows="false" receiveShadows="true" decalLayer="1" skinBindNodeIds="189 134 135 143 154 162 185" materialIds="20,23,22"/>
+          <Shape name="xt390_decals1" translation="0.214546 0.957555 0.057105" shapeId="13" clipDistance="30" nodeId="190" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="19"/>
+          <Shape name="xt390_glass" translation="-0.193897 1.23056 0.174748" shapeId="14" clipDistance="60" nodeId="191" castsShadows="true" receiveShadows="true" materialIds="5"/>
         </TransformGroup>
-        <TransformGroup name="root_joint" visibility="false" nodeId="192"/>
+        <TransformGroup name="root_joint" nodeId="192"/>
       </Shape>
       <TransformGroup name="skinnedMeshes" nodeId="193">
-        <Shape name="hoses" shapeId="15" clipDistance="300" nodeId="194" castsShadows="true" receiveShadows="true" skinBindNodeIds="192 169 173" materialIds="16"/>
+        <Shape name="hoses" shapeId="15" clipDistance="300" nodeId="194" castsShadows="true" receiveShadows="true" skinBindNodeIds="192 169 173" materialIds="24"/>
+        <Shape name="mowerCloth" shapeId="16" visibility="false" clipDistance="300" nodeId="195" castsShadows="true" receiveShadows="true" skinBindNodeIds="192 155 156 157 158 159 137 140 139 138 160" materialIds="8,17"/>
+        <Shape name="mowerCloth_decals" shapeId="17" visibility="false" clipDistance="80" nodeId="196" castsShadows="false" receiveShadows="true" decalLayer="1" skinBindNodeIds="155 156 159 158 157 160 140 139 137 138" materialIds="21"/>
       </TransformGroup>
       <TransformGroup name="colPart" nodeId="197">
-        <Shape name="colPart05" translation="-0.505794 1.03914 -0.511705" shapeId="16" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="198" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
-        <Shape name="colPart06" translation="-0.96163 1.1609 -0.822495" shapeId="17" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="199" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart05" translation="-0.505794 1.03914 -0.511705" shapeId="18" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="198" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="colPart06" translation="-0.96163 1.1609 -0.822495" shapeId="19" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="199" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
       </TransformGroup>
     </Shape>
-    <Shape name="xt390_mower_component2" translation="-3.16036 0.293511 -0.080029" shapeId="18" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="200" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
+    <Shape name="xt390_mower_component2" translation="-3.16036 0.293511 -0.080029" shapeId="20" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="200" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6">
       <TransformGroup name="workAreas" nodeId="201">
         <TransformGroup name="workAreaStart" translation="2.06036 -0.293511 0.125686" nodeId="202"/>
         <TransformGroup name="workAreaWidth" translation="-1.83964 -0.293511 0.125119" nodeId="203"/>
@@ -396,17 +432,21 @@
         <TransformGroup name="groundReferenceNode" translation="0.125674 -0.283267 -0.183134" nodeId="208"/>
       </TransformGroup>
       <TransformGroup name="ai" nodeId="209">
-        <TransformGroup name="aiMarkerLeft" translation="2.06036 -0.293511 0.125686" nodeId="210"/>
+        <TransformGroup name="aiMarkerLeft" translation="-1.4682 -0.293511 0.125686" nodeId="210"/>
         <TransformGroup name="aiMarkerRight" translation="-1.83964 -0.293511 0.125119" nodeId="211"/>
-        <TransformGroup name="aiMarkerBack" translation="0.125358 -0.293511 -0.4" nodeId="212"/>
+        <TransformGroup name="aiMarkerBack" translation="-1.71333 -0.293511 -0.4" nodeId="212"/>
         <TransformGroup name="aiCollisionNode" translation="0.125674 -0.283267 0.630921" nodeId="213"/>
       </TransformGroup>
       <TransformGroup name="mowerFlapPhys" translation="-1.65624 0.236328 -0.021909" nodeId="214">
-        <Shape name="colPart02" translation="-0.227185 -0.018679 0.001349" shapeId="19" visibility="false" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="215" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart02" translation="-0.227185 -0.018679 0.001349" shapeId="21" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="215" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
       </TransformGroup>
       <TransformGroup name="armMowerRef" translation="0.284458 0.362395 0.240029" rotation="5.59111 -90 0" nodeId="216"/>
       <TransformGroup name="mowerRef" translation="-9.71554 0.362389 -0.174971" rotation="0 -90 0" nodeId="217"/>
-      <Shape name="colPart01" translation="1.7262 0.213722 -0.620625" shapeId="20" visibility="false" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="218" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      <Shape name="colPart01" translation="1.7262 0.213722 -0.620625" scale="0.1 1 1" shapeId="22" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="218" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+      <TransformGroup name="attacherJoints" translation="3.16036 -0.293511 0.080029" nodeId="220">
+        <TransformGroup name="backRight" translation="-4.6 0.25 -0.5" rotation="0 90 0" nodeId="221"/>
+        <TransformGroup name="frontRight" translation="-4.6 0.25 0.25" rotation="0 -90 0" nodeId="280"/>
+      </TransformGroup>
     </Shape>
   </Scene>
 
