@@ -91,7 +91,7 @@
 
     <wheels>
         <wheelConfigurations>
-            <wheelConfiguration isSelectable="true" name="$l10n_configuration_valueNo" brand="NONE">
+            <wheelConfiguration isSelectable="true" name="$l10n_configuration_valueNo" brand="MACDON">
                 <wheels hasSurfaceSounds="false" autoRotateBackSpeed="2.0">
                     <wheel>
                         <physics restLoad="0.5" repr="wheelLeft01Phy" forcePointRatio="0.15" radius="0.16" width="0.2" initialCompression="30" suspTravel="0.05" spring="12" damper="10" frictionScale="0.5" yOffset="0.02"/>
@@ -201,6 +201,12 @@
                 <heightNode node="heightNode" />
                 <distanceToGround lower="0.9" upper="2"/>
                 <objectChange node="ptoArm" rotationActive="45 0 0" rotationInactive="0 0 0"/>
+            </inputAttacherJoint>
+            <inputAttacherJoint node="attacherJoint" jointType="cutter" lowerRotLimitScale="0 0 0">
+                <heightNode node="heightNode" />
+                <distanceToGround lower="0.9" upper="2"/>
+                <objectChange node="ptoArm" rotationActive="45 0 0" rotationInactive="0 0 0"/>
+				<subtype name="nexcoHeader" showWarning="false"/>
             </inputAttacherJoint>
         </inputAttacherJoints>
 

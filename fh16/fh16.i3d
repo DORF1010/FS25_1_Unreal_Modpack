@@ -1237,7 +1237,7 @@
         </TransformGroup>
         <TransformGroup name="cameras" nodeId="390">
           <TransformGroup name="outdoorCameraTarget" translation="0 2.26 1.44" rotation="-24 180 0" nodeId="391">
-            <Camera name="outdoorCamera" translation="-8.71548 2.48423 -2.15017" rotation="87.9218 -65.3902 -103.481" nodeId="392" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+            <Camera name="outdoorCamera" translation="-5.72512 0.403422 0.677444" rotation="83.0269 -65.8594 -96.3479" nodeId="392" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
           </TransformGroup>
           <Camera name="indoorCamera" translation="0.7045 3.0836 3.25339" rotation="-18 180 0" nodeId="393" fov="70" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
           <Camera name="indoorCameraPassenger" translation="-0.705 3.0836 3.25339" rotation="-18 180 0" nodeId="394" fov="70" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
@@ -1634,6 +1634,7 @@
           <TransformGroup name="trailerAttacherJoint" rotation="0 90 0" nodeId="738"/>
           <TransformGroup name="tlxFrontBumper" translation="-1.09159e-07 0.97251 4.75449" rotation="4.1621e-12 -90 4.78953e-08" nodeId="739"/>
           <TransformGroup name="u1450Crane" translation="0 1.40298 1.50272" nodeId="740"/>
+          <TransformGroup name="RMCSemiBed" translation="0 1.25 0.0747964" nodeId="1058"/>
         </TransformGroup>
         <TransformGroup name="movingParts" nodeId="741">
           <TransformGroup name="axleFrontFrameRefFrame" translation="0 0.68 3.977" rotation="172.426 0 180" nodeId="742">

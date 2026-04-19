@@ -20,8 +20,8 @@ Added color and decal config to frontloader bucket
 Added Changelog file to zip folder
 
 Dec 28, 2025
-Added CLAAS Lexion tracks configs to CR11 combine
-Other minor translation/naming adjustments to CR11
+Added CLAAS Lexion tracks configs to cr11 combine
+Other minor translation/naming adjustments to cr11
 Fixed errors that prevented snowblower from being purchasable
 Minor work area adjustments to tornado 252
 Fixed errors that disabled decal config for frontloader bucket
@@ -293,3 +293,9 @@ Added work width configs to bigM450
 
 Apr 17, 2026
 Updated modDesc version to 107
+
+Apr 18, 2026
+Fixed camouflage color selection bug on cr11
+Added NEXAT NEXCO header attacher to fd250
+Added Roughneck Modding Crew International workstar bed attacher to fh16
+Fixed vario1000 crawler configs only being front 'wheel' drive

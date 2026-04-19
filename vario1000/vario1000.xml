@@ -400,7 +400,7 @@
             </wheelConfiguration>-->
 			
             <wheelConfiguration name="$l10n_configuration_valueCrawler" price="0" saveId="CRAWLER">
-                <wheels autoRotateBackSpeed="2.1">
+                <wheels autoRotateBackSpeed="2.1" ackermannSteeringIndex="5" differentialIndex="2">
                     <wheel dimensions="650_65R38" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" rotSpeed="-1" restLoad="5.8" repr="frontLeftAxis"  driveNode="frontLeftWheel"  forcePointRatio="0.35" frictionScale="4" initialCompression="40" suspTravel="0.15" spring="90" damper="70" yOffset="0.06"/>
                     </wheel>
@@ -433,7 +433,7 @@
                 </crawlers>
             </wheelConfiguration>
             <wheelConfiguration name="Fendt" brand="CRAWLER" displayBrand="FENDT" saveId="FENDT_CRAWLER">
-                <wheels autoRotateBackSpeed="2.0" ackermannSteeringIndex="5">
+                <wheels autoRotateBackSpeed="2.0" ackermannSteeringIndex="5" differentialIndex="2">
                     <wheel hasParticles="true" hasTireTracks="true">
                         <physics rotSpeed="1" restLoad="2.3" repr="0>0|0|0|0|0|1"   radius="0.37" width="0.610" mass="0.5" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="68" damper="40" frictionScale="1.6" tireType="crawler" supportsWheelSink="false" showSteeringAngle="true"/>
                         <tire tireTrackAtlasIndex="7"/>
@@ -485,7 +485,7 @@
             </wheelConfiguration>
 			
             <wheelConfiguration name="Agrifac" price="0" brand="CRAWLER" saveId="AGRIFAC_CRAWLER" displayBrand="AGRIFAC">
-                <wheels autoRotateBackSpeed="2.1" ackermannSteeringIndex="5">
+                <wheels autoRotateBackSpeed="2.1" ackermannSteeringIndex="5" differentialIndex="2">
                     <wheel hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" rotSpeed="1"  restLoad="3.8" repr="0>0|0|0|0|0|1"   forcePointRatio="0.25" radius="0.4" width="0.6" mass="0.4" frictionScale="4" tireType="crawler" initialCompression="20" suspTravel="0.1" spring="170" damper="70" brakeFactor="0.35" yOffset="0.005" supportsWheelSink="false"/>
                         <tire tireTrackAtlasIndex="7"/>
@@ -551,7 +551,7 @@
 				
             </wheelConfiguration>
 			<wheelConfiguration name="John Deere" brand="CRAWLER" displayBrand="JOHNDEERE" saveId="JD_CRAWLER">
-                <wheels autoRotateBackSpeed="2.0" ackermannSteeringIndex="5">
+                <wheels autoRotateBackSpeed="2.0" ackermannSteeringIndex="5" differentialIndex="2">
                     <wheel hasParticles="true" hasTireTracks="true">
                         <physics rotSpeed="1" restLoad="2.3" repr="0>0|0|0|0|0|1"   radius="0.37" width="0.610" mass="0.5" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="68" damper="40" frictionScale="1.6" tireType="crawler" supportsWheelSink="false" showSteeringAngle="true"/>
                         <tire tireTrackAtlasIndex="7"/>
@@ -603,7 +603,7 @@
             </wheelConfiguration>
 			
 			<wheelConfiguration name="CaseIH" brand="CRAWLER" displayBrand="CASEIH" saveId="CASEIH_CRAWLER">
-                <wheels autoRotateBackSpeed="2.0" ackermannSteeringIndex="5">
+                <wheels autoRotateBackSpeed="2.0" ackermannSteeringIndex="5" differentialIndex="2">
                     <wheel hasParticles="true" hasTireTracks="true">
                         <physics rotSpeed="1" restLoad="2.3" repr="0>0|0|0|0|0|1"   radius="0.45" width="0.610" mass="0.5" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="68" damper="40" frictionScale="4" tireType="crawler" supportsWheelSink="false" showSteeringAngle="true" zOffset="0.5"/>
                         <tire tireTrackAtlasIndex="7"/>
@@ -932,6 +932,17 @@
                     <differential torqueRatio="0.5" maxSpeedRatio="1.5" wheelIndex1="1" wheelIndex2="2"/>
                     <differential torqueRatio="0.5" maxSpeedRatio="1.6" wheelIndex1="3" wheelIndex2="4"/>
                     <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="1" differentialIndex2="2"/>
+                </differentials>
+            </differentialConfiguration>
+            <differentialConfiguration> <!--crawlers-->
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.5" wheelIndex1="1" wheelIndex2="3"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.5" wheelIndex1="2" wheelIndex2="4"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.6" wheelIndex1="5" wheelIndex2="7"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.6" wheelIndex1="6" wheelIndex2="8"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="1" differentialIndex2="2"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="3" differentialIndex2="4"/>
+                    <differential torqueRatio="0.5" maxSpeedRatio="1.3" differentialIndex1="5" differentialIndex2="6"/>
                 </differentials>
             </differentialConfiguration>
         </differentialConfigurations>

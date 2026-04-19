@@ -1659,10 +1659,6 @@
                 <colorScale value="1 1 1"/>
                 <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
             </material>
-            <material materialSlotName="af11_shieldings_mat">
-                <colorScale value="1 1 1"/>
-                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
-            </material>
 		</designColor4Configuration>
 		<designColor4Configuration materialTemplateName="NEWHOLLAND_GOLD1"/>
 		<designColor4Configuration color="NEWHOLLAND_BLUE1"/>

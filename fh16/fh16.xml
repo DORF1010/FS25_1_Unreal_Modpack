@@ -813,7 +813,10 @@
 		<attacherJoint node="attacherJointU1450Crane" jointType="Kranmitte" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
 			<schema position="0.5 0.33" rotation="0" invertX="false"/>
 		</attacherJoint>
-        
+        <attacherJoint node="RMCSemiBed" jointType="RMCSemiBed" lowerRotLimit="0 0 0" allowsLowering="false">
+            <schema position="0.45 0.3" rotation="0" invertX="false"/>
+        </attacherJoint>
+		
     </attacherJoints>
 
     <connectionHoses>
@@ -1746,5 +1749,6 @@
         <i3dMapping id="hookLiftAttacherRef" node="0>0|8|12"/>
         <i3dMapping id="tlxFrontBumper" node="0>0|7|4"/>
         <i3dMapping id="attacherJointU1450Crane" node="0>0|7|5"/>
+        <i3dMapping id="RMCSemiBed" node="0>0|7|6"/>
     </i3dMappings>
 </vehicle>
