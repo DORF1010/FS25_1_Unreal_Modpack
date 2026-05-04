@@ -265,6 +265,52 @@
                 <attacherJoint node="licensePlateNodeBack" jointType="trailer" lowerRotLimit="25 65 50" upperRotationOffset="0" allowsJointLimitMovement="false" comboTime="1">
                     <schema position="1 0" rotation="0" invertX="false"/>
                 </attacherJoint>
+				<attacherJoint node="attacherJointContainer40ft" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0 0.85" rotation="0" invertX="false"/>
+                    <subType name="40FTContainer"/>
+					<objectChange node="attacherJointsContainerUpper" translationActive="0 3.72 0" translationInactive="0 0 0"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer30ft" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0 0.85" rotation="0" invertX="false"/>
+                    <subType name="30FTContainer"/>
+					<objectChange node="attacherJointsContainerUpper" translationActive="0 3.72 0" translationInactive="0 0 0"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer20ft2" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0.5 0.85" rotation="0" invertX="true"/>
+                    <subType name="20FTContainer"/>
+					<objectChange node="attacherJointsContainerUpper" translationActive="0 3.72 0" translationInactive="0 0 0"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer20ft1" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0.5 0.85" rotation="0" invertX="false"/>
+                    <subType name="20FTContainer"/>
+					<objectChange node="attacherJointsContainerUpper" translationActive="0 3.72 0" translationInactive="0 0 0"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer30ft" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0 0.85" rotation="0" invertX="false"/>
+                    <subType name="20FTContainer"/>
+					<objectChange node="attacherJointsContainerUpper" translationActive="0 3.72 0" translationInactive="0 0 0"/>
+                </attacherJoint>
+
+				<attacherJoint node="attacherJointContainer40ftUpper" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0 1.5" rotation="0" invertX="false"/>
+                    <subType name="40FTContainer"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer30ftUpper" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0 1.5" rotation="0" invertX="false"/>
+                    <subType name="30FTContainer"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer20ft2Upper" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0.5 1.5" rotation="0" invertX="true"/>
+                    <subType name="20FTContainer"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer20ft1Upper" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0.5 1.5" rotation="0" invertX="false"/>
+                    <subType name="20FTContainer"/>
+                </attacherJoint>
+				<attacherJoint node="attacherJointContainer30ftUpper" jointType="wheelLoader" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 150 40">
+                    <schema position="0 1.5" rotation="0" invertX="false"/>
+                    <subType name="20FTContainer"/>
+                </attacherJoint>
             </attacherJointConfiguration>
         </attacherJointConfigurations>
 
@@ -532,5 +578,14 @@
         <i3dMapping id="attacherJoint" node="2>1" />
         <i3dMapping id="springRightRef" node="2>2" />
         <i3dMapping id="springLeftRef" node="2>3" />
+        <i3dMapping id="attacherJointContainer40ft" node="0>0|7|1|0|0" />
+        <i3dMapping id="attacherJointContainer30ft" node="0>0|7|1|0|1" />
+        <i3dMapping id="attacherJointContainer20ft1" node="0>0|7|1|0|2" />
+        <i3dMapping id="attacherJointContainer20ft2" node="0>0|7|1|0|3" />
+        <i3dMapping id="attacherJointsContainerUpper" node="0>0|7|1|1" />
+        <i3dMapping id="attacherJointContainer40ftUpper" node="0>0|7|1|1|0" />
+        <i3dMapping id="attacherJointContainer30ftUpper" node="0>0|7|1|1|1" />
+        <i3dMapping id="attacherJointContainer20ft1Upper" node="0>0|7|1|1|2" />
+        <i3dMapping id="attacherJointContainer20ft2Upper" node="0>0|7|1|1|3" />
     </i3dMappings>
 </vehicle>

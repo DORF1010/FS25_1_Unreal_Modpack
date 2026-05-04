@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dolly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>DPW 1800 dolly</name>
+        <specs>
+            <weight ignore="true"/>
+            <combination filterCategory="trailersSemi"/>
+            <combination xmlFilename="$data/vehicles/pittsTrailers/lt408L/lt408L.xml"/>
+            <combination xmlFilename="dpw1800/dpw1800.xml"/>
+            <combination xmlFilename="$data/vehicles/lizard/moduleX/moduleX.xml"/>
+            <combination xmlFilename="$data/vehicles/kotte/tsa/tsa.xml"/>
+            <combination xmlFilename="$data/vehicles/lizard/mks32/mks32.xml"/>
+            <combination xmlFilename="$data/vehicles/wilsonTrailer/silverstar/silverstar.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_dolly</function>
+        </functions>
+        <image>dpw1800/store_dpw1800dolly.png</image>
+        <price>5000</price>
+        <lifetime>6000</lifetime>
+        <rotation>0</rotation>
+        <brand>FARMTECH</brand>
+        <category>misc</category>
+        <shopTranslationOffset>0 0.5 0</shopTranslationOffset>
+        <shopRotationOffset>0.044 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>777472</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>217088</indexBufferMemoryUsage>
+        <textureMemoryUsage>393216</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_trailer</typeDesc>
+        <filename>dpw1800/dpw1800dolly.i3d</filename>
+        <size width="2.65" length="12" height="3.1" lengthOffset="-0.05"/>
+        <componentConfigurations>
+            <componentConfiguration numComponents="2" name="$l10n_configuration_valueDefault">
+				<component centerOfMass="0 0 0" solverIterationCount="10" mass="500" inertiaScale="4 2 2"/>
+				<component centerOfMass="0 0 0" solverIterationCount="10" mass="300" inertiaScale="2 2 6"/>
+				<joint component1="1" component2="2" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
+				<shopOffset translation="0 0.5 0" rotation="0 0.044 0"/>
+            </componentConfiguration>
+        </componentConfigurations>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TRAILER"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT" isDefault="true">
+                <wheels>
+                    <wheel dimensions="500_50R17" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.9" repr="wheelFrontLeft"   forcePointRatio="0.25" initialCompression="8" suspTravel="0.1" spring="75" mass="0.35" damper="60" yOffset="0.01" />
+                    </wheel>
+                    <wheel dimensions="500_50R17" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.9" repr="wheelFrontRight"  forcePointRatio="0.25" initialCompression="8" suspTravel="0.1" spring="75" mass="0.35" damper="60" yOffset="0.01" />
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_ui_colorSpecial" price="0" saveId="SPECIAL">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="520_85R30_engravings">
+						<physics yOffset="-0.6"/>
+					</wheel>
+                    <wheel dimensions="520_85R30_engravings">
+						<physics yOffset="-0.6"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelMedium" price="0" saveId="MEDIUM">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="400_55R22_5 295_75R22_5 315_80R22_5 340_80R18">
+						<physics yOffset="-0.1" zOffset="0.05"/>
+					</wheel>
+                    <wheel dimensions="400_55R22_5 295_75R22_5 315_80R22_5 340_80R18">
+						<physics yOffset="-0.1" zOffset="0.05"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="0" saveId="BROAD">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="445_65R22_5">
+						<physics yOffset="-0.2" zOffset="0.05"/>
+					</wheel>
+                    <wheel dimensions="445_65R22_5">
+						<physics yOffset="-0.2" zOffset="0.05"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="0" saveId="NARROW">
+                <wheels baseConfig="MEDIUM">
+                    <wheel dimensions="275_70R22_5">
+						<physics/>
+					</wheel>
+                    <wheel dimensions="275_70R22_5">
+						<physics/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" saveId="TWIN_ALL">
+                <wheels baseConfig="MEDIUM">
+                    <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
+						<physics xOffset="-0.1"/>
+                        <additionalWheel configId="dual" offset="0.08">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
+						<physics xOffset="-0.1"/>
+                        <additionalWheel configId="dual" offset="0.08">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            
+        </wheelConfigurations>
+
+        <hubs>
+            <hub linkNode="wheelFrontLeft" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.25 0.25 0.25"/>
+            <hub linkNode="wheelFrontRight" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.25 0.25 0.25"/>
+        </hubs>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" rootNode="dpw1800_drawbar_component3" attacherHeight="0.68" />
+        </inputAttacherJoints>
+        <brakeForce force="0.6"/>
+        <support animationName="lockDrawbarLimit" delayedOnAttach="false" detachAfterAnimation="false"/>
+        <sounds>
+            <active file="$data/sounds/tools/sowing/generalRattle_02.wav" innerRadius="10" outerRadius="50" volumeScale="4.8" isLocalSound="true" pitchScale="0.8">
+                <volume indoor="0.7" outdoor="0.9" >
+                    <modifier type="WHEEL_SUSPENSION" value="-0.08" modifiedValue="0.3"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.04" modifiedValue="0.2"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.02" modifiedValue="0.1"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.01" modifiedValue="0.05"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.00" modifiedValue="0.0"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.01" modifiedValue="0.05"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.02" modifiedValue="0.1"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.04" modifiedValue="0.2"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.08" modifiedValue="0.3"/>
+
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0"/>
+                    <modifier type="SPEED" value="2.0" modifiedValue="1.0"/>
+                    <modifier type="SPEED" value="40.0" modifiedValue="1.0"/>
+                </volume>
+                <lowpassCutoffFrequency indoor="250" outdoor="20000" />
+                <lowpassGain indoor="0.5" outdoor="1" />
+            </active>
+        </sounds>
+    </attachable>
+
+    <attacherJoints>
+        <attacherJointConfigurations>
+            <attacherJointConfiguration>
+                <attacherJoint node="attacherJointSemitrailer" jointType="semitrailer" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 180 5" enableCollision="false" >
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+
+        <sounds>
+            <attach template="attach01" linkNode="0>"/>
+        </sounds>
+    </attacherJoints>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="airDoubleRed" node="airIn" adapterNode="airIn_detached" length="1.4" diameter="0.02" straighteningFactor="1">
+            <objectChange node="airIn_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airOut" adapterNode="airOut_detached" length="1.4" diameter="0.02" straighteningFactor="1">
+            <objectChange node="airOut_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" adapterNode="electric_detached" length="1.4" diameter="0.01" straighteningFactor="1">
+            <objectChange node="electric_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <sounds>
+            <connect    type="airDoubleRed" template="hydraulicHosesAttach" volumeScale="0.7" linkNode="attacherJoint"/>
+            <connect    type="electric"     template="generalConnection"    volumeScale="0.7" linkNode="attacherJoint"/>
+            <disconnect type="airDoubleRed" template="hydraulicHosesDetach" volumeScale="0.7" linkNode="attacherJoint"/>
+            <disconnect type="electric"     template="generalConnection"    volumeScale="0.7" linkNode="attacherJoint"/>
+        </sounds>
+    </connectionHoses>
+
+    <animations>
+        <animation name="lockDrawbarLimit">
+            <!--<part componentJointIndex="1" startTime="0.0" endTime="0.1" startRotLimit="60 0 0" endRotLimit="0 0 0"/>-->
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingParts>
+            <movingPart node="springLeftPart" referencePoint="springLeftRef" referenceFrame="springLeftRef" isActiveDirty="true" maxUpdateDistance="50"/>
+            <movingPart node="springRightPart" referencePoint="springRightRef" referenceFrame="springRightRef" isActiveDirty="true" maxUpdateDistance="50"/>
+            <movingPart node="springLeft" referencePoint="springLeftRef" referenceFrame="springLeftRef" scaleZ="true" isActiveDirty="true" maxUpdateDistance="50"/>
+            <movingPart node="springRight" referencePoint="springRightRef" referenceFrame="springRightRef" scaleZ="true" isActiveDirty="true" maxUpdateDistance="50"/>
+        </movingParts>
+    </cylindered>
+
+    <ai>
+        <allowTurnBackward value="false"/>
+        <turningRadiusLimitation radius="5"/>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.65" height="3.1" length="1.8" lengthOffset="0.3" hasCollision="false"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.3" maxX="1.3" minZ="-5.8" maxZ="4.1" yOffset="0.6" />
+        <bendingNode minX="-0.3" maxX="0.3" minZ="0.1" maxZ="1.75" yOffset="-0.08" node="drawbar"/>
+    </foliageBending>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <baseColorConfigurations useDefaultColors="true" title="$l10n_configuration_chassisColor" defaultColorIndex="7">
+        <material materialSlotName="dpw1800_metalPaintedBlack_mat"/>
+
+        <baseColorConfiguration materialTemplateName="SHARED_SILVERROPE1"/>
+        <baseColorConfiguration materialTemplateName="FARMTECH_GREY1"/>
+        <baseColorConfiguration materialTemplateName="FARMTECH_GREEN1"/>
+        <baseColorConfiguration materialTemplateName="FARMTECH_RED1"/>
+        <baseColorConfiguration materialTemplateName="FARMTECH_YELLOW1"/>
+        <baseColorConfiguration materialTemplateName="CASEIH_GREY"/>
+        <baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+        <baseColorConfiguration materialTemplateName="SHARED_BLACK1" isSelectable="false"/>
+    </baseColorConfigurations>
+
+    <designColorConfigurations useDefaultColors="true" title="$l10n_configuration_chassisColor" defaultColorIndex="7">
+        <material materialSlotName="dpw1800_metalPaintedBlack_mat2"/>
+
+        <designColorConfiguration materialTemplateName="SHARED_SILVERROPE1"/>
+        <designColorConfiguration materialTemplateName="FARMTECH_GREY1"/>
+        <designColorConfiguration materialTemplateName="FARMTECH_GREEN1"/>
+        <designColorConfiguration materialTemplateName="FARMTECH_RED1"/>
+        <designColorConfiguration materialTemplateName="FARMTECH_YELLOW1"/>
+        <designColorConfiguration materialTemplateName="CASEIH_GREY"/>
+        <designColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+        <designColorConfiguration materialTemplateName="SHARED_BLACK1" isSelectable="false"/>
+    </designColorConfigurations>
+
+    <rimColorConfigurations useDefaultColors="true">
+        <rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+        <rimColorConfiguration materialTemplateName="SHARED_SILVERROPE1"/>
+        <rimColorConfiguration materialTemplateName="FARMTECH_GREY1"/>
+        <rimColorConfiguration materialTemplateName="FARMTECH_GREEN1"/>
+        <rimColorConfiguration materialTemplateName="FARMTECH_RED1"/>
+        <rimColorConfiguration materialTemplateName="FARMTECH_YELLOW1"/>
+        <rimColorConfiguration materialTemplateName="CASEIH_GREY"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </rimColorConfigurations>
+
+    <i3dMappings>
+        <i3dMapping id="dpw1800_axis_component2" node="0>" />
+        <i3dMapping id="componentJointDrawbar" node="0>0" />
+        <i3dMapping id="axis" node="0>1" />
+        <i3dMapping id="wheelFrontLeft" node="0>2" />
+        <i3dMapping id="wheelFrontRight" node="0>3" />
+        <i3dMapping id="springRightPart" node="0>4" />
+        <i3dMapping id="springRight" node="0>4|0" />
+        <i3dMapping id="springLeftPart" node="0>5" />
+        <i3dMapping id="springLeft" node="0>5|0" />
+        <i3dMapping id="attacherJointSemitrailer" node="0>6|0" />
+        <i3dMapping id="dpw1800_drawbar_component3" node="1>" />
+        <i3dMapping id="drawbar" node="1>0" />
+        <i3dMapping id="electric_detached" node="1>0|0|0" />
+        <i3dMapping id="airOut_detached" node="1>0|0|1" />
+        <i3dMapping id="airIn_detached" node="1>0|0|2" />
+        <i3dMapping id="airOut" node="1>0|0|3" />
+        <i3dMapping id="airIn" node="1>0|0|4" />
+        <i3dMapping id="electric" node="1>0|0|5" />
+        <i3dMapping id="attacherJoint" node="1>1" />
+        <i3dMapping id="springRightRef" node="1>2" />
+        <i3dMapping id="springLeftRef" node="1>3" />
+    </i3dMappings>
+</vehicle>

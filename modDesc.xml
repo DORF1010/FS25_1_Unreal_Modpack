@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="107">
     <author>DORF1010</author>
-    <version>0.26.04.18</version>
+    <version>0.26.05.3</version>
     <title>
         <en>1 Unreal modpack</en>
     </title>
@@ -39,6 +39,7 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 		<storeItem xmlFilename="raniPlast/multiPurchasePallet_raniWrapPallet.xml"/>
 		<storeItem xmlFilename="raniPlast/raniWrapPallet.xml"/>
 		<storeItem xmlFilename="dpw1800/dpw1800.xml"/>
+		<storeItem xmlFilename="dpw1800/dpw1800dolly.xml"/>
 		<storeItem xmlFilename="dolly10L/dolly10L.xml"/>
 		<storeItem xmlFilename="terraFlex3020/terraFlex3020.xml"/>
 		<storeItem xmlFilename="xml/fd250.xml"/>
