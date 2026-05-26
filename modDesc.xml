@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="107">
+<modDesc descVersion="108">
     <author>DORF1010</author>
-    <version>0.26.05.3</version>
+    <version>0.26.05.26</version>
     <title>
         <en>1 Unreal modpack</en>
     </title>
@@ -43,6 +43,7 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 		<storeItem xmlFilename="dolly10L/dolly10L.xml"/>
 		<storeItem xmlFilename="terraFlex3020/terraFlex3020.xml"/>
 		<storeItem xmlFilename="xml/fd250.xml"/>
+		<storeItem xmlFilename="xml/northStar1230FB.xml"/>
 		<storeItem xmlFilename="n40bx/n40bx.xml"/>
 		<storeItem xmlFilename="w1800/w1800.xml"/>
 		<storeItem xmlFilename="tga560/tga560.xml"/>
@@ -67,6 +68,7 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 		<storeItem xmlFilename="pickup/pickup2017.xml"/>
 		<storeItem xmlFilename="skh60/skh60.xml"/>
 		<storeItem xmlFilename="z2840/z2840.xml"/>
+		<!-- <storeItem xmlFilename="attachableWheels/attachableWheels.xml"/> -->
 		<storeItem xmlFilename="storeShed/boardStack02.xml"/>
 		<storeItem xmlFilename="extraContent/cr11GoldEdition.xml"/>
 		<storeItem xmlFilename="extraContent/fd250GoldEdition.xml"/>
@@ -102,4 +104,21 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 	<consumables>
 		<consumable xmlFilename="raniPlast/raniPlast.xml"/>
 	</consumables>
+
+	<vehicleTypes>
+        <type name="balerAI" parent="baler" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="cultivator" />
+        </type>
+        <type name="balerLoaderAI" parent="balerLoader" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="cultivator" />
+        </type>
+		<!--<type name="cultivatorPlow" parent="cultivator" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="plow" />
+		</type>
+		<type name="mowerCutter" parent="mower" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="cutter" />
+		</type>-->
+	</vehicleTypes>
+
+    <fillTypes filename="xml/moreFillTypes.xml" />
 </modDesc>

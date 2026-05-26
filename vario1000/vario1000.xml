@@ -43,25 +43,38 @@
         <wheelConfigurations>
             <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT" isDefault="true">
                 <wheels autoRotateBackSpeed="2.1">
-                    <wheel dimensions="650_65R38 650_65R38" isLeft="true" hasTireTracks="true" hasParticles="true" rimOffset="-0.001">
+                    <wheel dimensions="650_65R38" isLeft="true" hasTireTracks="true" hasParticles="true" rimOffset="-0.001">
                         <physics rotSpeed="1" restLoad="3.3" repr="frontLeftAxis"  driveNode="frontLeftWheel"  forcePointRatio="0.55" initialCompression="30" suspTravel="0.25" spring="38" damper="60" transRatio="1" yOffset="-0.01"/>
                         <steering node="steeringBar" nodeMinTransX="-0.125" nodeMaxTransX="0.125"/>
                         <fender node="leftFender" rotMax="16"/>
                     </wheel>
-                    <wheel dimensions="650_65R38 650_65R38" isLeft="false" hasTireTracks="true" hasParticles="true" rimOffset="-0.001">
+                    <wheel dimensions="650_65R38" isLeft="false" hasTireTracks="true" hasParticles="true" rimOffset="-0.001">
                         <physics rotSpeed="1" restLoad="3.3" repr="frontRightAxis" driveNode="frontRightWheel" forcePointRatio="0.55" initialCompression="30" suspTravel="0.25" spring="38" damper="60" transRatio="1" yOffset="-0.01"/>
                         <fender node="rightFender" rotMin="-16"/>
                     </wheel>
-                    <wheel dimensions="750_75R46 710_75R42" isLeft="true" hasTireTracks="true" hasParticles="true" rimOffset="0.015">
+                    <wheel dimensions="750_75R46" isLeft="true" hasTireTracks="true" hasParticles="true" rimOffset="0.015">
                         <physics rotSpeed="0" restLoad="3.7" repr="backWheelLeft"  forcePointRatio="0.45" initialCompression="25" suspTravel="0.2" spring="63" damper="60" yOffset="0.035"/>
                     </wheel>
-                    <wheel dimensions="750_75R46 710_75R42" isLeft="false" hasTireTracks="true" hasParticles="true" rimOffset="0.015">
+                    <wheel dimensions="750_75R46" isLeft="false" hasTireTracks="true" hasParticles="true" rimOffset="0.015">
                         <physics rotSpeed="0" restLoad="3.7" repr="backWheelRight" forcePointRatio="0.45" initialCompression="25" suspTravel="0.2" spring="63" damper="60" yOffset="0.035"/>
                     </wheel>
                 </wheels>
                 
             </wheelConfiguration>
-            <wheelConfiguration name="%s PROGRIP" params="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT_PROGRIP">
+            <wheelConfiguration name="%s" params="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT_NOKIAN_DYNAMIC">
+            <tireCombination brand="TRELLEBORG" names="-"/>
+            <tireCombination brand="MICHELIN" names="-"/>
+            <tireCombination brand="BKT" names="-"/>
+            <tireCombination brand="MITAS" names="-"/>
+            <tireCombination brand="VREDESTEIN" names="-"/>
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="650_65R38"/>
+                    <wheel dimensions="650_65R38"/>
+                    <wheel dimensions="710_75R42"/>
+                    <wheel dimensions="710_75R42"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="%s PROGRIP" params="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT_PROGRIP">
                 <wheels baseConfig="DEFAULT">
                     <wheel dimensions="650_65R38">
 						<physics radius="0.95" tireType="crawler" frictionScale="2"/>
@@ -728,6 +741,24 @@
             <objectChange node="lowerLinkFrontLeft" visibilityActive="false" visibilityInactive="true" />
             <objectChange node="lowerLinkFrontRight" visibilityActive="false" visibilityInactive="true" />
         </attacherJoint>
+
+
+		<attacherJoint node="backWheelLeft" jointType="trailer">
+			<schema position="0.5 0.5" rotation="0" invertX="false"/>
+			<subType name="attachableWheel"/>
+		</attacherJoint>
+		<attacherJoint node="backWheelRight" jointType="trailer">
+			<schema position="0.5 -0.5" rotation="0" invertX="false"/>
+			<subType name="attachableWheel"/>
+		</attacherJoint>
+		<attacherJoint node="frontLeftWheel" jointType="trailer">
+			<schema position="0 0.5" rotation="0" invertX="false"/>
+			<subType name="attachableWheel"/>
+		</attacherJoint>
+		<attacherJoint node="frontRightWheel" jointType="trailer">
+			<schema position="0 -0.5" rotation="0" invertX="false"/>
+			<subType name="attachableWheel"/>
+		</attacherJoint>
     </attacherJoints>
 
     <connectionHoses>

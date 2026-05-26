@@ -41,24 +41,57 @@
 
      <wheels>
         <wheelConfigurations>
-            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MITAS" saveId="MITAS_DEFAULT">
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT">
                 <wheels>
-                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="6_50_R10 25x8R12" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" restLoad="0.5" repr="wheelFrontLeft"  useReprDirection="true" forcePointRatio="0.15" initialCompression="15" suspTravel="0.05" spring="62" damper="15" yOffset="0.02"/>
                         <wheelChock parkingNode="wheelChock02_left" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true" />
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="6_50_R10 25x8R12" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" restLoad="0.5" repr="wheelFrontRight" useReprDirection="true" forcePointRatio="0.15" initialCompression="15" suspTravel="0.05" spring="62" damper="15" yOffset="0.02"/>
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="6_50_R10 25x8R12" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" restLoad="0.5" repr="wheelBackLeft"   useReprDirection="true" forcePointRatio="0.15" initialCompression="15" suspTravel="0.05" spring="62" damper="15" yOffset="0.02"/>
                         <wheelChock parkingNode="wheelChock02_right" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" />
                     </wheel>
-                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="6_50_R10 25x8R12" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" restLoad="0.5" repr="wheelBackRight"  useReprDirection="true" forcePointRatio="0.15" initialCompression="15" suspTravel="0.05" spring="62" damper="15" yOffset="0.02"/>
                     </wheel>
                 </wheels>
             </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelMedium" saveId="MEDIUM">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="7_R12 260_70R13_3">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="7_R12 260_70R13_3">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="7_R12 260_70R13_3">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="7_R12 260_70R13_3">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" saveId="BROAD">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="14_5R20_J152 340_80R20">
+						<physics yOffset="-0.25" zOffset="-0.31"/>
+					</wheel>
+                    <wheel dimensions="14_5R20_J152 340_80R20">
+						<physics yOffset="-0.25" zOffset="-0.31"/>
+					</wheel>
+                    <wheel dimensions="14_5R20_J152 340_80R20">
+						<physics yOffset="-0.25" zOffset="0.31"/>
+					</wheel>
+                    <wheel dimensions="14_5R20_J152 340_80R20">
+						<physics yOffset="-0.25" zOffset="0.31"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+
         </wheelConfigurations>
 
         <dynamicallyLoadedWheels>
@@ -82,7 +115,7 @@
     </attachable>
 
     <attacherJoints>
-        <attacherJoint node="cutterTransportAttacher" jointType="cutter" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="true" canTurnOnImplement="false" comboTime="1" allowsLowering="true" updateAttacherJoint="true" hardAttach="true">
+        <attacherJoint node="cutterTransportAttacher" jointType="cutter" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="true" canTurnOnImplement="false" comboTime="1" allowsLowering="true" updateAttacherJoint="true" hardAttach="false">
             <schema position="0 0.5" rotation="0" invertX="false"/>
             <attachSound template="attach01" linkNode="cutterTransportAttacher"/>
         </attacherJoint>

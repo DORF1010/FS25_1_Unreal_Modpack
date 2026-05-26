@@ -142,9 +142,13 @@
 
     <attachable>
         <inputAttacherJoints>
-            <inputAttacherJoint node="0>0|0|0|0" jointType="semitrailer"/> attacherHeight="0.66"
-            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.66"/>
-            <inputAttacherJoint node="attacherJoint" jointType="trailerLow" attacherHeight="0.66"/>
+            <inputAttacherJoint node="0>0|0|0|2" jointType="implement" lowerRotLimitScale="3 3 3" upperRotLimitScale="3 3 3" attacherHeight="0.5" needsToolbar="true" allowsLowering="false" needsLowering="false"><!--3 point input attacher -->
+                <distanceToGround lower="0.5" upper="0.5" />
+				<!--<objectChange node="0>0|0|0|1" translationInactive="0.208 0 0" translationActive="0.208 0.05 0" rotationInactive="0 -90 0" rotationActive="-10 -90 0"/>-->
+            </inputAttacherJoint> -->
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.59"/>
+            <inputAttacherJoint node="attacherJoint" jointType="trailerLow" attacherHeight="0.59"/>
+            <inputAttacherJoint node="0>0|0|0|0" jointType="semitrailer"/> attacherHeight="0.59"
         </inputAttacherJoints>
         <!--<steeringAxleAngleScale backwards="true" speedDependent="false" forceUsage="true"/>-->
         <support animationName="moveSupport"/>
@@ -175,10 +179,10 @@
             <schema position="1 0" rotation="0" invertX="false" />
         </attacherJoint>
 		<attacherJoint node="0>0|0|6|0|0|0|0" upperRotationOffset="-0.7" moveTime="2.5" comboTime="0"> <!--main 3point-->
-                <distanceToGround lower="0.25" upper="0.72" />
-                <rotationNode node="0>0|0|6|0|0" lowerRotation="16 0 0" upperRotation="-25 0 0" />
+                <distanceToGround lower="0.25" upper="1.075" />
+                <rotationNode node="0>0|0|6|0|0" lowerRotation="25 0 0" upperRotation="-45 0 0" />
                 <rotationNode2 node="0>0|0|6|0|0|0" />
-                <bottomArm rotationNode="0>0|0|6|0|1" translationNode="0>0|0|6|0|1|0" referenceNode="0>0|0|6|0|1|0|2" zScale="1" startRotation="-25 0 0" categoryRange="1"/>
+                <bottomArm rotationNode="0>0|0|6|0|1" translationNode="0>0|0|6|0|1|0" referenceNode="0>0|0|6|0|1|0|2" zScale="1" startRotation="-25 0 0" categoryRange="2" defaultCategory="2"/>
                 <topArm baseNode="0>0|0|6|0|3" filename="$data/shared/assets/upperLinks/walterscheidSO_65_460.xml" zScale="1" materialTemplateName="AGCO_GREY3" toggleVisibility="true" />
                 <schema position="1 0" rotation="0" invertX="false" />
                 <objectChange node="0>0|0|6|0|1|0|0|0"  rotationActive="0 0 0" rotationInactive="52 0 0" />
@@ -370,6 +374,7 @@
     </animations>
 
     <ai>
+        <allowTurnBackward value="false"/>
         <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.55" height="1.3" length="4.65" lengthOffset="1.47"/>
     </ai>
 

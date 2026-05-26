@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<vehicle type="baler" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+<vehicle type="balerAI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
@@ -75,8 +75,8 @@
     </configurationSets>
 
     <vehicleTypeConfigurations>
-        <vehicleTypeConfiguration vehicleType="baler"/>
-        <vehicleTypeConfiguration vehicleType="balerLoader"/>
+        <vehicleTypeConfiguration vehicleType="balerAI"/>
+        <vehicleTypeConfiguration vehicleType="balerLoaderAI"/>
     </vehicleTypeConfigurations>
 
     <wheels>
@@ -788,6 +788,39 @@
         <bendingNode minX="-1.5" maxX="1.5" minZ="-0.5" maxZ="0.5" yOffset="0.2" node="groundReferenceNode"/>
         <bendingNode minX="-0.8" maxX="0.8" minZ="-2.0" maxZ="-0.2" yOffset="-0.25" node="backPart"/>
     </foliageBending>
+
+	<designConfigurations title="$l10n_configuration_workWidth">
+		<designConfiguration name="$l10n_configuration_valueDefault">
+			<objectChange node="workAreaStart" translationActive=  "1.5 0 2.845"/>
+			<objectChange node="workAreaHeight" translationActive= "1.5 0 1.5"/>
+			<objectChange node="workAreaWidth" translationActive= "-1.5 0 2.845"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value5M">
+			<objectChange node="workAreaStart" translationActive=  "2.5 0 2.845"/>
+			<objectChange node="workAreaHeight" translationActive= "2.5 0 1.5"/>
+			<objectChange node="workAreaWidth" translationActive= "-2.5 0 2.845"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value10M">
+			<objectChange node="workAreaStart" translationActive=  "5 0 2.845"/>
+			<objectChange node="workAreaHeight" translationActive= "5 0 1.5"/>
+			<objectChange node="workAreaWidth" translationActive= "-5 0 2.845"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value20M">
+			<objectChange node="workAreaStart" translationActive=  "10 0 2.845"/>
+			<objectChange node="workAreaHeight" translationActive= "10 0 1.5"/>
+			<objectChange node="workAreaWidth" translationActive= "-10 0 2.845"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value25M">
+			<objectChange node="workAreaStart" translationActive=  "12.5 0 2.845"/>
+			<objectChange node="workAreaHeight" translationActive= "12.5 0 1.5"/>
+			<objectChange node="workAreaWidth" translationActive= "-12.5 0 2.845"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value50M">
+			<objectChange node="workAreaStart" translationActive=  "25 0 2.845"/>
+			<objectChange node="workAreaHeight" translationActive= "25 0 1.5"/>
+			<objectChange node="workAreaWidth" translationActive= "-25 0 2.845"/>
+		</designConfiguration>
+	</designConfigurations>
 
 	<baseColorConfigurations useDefaultColors="true">
         <material materialSlotName="KRONE_GREEN1_01_mat"/>

@@ -1016,19 +1016,94 @@
 			</cropSensorConfiguration>
 		</cropSensorConfigurations>
 	</cropSensor>
-    
+
     <baseColorConfigurations price="0" useDefaultColors="true">
         <material materialSlotName="base_mat"/>
-
-        <baseColorConfiguration materialTemplateName="FENDT_OLDGREEN1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_BIEGE1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_BLACK1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_BLACK2"/>
         <baseColorConfiguration materialTemplateName="FENDT_BLUE1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_BLUE2"/>
+        <baseColorConfiguration materialTemplateName="FENDT_BRIGHTBLUE1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_BRIGHTGREEN"/>
+        <baseColorConfiguration materialTemplateName="FENDT_DARKGREEN1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_DESIGN_GRILL"/>
+        <baseColorConfiguration materialTemplateName="FENDT_GREY1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_GREY2"/>
+        <baseColorConfiguration materialTemplateName="FENDT_GREY3"/>
+        <baseColorConfiguration materialTemplateName="FENDT_GRILL"/>
+        <baseColorConfiguration materialTemplateName="FENDT_NEWGREEN1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_OLDGREEN1" isDefault="true"/>
         <baseColorConfiguration materialTemplateName="FENDT_ORANGE1"/>
-		<baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+        <baseColorConfiguration materialTemplateName="FENDT_RED1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_VIOLET1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_WHITE1"/>
+        <baseColorConfiguration materialTemplateName="FENDT_WHITE2"/>
+        <baseColorConfiguration materialTemplateName="FENDT_YELLOW1"/>
+		<baseColorConfiguration materialTemplateName="DORF_WHITEHOLE" name="Michelin %s" params="$l10n_ui_colorWhite"/>
+		<baseColorConfiguration materialTemplateName="OLOFSFORS_BLUE1"/>
+        <baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		<baseColorConfiguration materialTemplateName="silverScratchedShiny"/>
+        <baseColorConfiguration materialTemplateName="CASEIH_GREY" name="$l10n_ui_colorSilver"/>
     </baseColorConfigurations>
 
+    <designColorConfigurations title="$l10n_configuration_chassisColor" useDefaultColors="true">
+        <material materialSlotName="chassis_mat"/>
+        <designColorConfiguration materialTemplateName="FENDT_BIEGE1"/>
+        <designColorConfiguration materialTemplateName="FENDT_BLACK1"/>
+        <designColorConfiguration materialTemplateName="FENDT_BLACK2"/>
+        <designColorConfiguration materialTemplateName="FENDT_BLUE1"/>
+        <designColorConfiguration materialTemplateName="FENDT_BLUE2"/>
+        <designColorConfiguration materialTemplateName="FENDT_BRIGHTBLUE1"/>
+        <designColorConfiguration materialTemplateName="FENDT_BRIGHTGREEN"/>
+        <designColorConfiguration materialTemplateName="FENDT_DARKGREEN1"/>
+        <designColorConfiguration materialTemplateName="FENDT_DESIGN_GRILL"/>
+        <designColorConfiguration materialTemplateName="FENDT_GREY1" isDefault="true"/>
+        <designColorConfiguration materialTemplateName="FENDT_GREY2"/>
+        <designColorConfiguration materialTemplateName="FENDT_GREY3"/>
+        <designColorConfiguration materialTemplateName="FENDT_GRILL"/>
+        <designColorConfiguration materialTemplateName="FENDT_NEWGREEN1"/>
+        <designColorConfiguration materialTemplateName="FENDT_OLDGREEN1"/>
+        <designColorConfiguration materialTemplateName="FENDT_ORANGE1"/>
+        <designColorConfiguration materialTemplateName="FENDT_RED1"/>
+        <designColorConfiguration materialTemplateName="FENDT_VIOLET1"/>
+        <designColorConfiguration materialTemplateName="FENDT_WHITE1"/>
+        <designColorConfiguration materialTemplateName="FENDT_WHITE2"/>
+        <designColorConfiguration materialTemplateName="FENDT_YELLOW1"/>
+		<designColorConfiguration materialTemplateName="DORF_WHITEHOLE" name="Michelin %s" params="$l10n_ui_colorWhite"/>
+		<designColorConfiguration materialTemplateName="OLOFSFORS_BLUE1"/>
+        <designColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		<designColorConfiguration materialTemplateName="silverScratchedShiny"/>
+        <designColorConfiguration materialTemplateName="CASEIH_GREY" name="$l10n_ui_colorSilver"/>
+    </designColorConfigurations>
+
     <rimColorConfigurations useDefaultColors="true">
-        <rimColorConfiguration materialTemplateName="FENDT_RED1"/>
-		<rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+        <rimColorConfiguration materialTemplateName="FENDT_BIEGE1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_BLACK1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_BLACK2"/>
+        <rimColorConfiguration materialTemplateName="FENDT_BLUE1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_BLUE2"/>
+        <rimColorConfiguration materialTemplateName="FENDT_BRIGHTBLUE1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_BRIGHTGREEN"/>
+        <rimColorConfiguration materialTemplateName="FENDT_DARKGREEN1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_DESIGN_GRILL"/>
+        <rimColorConfiguration materialTemplateName="FENDT_GREY1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_GREY2"/>
+        <rimColorConfiguration materialTemplateName="FENDT_GREY3"/>
+        <rimColorConfiguration materialTemplateName="FENDT_GRILL"/>
+        <rimColorConfiguration materialTemplateName="FENDT_NEWGREEN1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_OLDGREEN1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_ORANGE1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_RED1" isDefault="true"/>
+        <rimColorConfiguration materialTemplateName="FENDT_VIOLET1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_WHITE1"/>
+        <rimColorConfiguration materialTemplateName="FENDT_WHITE2"/>
+        <rimColorConfiguration materialTemplateName="FENDT_YELLOW1"/>
+		<rimColorConfiguration materialTemplateName="DORF_WHITEHOLE" name="Michelin %s" params="$l10n_ui_colorWhite"/>
+		<rimColorConfiguration materialTemplateName="OLOFSFORS_BLUE1"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		<rimColorConfiguration materialTemplateName="silverScratchedShiny"/>
+        <rimColorConfiguration materialTemplateName="CASEIH_GREY" name="$l10n_ui_colorSilver"/>
     </rimColorConfigurations>
 
     <dynamicallyLoadedParts>

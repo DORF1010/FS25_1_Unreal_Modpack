@@ -810,7 +810,7 @@
 
     <designColorConfigurations useDefaultColors="true" defaultColorMaterialTemplateName="chrome">
         <material materialSlotName="chrome_01_mat"/>
-        <designColorConfiguration color="RIM_CONFIGURATION_CHROME"/>
+        <designColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
         <designColorConfiguration color="INTERNATIONAL_BEIGE1"/>
         <designColorConfiguration color="CASEIH_RED1" name="INTERNATIONAL %s" params="$l10n_ui_colorRed"/>
     </designColorConfigurations>

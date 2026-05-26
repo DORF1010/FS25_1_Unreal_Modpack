@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="cutter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>NorthStar 1230 FB</name>
+        <specs>
+            <workingWidth>9</workingWidth>
+            <combination xmlFilename="cr11/cr11colorfull.xml"/>
+            <combination xmlFilename="extraContent/cr11GoldEdition.xml"/>
+            <combination xmlFilename="$data/vehicles/caseIH/axialFlow150/axialFlow150.xml"/>
+            <combination xmlFilename="$data/vehicles/johnDeere/seriesS7/seriesS7.xml"/>
+            <combination xmlFilename="$data/vehicles/claas/lexion6900/lexion6900.xml"/>
+            <combination xmlFilename="$data/vehicles/claas/lexion8900/lexion8900.xml"/>
+            <combination xmlFilename="$data/vehicles/johnDeere/seriesX9/seriesX9.xml"/>
+            <combination xmlFilename="$data/vehicles/caseIH/af11/af11.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>$data/vehicles/geringhoff/northStar1230FB/store_northStar1230FB.png</image>
+        <price>100000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>GERINGHOFF</brand>
+        <category>cornHeaders</category>
+        <shopTranslationOffset>0 0 0</shopTranslationOffset>
+        <shopRotationOffset>0 0 0</shopRotationOffset>
+        <shopHeight>4</shopHeight>
+        <vertexBufferMemoryUsage>2922752</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1234688</indexBufferMemoryUsage>
+        <textureMemoryUsage>720896</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+        <filename>$data/vehicles/geringhoff/northStar1230FB/northStar1230FB.i3d</filename>
+        <size width="4.9" length="3.2" height="2.1" lengthOffset="0.2"/>
+        <speedLimit value="50"/>
+        <components>
+            <component centerOfMass="0 0.2 0" solverIterationCount="10" mass="4500"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="COMBINE_HEADER"/>
+        <mapHotspot type="CUTTER"/>
+    </base>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="cutter">
+                <heightNode node="heightNode01"/>
+                <heightNode node="heightNode02"/>
+                <heightNode node="heightNode03"/>
+                <distanceToGround lower="0.1" upper="1.2"/>
+                <objectChange node="claasConnector" visibilityActive="false" visibilityInactive="true"/>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric_node" socket="electric" length="1.4" diameter="0.018" straighteningFactor="1.5"/>
+        <customTarget node="claasConnectorNode" type="claasMultiCoupler" inputAttacherJointIndices="1"/>
+    </connectionHoses>
+
+    <powerTakeOffs>
+        <input inputAttacherJointIndices="1" inputNode="ptoInputLeft"  aboveAttacher="true" ptoName="LEFT_PTO"/>
+        <input inputAttacherJointIndices="1" inputNode="ptoInputRight" aboveAttacher="true" ptoName="RIGHT_PTO"/>
+        <local startNode="ptoLeft_02"  endNode="ptoLeft_03"  filename="$data/shared/assets/powerTakeOffs/walterscheidW_SC25.xml"/>
+        <local startNode="ptoRight_02" endNode="ptoRight_03" filename="$data/shared/assets/powerTakeOffs/walterscheidW_SC25.xml"/>
+    </powerTakeOffs>
+
+    <powerConsumer ptoRpm="250" neededMaxPtoPower="50"/>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNode" threshold="0.5"/>
+    </groundReferenceNodes>
+
+    <lights>
+        <states>
+            <state lightTypes="0"/>
+        </states>
+
+        <sharedLight linkNode="sideMarker18_left"  filename="$data/shared/assets/lights/lizard/sideMarker18_right.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker18_right" filename="$data/shared/assets/lights/lizard/sideMarker18_left.xml"  lightTypes="0"/>
+    </lights>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="support"    startTime="0" endTime="1.0" startTrans="0 0 -0.07" endTrans="0 0 0" />
+            <part node="supportCol" startTime="0" endTime="0.2" startTrans="0 0.07 0"  endTrans="0 0 0" />
+        </animation>
+
+        <animation name="folding">
+            <part node="leftArm"  startTime="1" endTime="10" startRot="0 0 0" endRot="0 0 178"  tangentType="spline"/>
+            <part node="rightArm" startTime="0" endTime="9"  startRot="0 0 0" endRot="0 0 -178" tangentType="spline"/>
+
+            <part node="coneLeftPart"      startTime="0" endTime="1.5" startRot="-5.7 0 0" endRot="0 0 0" />
+            <part node="coneLeft"          startTime="1.5" endTime="4" startRot="0 0 0"    endRot="0 0 30" />
+            <part node="hydraulicConeLeft" startTime="1.5" endTime="4" startRot="0 0 0"    endRot="-11 0 0" />
+
+            <part node="coneRightPart"      startTime="0" endTime="0.5" startRot="-5.7 0 0" endRot="0 0 0" />
+            <part node="coneRight"          startTime="0.5" endTime="4" startRot="0 0 0"    endRot="0 0 -30" />
+            <part node="hydraulicConeRight" startTime="0.5" endTime="4" startRot="0 0 0"    endRot="-11 0 0" />
+
+            <sound template="hydraulicOpen02"  startTime="0.01" endTime="9"    direction="-1"    volumeScale="1.7" pitchScale="1.3" fadeIn="0.1" fadeOut="0.1" linkNode="rightArm"/>
+            <sound template="hydraulicOpen05"  startTime="1"    endTime="9.99" direction="-1"    volumeScale="1.7" pitchScale="1.3" fadeIn="0.1" fadeOut="0.1" linkNode="leftArm"/>
+            <sound template="hydraulicClose01" startTime="0.01" endTime="9"    direction="1"     volumeScale="3"   pitchScale="0.7" fadeIn="0.1" fadeOut="0.1" linkNode="rightArm"/>
+            <sound template="hydraulicClose03" startTime="1"    endTime="9.99" direction="1"     volumeScale="3.5" pitchScale="0.9" fadeIn="0.1" fadeOut="0.1" linkNode="leftArm"/>
+            <sound template="vibratingImp"     startTime="1.1"  direction="-1" volumeScale="1"   pitchScale="1.2"  linkNode="leftArm"/>
+            <sound template="foldStartMed02"   startTime="1.1"  direction="-1" volumeScale="3"   pitchScale="0.7"  linkNode="leftArm"/>
+            <sound template="vibratingImp"     startTime="0.01" direction="-1" volumeScale="1"   pitchScale="1.0"  linkNode="rightArm"/>
+            <sound template="metalImpHigh01"   startTime="0.01" direction="-1" volumeScale="0.7" pitchScale="0.8"  linkNode="rightArm"/>
+            <sound template="clackVar6"        startTime="9"    direction="1"  volumeScale="1.7" pitchScale="0.7"  linkNode="rightArm"/>
+            <sound template="cylinderPunch"    startTime="9"    direction="1"  volumeScale="0.4" pitchScale="1.5"  linkNode="rightArm"/>
+            <sound template="sheetImp02"       startTime="9"    direction="1"  volumeScale="2.5" pitchScale="1.5"  linkNode="rightArm"/>
+            <sound template="vibratingImp"     startTime="9.99" direction="1"  volumeScale="1"   pitchScale="1.3"  linkNode="leftArm"/>
+            <sound template="cylinderPunch"    startTime="9.99" direction="1"  volumeScale="0.5" pitchScale="1.5"  linkNode="leftArm"/>
+            <sound template="metalImpHigh01"   startTime="9.99" direction="1"  volumeScale="0.7" pitchScale="0.8"  linkNode="leftArm"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="leftArm">
+                <dependentPart node="leftArmPart01" />
+                <dependentPart node="hydraulicConeLeftPunch" />
+            </movingTool>
+            <movingTool node="rightArm">
+                <dependentPart node="rightArmPart01" />
+                <dependentPart node="hydraulicConeRightPunch" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="leftArmPart01" localReferencePoint="leftArmPart02" referencePoint="leftArmPart02Ref" referenceFrame="leftArmPart01RefFrame">
+                <dependentPart node="leftArmPart02"/>
+                <dependentPart node="hydraulicLeft"/>
+            </movingPart>
+            <movingPart node="leftArmPart02" referencePoint="leftArmPart02Ref" referenceFrame="leftArmPart02RefFrame"/>
+            <movingPart node="hydraulicLeft" referencePoint="hydraulicLeftRef" referenceFrame="hydraulicLeftRefFrame">
+                <translatingPart node="hydraulicLeftPunch" />
+            </movingPart>
+
+            <movingPart node="rightArmPart01" localReferencePoint="rightArmPart02" referencePoint="rightArmPart02Ref" referenceFrame="rightArmPart01RefFrame">
+                <dependentPart node="rightArmPart02"/>
+                <dependentPart node="hydraulicRight"/>
+            </movingPart>
+            <movingPart node="rightArmPart02" referencePoint="rightArmPart02Ref" referenceFrame="rightArmPart02RefFrame"/>
+            <movingPart node="hydraulicRight" referencePoint="hydraulicRightRef" referenceFrame="hydraulicRightRefFrame">
+                <translatingPart node="hydraulicRightPunch" />
+            </movingPart>
+            <movingPart node="hydraulicConeLeftPunch"  referencePoint="hydraulicConeLeftPunchRef"  referenceFrame="hydraulicConeLeftPunchRef"/>
+            <movingPart node="hydraulicConeRightPunch" referencePoint="hydraulicConeRightPunchRef" referenceFrame="hydraulicConeRightPunchRef"/>
+        </movingParts>
+    </cylindered>
+
+    <workAreas>
+        <workArea type="cutter" functionName="processCutterArea" >
+            <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight" />
+            <groundReferenceNode index="1" />
+            <chopperArea index="2" />
+            <testAreas autoGenerate="true" zOffset="0.5" xOffset="0" length="0.6" numAreas="12" areaWidthScale="0.25"/>
+        </workArea>
+        <workArea type="auxiliary" >
+            <area startNode="workAreaStartStraw" widthNode="workAreaWidthStraw" heightNode="workAreaHeightStraw" />
+        </workArea>
+    </workAreas>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.1" turnOnFoldMinLimit="0" >
+                    <foldingPart animationName="folding" speedScale="1.5" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <cutter fruitTypes="MAIZE SUNFLOWER SUGARCANE POPLAR" strawRatio="0.1" fruitTypeConverter="forageHarvester">
+        <effect>
+            <effectNode effectClass="CutterMotionPathEffect" effectType="CUTTER" linkNode="effectNodePlant">
+                <motionPathEffect textureFilename="$data/vehicles/geringhoff/northStar1230FB/plantArray.dds" numRows="12" rowLength="8" minFade="0.19" visibilityY="50 0"/>
+            </effectNode>
+            <effectNode effectClass="CutterMotionPathEffect" effectType="CUTTER_FRUITS" linkNode="effectNodeFruit">
+                <motionPathEffect textureFilename="$data/vehicles/geringhoff/northStar1230FB/fruitArray.dds" numRows="12" rowLength="28" speedScale="0.23" verticalOffset="0" minFade="0.09" startDelay="0.4" stopDelay="0.6"/>
+            </effectNode>
+            <effectNode effectClass="CutterMotionPathEffect" effectType="CUTTER_THRESHING" linkNode="effectNodeThreshing">
+                <motionPathEffect textureFilename="$data/vehicles/geringhoff/northStar1230FB/threshingArray.dds" numRows="12" rowLength="10" verticalOffset="0" minFade="0.15" startDelay="0.2" stopDelay="0.6"/>
+            </effectNode>
+            <effectNode effectClass="ParticleEffect" effectNode="smokeEmitter" particleType="SMOKE" materialType="smokeParticle" emitCountScale="0.1" worldSpace="false" useCuttingWidth="false"/>
+        </effect>
+
+        <animationNodes>
+            <animationNode node="drumLeft"   rotSpeed="900" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="7"/>
+            <animationNode node="drumMiddle" rotSpeed="900" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="7"/>
+            <animationNode node="drumRight"  rotSpeed="900" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="7"/>
+
+            <animationNode node="rollLeft"  rotSpeed="1300"  rotAxis="3" turnOnFadeTime="3" turnOffFadeTime="5"/>
+            <animationNode node="rollRight" rotSpeed="-1300" rotAxis="3" turnOnFadeTime="3" turnOffFadeTime="5"/>
+
+            <animationNode node="cutterRoll01" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll02" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll03" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll04" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll05" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll06" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll07" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll08" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll09" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll10" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll11" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll12" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll13" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll14" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll15" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll16" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll17" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll18" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll19" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll20" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll21" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll22" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll23" rotSpeed="800"  rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="cutterRoll24" rotSpeed="-800" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="4"/>
+
+            <animationNode class="ScrollingAnimation" node="chainsLeft"  scrollSpeed="-3" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="2" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode class="ScrollingAnimation" node="chainsMiddle"  scrollSpeed="-3" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="2" turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode class="ScrollingAnimation" node="chainsRight"  scrollSpeed="-3" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="2" turnOnFadeTime="2" turnOffFadeTime="4"/>
+        </animationNodes>
+
+        <automaticTilt raycastNode1="heightNode01" raycastNode2="heightNode03"/>
+        <sounds>
+            <cut template="cropCuttingCorn" volumeScale="3.0"/>
+        </sounds>
+    </cutter>
+
+    <turnOnVehicle turnedOnByAttacherVehicle="true">
+        <sounds>
+            <start template="maizeHeaderStart" pitchScale="0.8" volumeScale="0.3"/>
+            <work  template="maizeHeaderLoop"  pitchScale="0.8" volumeScale="0.3"/>
+            <stop  template="maizeHeaderStop"  pitchScale="0.8" volumeScale="0.3"/>
+        </sounds>
+    </turnOnVehicle>
+
+    <dynamicMount forceLimitScale="1"/>
+
+    <ai>
+        <areaMarkers leftNode="workAreaStart" rightNode="workAreaWidth" backNode="workAreaHeight"/>
+        <collisionTrigger useSize="true" width="9.4" height="1.6"/>
+        <agentAttachment useSize="true"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-2.55" maxX="2.55" minZ="-1.0" maxZ="0.9" yOffset="0.2"/>
+        <bendingNode minX="0.22" maxX="2.35" minZ="-0.2" maxZ="1.93" yOffset="-0.38" node="leftArm"/>
+        <bendingNode minX="-2.35" maxX="-0.22" minZ="-0.2" maxZ="1.93" yOffset="-0.38" node="rightArm"/>
+    </foliageBending>
+
+	<designConfigurations>
+		<designConfiguration name="$l10n_configuration_valueDefault">
+            <xmlOverwrites>
+                <remove path="vehicle.cutter#fruitTypeConverter"/>
+                <set path="vehicle.cutter#fruitTypes" value="MAIZE SUNFLOWER"/>
+            </xmlOverwrites>
+		</designConfiguration>
+		<designConfiguration name="POPLAR">
+            <xmlOverwrites>
+                <set path="vehicle.cutter#fruitTypes" value="SUGARCANE POPLAR"/>
+            </xmlOverwrites>
+		</designConfiguration>
+	</designConfigurations>
+
+	<design3Configurations title="$l10n_configuration_workWidth">
+		<design3Configuration name="$l10n_configuration_valueDefault">
+		</design3Configuration>
+		<design3Configuration name="$l10n_configuration_value10M">
+			<objectChange node="workAreaStart" translationActive= "5 0 0.9"/>
+			<objectChange node="workAreaWidth" translationActive="-5 0 0.9"/>
+			<objectChange node="workAreaHeight" translationActive="5 0 0.4"/>
+		</design3Configuration>
+		<design3Configuration name="$l10n_configuration_value20M">
+			<objectChange node="workAreaStart" translationActive= "10 0 0.9"/>
+			<objectChange node="workAreaWidth" translationActive="-10 0 0.9"/>
+			<objectChange node="workAreaHeight" translationActive="10 0 0.4"/>
+		</design3Configuration>
+		<design3Configuration name="$l10n_configuration_value25M">
+			<objectChange node="workAreaStart" translationActive= "12.5 0 0.9"/>
+			<objectChange node="workAreaWidth" translationActive="-12.5 0 0.9"/>
+			<objectChange node="workAreaHeight" translationActive="12.5 0 0.4"/>
+		</design3Configuration>
+		<design3Configuration name="$l10n_configuration_value50M">
+			<objectChange node="workAreaStart" translationActive= "25 0 0.9"/>
+			<objectChange node="workAreaWidth" translationActive="-25 0 0.9"/>
+			<objectChange node="workAreaHeight" translationActive="25 0 0.4"/>
+		</design3Configuration>
+	</design3Configurations>
+
+	<baseColorConfigurations useDefaultColors="true">
+		<material materialSlotName="base01_color_mat"/>
+		<baseColorConfiguration materialTemplateName="GERINGHOFF_BLACK" />
+		<baseColorConfiguration materialTemplateName="GERINGHOFF_RED" isDefault="true"/>
+		<baseColorConfiguration materialTemplateName="GERINGHOFF_YELLOW" />
+		<baseColorConfiguration materialTemplateName="JOHNDEERE_GREEN1" />
+		<baseColorConfiguration materialTemplateName="JOHNDEERE_YELLOW1" />
+		<baseColorConfiguration materialTemplateName="NEWHOLLAND_WHITE1" />
+		<baseColorConfiguration materialTemplateName="NEWHOLLAND_YELLOW1" />
+		<baseColorConfiguration materialTemplateName="SHARED_GREY" />
+	</baseColorConfigurations>
+
+	<designColorConfigurations title="$l10n_configuration_chassisColor" useDefaultColors="true">
+		<material materialSlotName="base02_color_mat"/>
+		<designColorConfiguration materialTemplateName="GERINGHOFF_BLACK" />
+		<designColorConfiguration materialTemplateName="GERINGHOFF_RED" />
+		<designColorConfiguration materialTemplateName="GERINGHOFF_YELLOW" />
+		<designColorConfiguration materialTemplateName="JOHNDEERE_GREEN1" />
+		<designColorConfiguration materialTemplateName="JOHNDEERE_YELLOW1" />
+		<designColorConfiguration materialTemplateName="NEWHOLLAND_WHITE1" />
+		<designColorConfiguration materialTemplateName="NEWHOLLAND_YELLOW1" />
+		<designColorConfiguration materialTemplateName="SHARED_GREY" />
+	</designColorConfigurations>
+
+	<designColor2Configurations useDefaultColors="true">
+		<material materialSlotName="tines_color_mat"/>
+		<designColor2Configuration materialTemplateName="GERINGHOFF_BLACK" />
+		<designColor2Configuration materialTemplateName="GERINGHOFF_RED" />
+		<designColor2Configuration materialTemplateName="GERINGHOFF_YELLOW" isDefault="true"/>
+		<designColor2Configuration materialTemplateName="JOHNDEERE_GREEN1" />
+		<designColor2Configuration materialTemplateName="JOHNDEERE_YELLOW1" />
+		<designColor2Configuration materialTemplateName="NEWHOLLAND_WHITE1" />
+		<designColor2Configuration materialTemplateName="NEWHOLLAND_YELLOW1" />
+		<designColor2Configuration materialTemplateName="SHARED_GREY" />
+	</designColor2Configurations>
+
+    <!--<designColorConfigurations defaultColorMaterialTemplateName="calibratedPaint">
+        <material materialSlotName="base02_color_mat" />
+        <designColorConfiguration materialTemplateName="GERINGHOFF_RED" saveId="1">
+            <material materialSlotName="base02_color_mat" materialTemplateName="GERINGHOFF_BLACK"/>
+            <material materialSlotName="tines_color_mat" materialTemplateName="GERINGHOFF_YELLOW"/>
+        </designColorConfiguration>
+
+        <designColorConfiguration materialTemplateName="JOHNDEERE_GREEN1" saveId="3">
+            <material materialSlotName="base02_color_mat" materialTemplateName="GERINGHOFF_BLACK"/>
+            <material materialSlotName="tines_color_mat" materialTemplateName="JOHNDEERE_YELLOW1"/>
+        </designColorConfiguration>
+
+        <designColorConfiguration materialTemplateName="NEWHOLLAND_YELLOW1" saveId="5">
+            <material materialSlotName="base02_color_mat" materialTemplateName="GERINGHOFF_BLACK"/>
+            <material materialSlotName="tines_color_mat" materialTemplateName="NEWHOLLAND_WHITE1"/>
+        </designColorConfiguration>
+
+        <designColorConfiguration materialTemplateName="GERINGHOFF_BLACK" saveId="2">
+            <material materialSlotName="base02_color_mat" materialTemplateName="GERINGHOFF_BLACK"/>
+            <material materialSlotName="tines_color_mat" materialTemplateName="GERINGHOFF_YELLOW"/>
+        </designColorConfiguration>
+
+        <designColorConfiguration materialTemplateName="SHARED_GREY" saveId="6">
+            <material materialSlotName="base02_color_mat" materialTemplateName="GERINGHOFF_BLACK"/>
+            <material materialSlotName="tines_color_mat" materialTemplateName="GERINGHOFF_YELLOW"/>
+        </designColorConfiguration>
+
+    </designColorConfigurations>-->
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90"  workMultiplier="4" fieldMultiplier="2" washDuration="1"/>
+
+    <i3dMappings>
+        <i3dMapping id="northStar1230FB_main_component1" node="0>" />
+        <i3dMapping id="attacherJoint" node="0>0|0|0|0" />
+        <i3dMapping id="heightNode01" node="0>0|0|0|0|0" />
+        <i3dMapping id="heightNode02" node="0>0|0|0|0|1" />
+        <i3dMapping id="heightNode03" node="0>0|0|0|0|2" />
+        <i3dMapping id="support" node="0>0|0|1|0|0" />
+        <i3dMapping id="supportCol" node="0>0|0|1|1" />
+        <i3dMapping id="ptoInputLeft" node="0>0|0|2" />
+        <i3dMapping id="ptoLeft_detach" node="0>0|0|2|0" />
+        <i3dMapping id="ptoInputRight" node="0>0|0|3" />
+        <i3dMapping id="electric_node" node="0>0|0|4|0" />
+        <i3dMapping id="claasConnectorNode" node="0>0|0|4|1" />
+        <i3dMapping id="claasConnector" node="0>0|0|4|1|0" />
+        <i3dMapping id="leftArm" node="0>0|1|0|0" />
+        <i3dMapping id="leftArmPart01RefFrame" node="0>0|1|0|0|0|0" />
+        <i3dMapping id="leftArmPart01" node="0>0|1|0|0|0|0|0" />
+        <i3dMapping id="leftArmPart02RefFrame" node="0>0|1|0|0|0|0|0|0" />
+        <i3dMapping id="leftArmPart02" node="0>0|1|0|0|0|0|0|0|0" />
+        <i3dMapping id="hydraulicLeftRef" node="0>0|1|0|0|0|0|0|0|0|0" />
+        <i3dMapping id="cutterRoll01" node="0>0|1|0|0|0|1|0|0" />
+        <i3dMapping id="cutterRoll02" node="0>0|1|0|0|0|1|1|0" />
+        <i3dMapping id="cutterRoll03" node="0>0|1|0|0|0|1|2|0" />
+        <i3dMapping id="cutterRoll04" node="0>0|1|0|0|0|1|3|0" />
+        <i3dMapping id="cutterRoll05" node="0>0|1|0|0|0|1|4|0" />
+        <i3dMapping id="cutterRoll06" node="0>0|1|0|0|0|1|5|0" />
+        <i3dMapping id="rollLeft" node="0>0|1|0|0|0|2|0" />
+        <i3dMapping id="drumLeft" node="0>0|1|0|0|0|3" />
+        <i3dMapping id="chainsLeft" node="0>0|1|0|0|0|4" />
+        <i3dMapping id="sideMarker18_left" node="0>0|1|0|0|1|0|0" />
+        <i3dMapping id="ptoLeft_02" node="0>0|1|0|0|2|0" />
+        <i3dMapping id="ptoLeft_03" node="0>0|1|0|0|2|1" />
+        <i3dMapping id="rightArm" node="0>0|1|1|0" />
+        <i3dMapping id="rightArmPart01RefFrame" node="0>0|1|1|0|0|0" />
+        <i3dMapping id="rightArmPart01" node="0>0|1|1|0|0|0|0" />
+        <i3dMapping id="rightArmPart02RefFrame" node="0>0|1|1|0|0|0|0|0" />
+        <i3dMapping id="rightArmPart02" node="0>0|1|1|0|0|0|0|0|0" />
+        <i3dMapping id="hydraulicRightRef" node="0>0|1|1|0|0|0|0|0|0|0" />
+        <i3dMapping id="cutterRoll19" node="0>0|1|1|0|0|1|0|0" />
+        <i3dMapping id="cutterRoll20" node="0>0|1|1|0|0|1|1|0" />
+        <i3dMapping id="cutterRoll21" node="0>0|1|1|0|0|1|2|0" />
+        <i3dMapping id="cutterRoll22" node="0>0|1|1|0|0|1|3|0" />
+        <i3dMapping id="cutterRoll23" node="0>0|1|1|0|0|1|4|0" />
+        <i3dMapping id="cutterRoll24" node="0>0|1|1|0|0|1|5|0" />
+        <i3dMapping id="rollRight" node="0>0|1|1|0|0|2|0" />
+        <i3dMapping id="drumRight" node="0>0|1|1|0|0|3" />
+        <i3dMapping id="chainsRight" node="0>0|1|1|0|0|4" />
+        <i3dMapping id="sideMarker18_right" node="0>0|1|1|0|1|0|0" />
+        <i3dMapping id="ptoRight_02" node="0>0|1|1|0|2|0" />
+        <i3dMapping id="ptoRight_03" node="0>0|1|1|0|2|1" />
+        <i3dMapping id="cutterRoll07" node="0>0|1|2|0|0" />
+        <i3dMapping id="cutterRoll08" node="0>0|1|2|1|0" />
+        <i3dMapping id="cutterRoll09" node="0>0|1|2|2|0" />
+        <i3dMapping id="cutterRoll10" node="0>0|1|2|3|0" />
+        <i3dMapping id="cutterRoll11" node="0>0|1|2|4|0" />
+        <i3dMapping id="cutterRoll12" node="0>0|1|2|5|0" />
+        <i3dMapping id="cutterRoll13" node="0>0|1|2|6|0" />
+        <i3dMapping id="cutterRoll14" node="0>0|1|2|7|0" />
+        <i3dMapping id="cutterRoll15" node="0>0|1|2|8|0" />
+        <i3dMapping id="cutterRoll16" node="0>0|1|2|9|0" />
+        <i3dMapping id="cutterRoll17" node="0>0|1|2|10|0" />
+        <i3dMapping id="cutterRoll18" node="0>0|1|2|11|0" />
+        <i3dMapping id="hydraulicLeftRefFrame" node="0>0|1|3" />
+        <i3dMapping id="hydraulicLeft" node="0>0|1|3|0" />
+        <i3dMapping id="hydraulicLeftPunch" node="0>0|1|3|0|0" />
+        <i3dMapping id="hydraulicRightRefFrame" node="0>0|1|4" />
+        <i3dMapping id="hydraulicRight" node="0>0|1|4|0" />
+        <i3dMapping id="hydraulicRightPunch" node="0>0|1|4|0|0" />
+        <i3dMapping id="coneLeft" node="0>0|1|5|0" />
+        <i3dMapping id="coneLeftPart" node="0>0|1|5|0|0" />
+        <i3dMapping id="hydraulicConeLeftPunch" node="0>0|1|5|0|1" />
+        <i3dMapping id="coneRight" node="0>0|1|6|0" />
+        <i3dMapping id="hydraulicConeRightPunch" node="0>0|1|6|0|0" />
+        <i3dMapping id="coneRightPart" node="0>0|1|6|0|1" />
+        <i3dMapping id="hydraulicConeLeft" node="0>0|1|7|0" />
+        <i3dMapping id="hydraulicConeLeftPunchRef" node="0>0|1|7|0|0" />
+        <i3dMapping id="hydraulicConeRight" node="0>0|1|8|0" />
+        <i3dMapping id="hydraulicConeRightPunchRef" node="0>0|1|8|0|0" />
+        <i3dMapping id="drumMiddle" node="0>0|1|9" />
+        <i3dMapping id="chainsMiddle" node="0>0|1|10" />
+        <i3dMapping id="workAreaStart" node="0>0|2|0" />
+        <i3dMapping id="workAreaWidth" node="0>0|2|1" />
+        <i3dMapping id="workAreaHeight" node="0>0|2|2" />
+        <i3dMapping id="workAreaStartStraw" node="0>0|2|3" />
+        <i3dMapping id="workAreaWidthStraw" node="0>0|2|4" />
+        <i3dMapping id="workAreaHeightStraw" node="0>0|2|5" />
+        <i3dMapping id="groundReferenceNode" node="0>0|2|6" />
+        <i3dMapping id="effectNodePlant" node="0>0|3|0|0" />
+        <i3dMapping id="effectNodeFruit" node="0>0|3|0|1" />
+        <i3dMapping id="effectNodeThreshing" node="0>0|3|0|2" />
+        <i3dMapping id="smokeEmitter" node="0>0|3|1" />
+        <i3dMapping id="aiMarkerLeft" node="0>0|4|0|0" />
+        <i3dMapping id="aiMarkerRight" node="0>0|4|0|1" />
+        <i3dMapping id="aiMarkerBack" node="0>0|4|0|2" />
+        <i3dMapping id="leftArmPart02Ref" node="0>0|5|0" />
+        <i3dMapping id="rightArmPart02Ref" node="0>0|5|1" />
+    </i3dMappings>
+</vehicle>

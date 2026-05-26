@@ -48,18 +48,18 @@
         <wheelConfigurations>
             <wheelConfiguration name="$l10n_configuration_valueDefault" saveId="DEFAULT">
                 <wheels autoRotateBackSpeed="2.4">
-                    <wheel dimensions="425_55R17" isLeft="true"  hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="425_55R17 440_50R17" isLeft="true"  hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="0.8" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  forcePointRatio="0.3" initialCompression="22" suspTravel="0.035" spring="90" damper="20" yOffset="0.02" frictionScale="1.9"/>
                         <steering node="steeringBarFront" nodeMinTransX="0.125" nodeMaxTransX="-0.125"/>
                     </wheel>
-                    <wheel dimensions="425_55R17" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="425_55R17 440_50R17" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="0.8" repr="wheelFrontRightRepr" driveNode="wheelFrontRight" forcePointRatio="0.3" initialCompression="22" suspTravel="0.035" spring="90" damper="20" yOffset="0.02" frictionScale="1.9"/>
                     </wheel>
-                    <wheel dimensions="425_55R17" isLeft="true"  hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="425_55R17 440_50R17" isLeft="true"  hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="0.8" repr="wheelBackLeftRepr"   driveNode="wheelBackLeft"   forcePointRatio="0.3" initialCompression="22" suspTravel="0.080" spring="41" damper="20" yOffset="0.025" frictionScale="2"/>
                         <steering node="steeringBarBack" nodeMinTransX="-0.125" nodeMaxTransX="0.125"/>
                     </wheel>
-                    <wheel dimensions="425_55R17" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="425_55R17 440_50R17" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="0.8" repr="wheelBackRightRepr"  driveNode="wheelBackRight"  forcePointRatio="0.3" initialCompression="22" suspTravel="0.080" spring="41" damper="20" yOffset="0.025" frictionScale="2"/>
                     </wheel>
                 </wheels>
@@ -198,7 +198,7 @@
         <ackermannSteeringConfigurations>
             <ackermannSteering rotSpeed="22" rotMax="45" rotCenterNode="steeringCenterNode"/>
 			<ackermannSteering rotSpeed="20" rotMax="37" rotCenterNode="steeringCenterNode"/>
-			<ackermannSteering rotSpeed="40" rotMax="90" rotCenterNode="steeringCenterNode"/>
+			<ackermannSteering rotSpeed="40" rotMax="80" rotCenterNode="steeringCenterNode"/>
         </ackermannSteeringConfigurations>
 
         <hubMaterial materialTemplateName="RIGITRAC_GREY"/>
@@ -599,8 +599,8 @@
     <cylindered>
         <movingTools>
             <movingTool node="attacherFrameArmLeftPhys" playSound="true">
-                <!--<controls axis="AXIS_FRONTLOADER_TOOL2" mouseSpeedFactor="0.3" invertAxis="true" iconName="BEET_PICKUP_TRANS_X"/>/-->
-                <rotation rotSpeed="30" rotAcceleration="200" rotMin="-35" rotMax="35" startRot="0" rotationAxis="2"/>
+                <controls axis="AXIS_FRONTLOADER_TOOL5" mouseSpeedFactor="0.5" invertAxis="true" iconName="BEET_PICKUP_TRANS_X"/>-->
+                <rotation rotSpeed="30" rotAcceleration="200" rotMin="-35" rotMax="35" startRot="0" rotationAxis="2"/> <!--rotMax="35"-->
                 <attacherJoint jointIndices="2" />
                 <dependentPart node="attacherFramePhys"/>
                 <dependentPart node="attacherFrameArmLeft"/>

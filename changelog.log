@@ -308,3 +308,38 @@ Minor tweaks to container attachers on dpw1800
 
 May 3, 2026
 Added dpw1800 dolly, based on front part of dpw1800
+
+May 4, 2026
+Added more color configs to gta380
+Added attachable wheels (for custom duals, etc) WARNING! Very buggy and doesn't work well, can cause issues with your game, disabled. Remove '<!--' at the start of line 71 in modDesc.xml to enable.
+
+May 10, 2026
+Fixed part of bigPack not changing color
+
+May 11, 2026
+Added work width config to bigPack
+Added beacon light config to dpw1800
+Minor tweaks to wheel configs on vario1000
+
+May 13, 2026
+Removed internal fender collisions on series200 to make loading things easier
+
+May 14, 2026
+Added dynamic vehicle icon to cr11 depending on design of cr11 or af11
+Renamed wheel configuration 'Super singles' to 'Medium tires' on cr11
+
+May 15, 2026
+Added some filltype tweaks
+	Augerwagons can now hold lime
+	Most grain harvesters can now harvest additional crops
+Slightly increased breaking force on cr11
+
+May 16, 2026
+Added northStar1230FB
+	Can cut poplar in addition to corn and sunflowers (separate config)
+
+May 17, 2026
+Added implement input attacher to dolly10L
+
+May 23, 2026
+Added AI worker capabilities to bigPack

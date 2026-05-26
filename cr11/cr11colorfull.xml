@@ -3,7 +3,7 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>CR11 unreal</name>
+        <name>CR11 Unreal</name>
         <specs>
             <power>5000</power>
             <maxSpeed>150</maxSpeed>
@@ -56,7 +56,7 @@
     </base>
 
     <designConfigurations>
-        <designConfiguration name="CR 11" vehicleBrand="NEWHOLLAND" vehicleName="CR" displayBrand="NEWHOLLAND">
+        <designConfiguration name="CR 11" vehicleBrand="NEWHOLLAND" vehicleName="CR" displayBrand="NEWHOLLAND" vehicleIcon="cr11/store_cr11.png">
             <objectChange node="configurationCR11" visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="configurationCR11Cabin" visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="sidePanelWheelCR11" visibilityActive="true" visibilityInactive="false"/>
@@ -69,7 +69,7 @@
 
         </designConfiguration>
 
-        <designConfiguration name="AF 11" vehicleBrand="CASEIH" vehicleName="AF" displayBrand="CASEIH">
+        <designConfiguration name="AF 11" vehicleBrand="CASEIH" vehicleName="AF" displayBrand="CASEIH" vehicleIcon="$data/vehicles/caseIH/af11/store_af11.png">
             <objectChange node="configurationAF11" visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="configurationAF11Cabin" visibilityActive="true" visibilityInactive="false"/>
             <objectChange node="sidePanelWheelAF11" visibilityActive="true" visibilityInactive="false"/>
@@ -81,7 +81,11 @@
             <objectChange node="bigTriangleAF11" translationActive="0 2.481 -4.453"/>
 
             <objectChange node="playerRightHandTarget" parentNodeActive="joystickAF11" translationActive="-0.007 0.222 -0.008" rotationActive="-3.018 83.415 76.487"/>
-
+			<xmlOverwrites>
+				<set path="vehicle.storeData.name" value="AF 11 Unreal"/>
+				<set path="vehicle.motorized.motorConfigurations.motorConfiguration(0)#name" value="AF 11" />
+				<set path="vehicle.motorized.motorConfigurations.motorConfiguration(1)#name" value="AF 11 Flat Map Edition" />
+			</xmlOverwrites>
         </designConfiguration>
 		
     </designConfigurations>
@@ -150,7 +154,7 @@
                 
             </wheelConfiguration>
             
-            <wheelConfiguration name="Super Singles" price="0" saveId="DEFAULT_SINGLE2">
+            <wheelConfiguration name="$l10n_configuration_valueWheelMedium" price="0" saveId="DEFAULT_SINGLE2">
                 <wheels autoRotateBackSpeed="2.1" ackermannSteeringIndex="2" differentialIndex="2">
                     <wheel dimensions="710_70R42" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" rotSpeed="0"  restLoad="6.7" repr="wheelFrontLeft"  forcePointRatio="0.25" initialCompression="20" suspTravel="0.1" spring="305" damper="95" xOffset="-0.1" yOffset="0.16" zOffset="0.075"/>
@@ -898,7 +902,7 @@
                 <transmission minForwardGearRatio="20.6" maxForwardGearRatio="320" minBackwardGearRatio="41" maxBackwardGearRatio="320" name="$l10n_info_transmission_cvt"/>
             </motorConfiguration>
 			<motorConfiguration name="CR 11 Flat Map Edition" hp="5000">
-                <motor torqueScale="20" minRpm="650" maxRpm="1000" maxForwardSpeed="250" maxBackwardSpeed="70" brakeForce="30" lowBrakeForceScale="0.1" lowBrakeForceSpeedLimit="0" ptoMotorRpmRatio="3" dampingRateScale="3.3" accelerationLimit="10">
+                <motor torqueScale="20" minRpm="650" maxRpm="1000" maxForwardSpeed="250" maxBackwardSpeed="70" brakeForce="50" lowBrakeForceScale="0.1" lowBrakeForceSpeedLimit="0" ptoMotorRpmRatio="3" dampingRateScale="3.3" accelerationLimit="10">
                     <torque normRpm="0.1" torque="2"/>
                     <torque normRpm="0.25" torque="10"/>
                     <torque normRpm="0.45" torque="20"/>
@@ -998,7 +1002,7 @@
         <fillUnitConfigurations>
             <fillUnitConfiguration name="$l10n_configuration_valueDesign01">
                 <fillUnits>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine BULK" capacity="200000" foldMinLimit="1" foldMaxLimit="1">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine BULK" capacity="200000" foldMinLimit="1" foldMaxLimit="1" updateMass="false">
                         <exactFillRootNode node="exactFillRootNode"/>
                     </fillUnit>
                     <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="5000">
@@ -1328,7 +1332,7 @@
     <combine fillUnitIndex="1" allowThreshingDuringRain="false">
         <swath available="true" workAreaIndex="1" isDefaultActive="true"/>
         <chopper available="true" workAreaIndex="2" animName="toggleChopper" animSpeedScale="1"/>
-        <processing toggleTime="5" />
+        <processing toggleTime="0" />
         <ladder animName="ladderAnimation" animSpeedScale="1" foldDirection="1" foldMinLimit="0.0" foldMaxLimit="0.01"/>
         <folding direction="-1"/>
 

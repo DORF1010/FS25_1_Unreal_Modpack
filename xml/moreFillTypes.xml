@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+    <fillTypeCategories>
+        <fillTypeCategory name="AUGERWAGON" >LIME</fillTypeCategory>
+        <fillTypeCategory name="COMBINE" >ONION PEA SUGARBEET CARROT PARSNIP WOODCHIPS RICE RICELONGGRAIN</fillTypeCategory>
+		<fillTypeCategory name="BULK">COTTON GRAPE OLIVE POPLAR</fillTypeCategory>
+		<fillTypeCategory name="MOWER">MEADOW POPLAR SUGARCANE</fillTypeCategory>
+		<fillTypeCategory name="FORAGEHARVESTER">CHAFF GRASS_WINDROW WOODCHIPS SUGARCANE COTTON</fillTypeCategory>
+		<fillTypeCategory name="SELLINGSTATION_FIELDFRUITS">COTTON</fillTypeCategory>
+		<fillTypeCategory name="PRODUCT">SEEDS WOOL FERTILIZER LIME MINERAL_FEED CASTLEROCK COAL FISHFOOD FRIEDONION ONIONBAG ONIONSALT ONIONSOUP SALMON SALMONYOUNG SHINGLEROOF STONEBIG TROUT TROUTYOUNG</fillTypeCategory>
+    </fillTypeCategories>
+
+	<fruitTypeCategories>
+		<fruitTypeCategory name="maizeHeader" >SUGARCANE POPLAR</fruitTypeCategory>
+		<fruitTypeCategory name="grainHeader" >RICE</fruitTypeCategory>
+	</fruitTypeCategories>
+</map>

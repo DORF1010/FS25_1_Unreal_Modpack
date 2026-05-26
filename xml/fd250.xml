@@ -91,12 +91,12 @@
 
     <wheels>
         <wheelConfigurations>
-            <wheelConfiguration isSelectable="true" name="$l10n_configuration_valueNo" brand="MACDON">
+            <wheelConfiguration isSelectable="true" name="$l10n_configuration_valueNo" saveId="DEFAULT">
                 <wheels hasSurfaceSounds="false" autoRotateBackSpeed="2.0">
                     <wheel>
                         <physics restLoad="0.5" repr="wheelLeft01Phy" forcePointRatio="0.15" radius="0.16" width="0.2" initialCompression="30" suspTravel="0.05" spring="12" damper="10" frictionScale="0.5" yOffset="0.02"/>
                     </wheel>
-                    <wheel hasParticles="true">
+                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152 480_45R17" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics restLoad="0.7" repr="wheelLeft02Phy" useDriveNodeDirection="true" forcePointRatio="0.15" radius="0.35" width="0.5" initialCompression="30" suspTravel="0.05" spring="22" damper="10" frictionScale="0.5" yOffset="0.02"/>
                     </wheel>
                     <wheel>
@@ -105,7 +105,7 @@
                     <wheel>
                         <physics restLoad="0.3" repr="wheelRight01Phy" forcePointRatio="0.15" radius="0.16" width="0.2" initialCompression="30" suspTravel="0.05" spring="12" damper="10" frictionScale="0.5" yOffset="0.02"/>
                     </wheel>
-                    <wheel hasParticles="true">
+                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152 480_45R17" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics restLoad="0.7" repr="wheelRight02Phy"  useDriveNodeDirection="true" forcePointRatio="0.15" radius="0.35" width="0.5" initialCompression="30" suspTravel="0.05" spring="22" damper="10" frictionScale="0.5" yOffset="0.02"/>
                     </wheel>
                     <wheel>
@@ -116,7 +116,7 @@
                 <objectChange node="configurationLeftDefault" visibilityActive="true" visibilityInactive="false"/>
                 <objectChange node="configurationRightDefault" visibilityActive="true" visibilityInactive="false"/>
             </wheelConfiguration>
-            <wheelConfiguration price="0" name="$l10n_configuration_valueDefault" saveId="DEFAULT">
+            <wheelConfiguration price="0" name="$l10n_configuration_transportWheels" saveId="TRANSPORT_WHEELS">
                 <wheels hasSurfaceSounds="false" autoRotateBackSpeed="2.0">
                     <wheel>
                         <physics restLoad="0.1" repr="wheelLeft01Phy"  forcePointRatio="0.15" radius="0.16" width="0.2" initialCompression="30" suspTravel="0.05" spring="12" damper="10" frictionScale="0.5" yOffset="0.02" brakeFactor="0"/>
@@ -131,17 +131,17 @@
                         <physics restLoad="0.1" repr="wheelRight03Phy" forcePointRatio="0.15" radius="0.16" width="0.6" initialCompression="30" suspTravel="0.05" spring="15" damper="10" frictionScale="0.5" yOffset="0.02" brakeFactor="0"/>
                     </wheel>
 
-                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152 480_45R17" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics restLoad="1.5" repr="headerTrailerWheelFrontLeft"  useReprDirection="true" forcePointRatio="0.25" initialCompression="30" suspTravel="0.1" spring="50" damper="40"/>
                     </wheel>
-                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152 480_45R17" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics restLoad="1.4" repr="headerTrailerWheelFrontRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="30" suspTravel="0.1" spring="50" damper="40"/>
                     </wheel>
 
-                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152 480_45R17" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics restLoad="1.2" repr="headerTrailerWheelBackLeft"   useReprDirection="true" forcePointRatio="0.25" initialCompression="30" suspTravel="0.1" spring="50" damper="40" brakeFactor="0.5"/>
                     </wheel>
-                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="7_R12 25x8R12 340_80R20 14_5R20_J152 480_45R17" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics restLoad="0.8" repr="headerTrailerWheelBackRight"  useReprDirection="true" forcePointRatio="0.25" initialCompression="30" suspTravel="0.1" spring="50" damper="40"/>
                     </wheel>
                 </wheels>
@@ -155,10 +155,10 @@
         </wheelConfigurations>
 
         <dynamicallyLoadedWheels>
-            <dynamicallyLoadedWheel linkNode="wheelLeft01"  filename="$data/shared/wheels/tires/mitas/FL02/7_R12.xml" isLeft="true"/>
+            <!--<dynamicallyLoadedWheel linkNode="wheelLeft01"  filename="$data/shared/wheels/tires/mitas/FL02/7_R12.xml" isLeft="true"/>
             <dynamicallyLoadedWheel linkNode="wheelLeft02"  filename="$data/shared/wheels/tires/mitas/FL02/7_R12.xml" isLeft="false"/>
             <dynamicallyLoadedWheel linkNode="wheelRight01" filename="$data/shared/wheels/tires/mitas/FL02/7_R12.xml" isLeft="false"/>
-            <dynamicallyLoadedWheel linkNode="wheelRight02" filename="$data/shared/wheels/tires/mitas/FL02/7_R12.xml" isLeft="true"/>
+            <dynamicallyLoadedWheel linkNode="wheelRight02" filename="$data/shared/wheels/tires/mitas/FL02/7_R12.xml" isLeft="true"/>-->
         </dynamicallyLoadedWheels>
 
         <hubs>

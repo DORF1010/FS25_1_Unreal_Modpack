@@ -361,6 +361,10 @@
                 <brakeLight node="backLightsHigh1" />
             </high>
         </realLights>
+
+		<beaconLights>
+			<beaconLight node="beaconLightNode" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+		</beaconLights>
     </lights>
 
     <animations>
@@ -415,6 +419,14 @@
         </design3Configuration>
         <design3Configuration name="6x6" isDefault="true"/>
     </design3Configurations>
+
+    <design4Configurations title="$l10n_configuration_beacon" isYesNoOption="true">
+        <design4Configuration name="$l10n_configuration_valueNo">
+		</design4Configuration>
+        <design4Configuration name="$l10n_configuration_valueYes">
+			<objectChange node="beaconLightNode" visibilityActive="true" visibilityInactive="false"/>
+        </design4Configuration>
+    </design4Configurations>
 
     <tensionBelts>
         <tensionBeltsConfigurations>
@@ -531,6 +543,7 @@
         <i3dMapping id="licensePlateLightHigh" node="0>0|2|1|2|1|1" />
         <i3dMapping id="turnLightLeftBack" node="0>0|2|1|2|2|0" />
         <i3dMapping id="turnLightRightBack" node="0>0|2|1|2|2|1" />
+        <i3dMapping id="beaconLightNode" node="0>0|1|1" />
         <i3dMapping id="colPart03" node="0>0|2|1|4" />
         <i3dMapping id="colPart04" node="0>0|2|1|5" />
         <i3dMapping id="colPart01" node="0>0|2|2|0" />

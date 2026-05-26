@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="implement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Attachable Wheel</name>
+        <functions>
+            <function>$l10n_typeDesc_tool</function>
+        </functions>
+        <rotation>0</rotation>
+        <image>attachableWheels/store_attachableWheels.png</image>
+        <price>500</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <brand>LIZARD</brand>
+        <category>misc</category>
+        <shopTranslationOffset>0 1.25 0</shopTranslationOffset>
+        <vertexBufferMemoryUsage>130816</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>52992</indexBufferMemoryUsage>
+        <textureMemoryUsage>327680</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tool</typeDesc>
+        <filename>attachableWheels/attachableWheels.i3d</filename>
+        <size width="0.5" length="2" height="2" lengthOffset="0"/>
+        <components>
+            <component centerOfMass="0 -1.5 0" solverIterationCount="10" mass="10" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+        <mapHotspot type="TOOL" />
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+			<wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT" isDefault="true">
+                <wheels>
+                    <wheel dimensions="710_72R32" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1" repr="wheelNode" forcePointRatio="0.25" initialCompression="1" suspTravel="0.5" spring="10" mass="1" damper="100" yOffset="-0.15" xOffset="0"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="710_75R42" price="0" saveId="710_75R42">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="710_75R42"/>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="750_75R46" price="0" saveId="750_75R46">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="750_75R46"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="900_65R46" price="0" saveId="900_65R46">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="900_65R46"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="900_65R46_engravings" price="0" saveId="SPECIAL_BIG">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="900_65R46_engravings"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="1050_50R32" price="0" saveId="1050_50R32">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="1050_50R32"/>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="1250_50R32" price="0" saveId="1250_50R32">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="1250_50R32"/>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <hubs>
+            <hub linkNode="wheelNode" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.25 0.25 0.25"/>
+        </hubs>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+				<inputAttacherJoint node="inputAttacherJoint" jointType="trailer">
+					<schema position="0.5 0.5" rotation="0" invertX="false"/>
+					<subType name="attachableWheel"/>
+				</inputAttacherJoint>
+		</inputAttacherJoints>
+    </attachable>
+
+    <attacherJoints>
+        <attacherJointConfigurations>
+            <attacherJointConfiguration>
+				<attacherJoint node="attacherJoint" jointType="trailer">
+					<subType name="attachableWheel"/>
+                    <schema position="0 0.5" rotation="0" invertX="false"/>
+                </attacherJoint>
+			</attacherJointConfiguration>
+        </attacherJointConfigurations>
+
+        <sounds>
+            <attach template="attach01" linkNode="0>"/>
+        </sounds>
+    </attacherJoints>
+
+    <designConfigurations isYesNoOption="true">
+		<designConfiguration name="$l10n_info_tipSideLeft">
+		<objectChange node="wheelNode" translationActive="1 0 0"/>
+			<xmlOverwrites>
+				<set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel#isLeft" value="true" />
+				<set path="vehicle.wheels.hubs.hub#isLeft" value="true" />
+				<set path="vehicle.base.components.component#centerOfMass" value="1 -1.5 0" />
+			</xmlOverwrites>
+		</designConfiguration>
+		<designConfiguration name="$l10n_info_tipSideRight">
+		<objectChange node="wheelNode" translationActive="-1 0 0"/>
+			<xmlOverwrites>
+				<set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0).wheels.wheel#isLeft" value="false" />
+				<set path="vehicle.wheels.hubs.hub#isLeft" value="false" />
+				<set path="vehicle.base.components.component#centerOfMass" value="-1 -1.5 0" />
+			</xmlOverwrites>
+		</designConfiguration>
+	</designConfigurations>
+
+    <rimColorConfigurations useDefaultColors="true">
+		<rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+		<rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </rimColorConfigurations>
+
+    <foliageBending>
+        <bendingNode minX="-0.95" maxX="0.95" minZ="-0.45" maxZ="0.4" yOffset="0.1" />
+    </foliageBending>
+
+    <ai>
+        <agentAttachment/>
+    </ai>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2" showOnHud="false"/>
+    <washable dirtDuration="90"  workMultiplier="2" fieldMultiplier="2" washDuration="1"/>
+
+    <i3dMappings>
+        <i3dMapping id="main_component1" node="0>" />
+        <i3dMapping id="inputAttacherJoint" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>1" />
+        <i3dMapping id="wheelNode" node="0>2" />
+    </i3dMappings>
+</vehicle>
