@@ -311,7 +311,7 @@ Added dpw1800 dolly, based on front part of dpw1800
 
 May 4, 2026
 Added more color configs to gta380
-Added attachable wheels (for custom duals, etc) WARNING! Very buggy and doesn't work well, can cause issues with your game, disabled. Remove '<!--' at the start of line 71 in modDesc.xml to enable.
+Added attachable wheels (for custom duals, etc) WARNING! Very buggy and doesn't work well, can cause issues with your game
 
 May 10, 2026
 Fixed part of bigPack not changing color
@@ -343,3 +343,29 @@ Added implement input attacher to dolly10L
 
 May 23, 2026
 Added AI worker capabilities to bigPack
+
+May 27, 2026
+Added attacher joint position config to dolly10L
+Added proper animation for reverse driving to vario1000
+
+May 28, 2026
+Added another SMV triangle configuration to vario1000
+
+May 29, 2026
+Tweaks to reverse driving animation on vario1000
+Work width config added to bossAlpin251
+AI worker capabilities added to bossAlpin251
+
+May 30, 2026
+AI workers and GPS work correctly with reverse driving on vario1000
+Added questionable twin wheel fender config to vario1000
+Added claas xerion saddleTrac gooseneck attacher to vario1000
+
+Jun 2, 2026
+Added some fill types to 'LIQUID' category
+
+Jun 7, 2026
+Added input attacher joint config to dolly10L --> now properly supports 5th wheel/semitrucks
+
+Jun 9, 2026
+Added input attacher joint config to dolly10L for CLAAS Xerion SaddleTrac gooseneck connector

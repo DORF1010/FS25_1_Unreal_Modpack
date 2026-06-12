@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="108">
     <author>DORF1010</author>
-    <version>0.26.05.26</version>
+    <version>2026.06.12</version>
     <title>
         <en>1 Unreal modpack</en>
     </title>
@@ -68,7 +68,7 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
 		<storeItem xmlFilename="pickup/pickup2017.xml"/>
 		<storeItem xmlFilename="skh60/skh60.xml"/>
 		<storeItem xmlFilename="z2840/z2840.xml"/>
-		<!-- <storeItem xmlFilename="attachableWheels/attachableWheels.xml"/> -->
+		<storeItem xmlFilename="attachableWheels/attachableWheels.xml"/>
 		<storeItem xmlFilename="storeShed/boardStack02.xml"/>
 		<storeItem xmlFilename="extraContent/cr11GoldEdition.xml"/>
 		<storeItem xmlFilename="extraContent/fd250GoldEdition.xml"/>
@@ -110,6 +110,9 @@ GIANTS unlimited color configuration mod is highly suggested, so it is linked as
             <specialization name="cultivator" />
         </type>
         <type name="balerLoaderAI" parent="balerLoader" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="cultivator" />
+        </type>
+        <type name="forageWagonAI" parent="forageWagon" filename="$dataS/scripts/vehicles/Vehicle.lua">
             <specialization name="cultivator" />
         </type>
 		<!--<type name="cultivatorPlow" parent="cultivator" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">

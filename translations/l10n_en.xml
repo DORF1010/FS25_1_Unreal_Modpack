@@ -123,7 +123,8 @@
 		<text name="configuration_innerRimColor" 	text="Inner Rim Color" />
 		<text name="configuration_outerRimColor" 	text="Outer Rim Color" />
 		<text name="configuration_valueCrawlerWide" text="Crawler Track Wide" />
-		<text name="configuration_valueTwinFront" 	text="Twin Front" />		
+		<text name="configuration_valueTwinFront" 	text="Twin Front" />
 		
+		<text name="configuration_valueDefault" 	text="Default" />
     </texts>
 </l10n>

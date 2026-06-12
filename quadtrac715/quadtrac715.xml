@@ -235,7 +235,7 @@
                 <objectChange node="quadtracDecal" visibilityActive="true" visibilityInactive="false"/>
                 <size width="3.25"/>
             </wheelConfiguration>
-			
+
             <wheelConfiguration name="SmartTrax %s" params="$l10n_configuration_valueWheelNarrow" price="0" saveId="CRAWLER_NARROW_CNH" brand="CNH">
                 <wheels baseConfig="CRAWLER_CASEIH" isCareWheelConfiguration="true">
                     <wheel>

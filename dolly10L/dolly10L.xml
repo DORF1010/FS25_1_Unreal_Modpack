@@ -141,15 +141,24 @@
     </wheels>
 
     <attachable>
-        <inputAttacherJoints>
-            <inputAttacherJoint node="0>0|0|0|2" jointType="implement" lowerRotLimitScale="3 3 3" upperRotLimitScale="3 3 3" attacherHeight="0.5" needsToolbar="true" allowsLowering="false" needsLowering="false"><!--3 point input attacher -->
-                <distanceToGround lower="0.5" upper="0.5" />
-				<!--<objectChange node="0>0|0|0|1" translationInactive="0.208 0 0" translationActive="0.208 0.05 0" rotationInactive="0 -90 0" rotationActive="-10 -90 0"/>-->
-            </inputAttacherJoint> -->
-            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.59"/>
-            <inputAttacherJoint node="attacherJoint" jointType="trailerLow" attacherHeight="0.59"/>
-            <inputAttacherJoint node="0>0|0|0|0" jointType="semitrailer"/> attacherHeight="0.59"
-        </inputAttacherJoints>
+		<inputAttacherJointConfigurations>
+            <inputAttacherJointConfiguration name="$l10n_configuration_valueDefault">
+				<inputAttacherJoint node="0>0|0|0|2" jointType="implement" lowerRotLimitScale="3 3 3" upperRotLimitScale="3 3 3" attacherHeight="0.5" needsToolbar="true" allowsLowering="false" needsLowering="false"><!--3 point input attacher -->
+					<distanceToGround lower="0.5" upper="0.5" />
+				</inputAttacherJoint>
+				<inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.59"/>
+				<inputAttacherJoint node="attacherJoint" jointType="trailerLow" attacherHeight="0.59"/>
+				<objectChange node="0>0|0|0|1" visibilityActive="true" visibilityInactive="false"/><!-- ball hitch -->
+			</inputAttacherJointConfiguration>
+            <inputAttacherJointConfiguration name="5th %s %s" params="$l10n_configuration_attacherJoint|$l10n_typeDesc_truck">
+				<inputAttacherJoint node="0>0|0|0|0" jointType="semitrailer" attacherHeight="1.141"/>
+				<objectChange node="0>0|8|2" visibilityActive="true" visibilityInactive="false"/><!-- 5th wheel hitch -->
+			</inputAttacherJointConfiguration>
+            <inputAttacherJointConfiguration name="CLAAS Xerion Saddletrac">
+				<inputAttacherJoint node="0>0|0|8" jointType="trailerSaddled" attacherHeight="1.922"/>
+				<objectChange node="0>0|8|3" visibilityActive="true" visibilityInactive="false"/><!-- Saddletrac 5th wheel hitch -->
+			</inputAttacherJointConfiguration>
+		</inputAttacherJointConfigurations>
         <!--<steeringAxleAngleScale backwards="true" speedDependent="false" forceUsage="true"/>-->
         <support animationName="moveSupport"/>
         <brakeForce force="1.3"/>
@@ -192,13 +201,13 @@
 		<attacherJoint node="attacherJointU2400" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
             <schema position="0.5 1" rotation="0" invertX="false" />
 			<objectChange node="transNode" visibilityActive="true" visibilityInactive="true"/>
-			<objectChange node="0>0|3|1" visibilityActive="false" visibilityInactive="false"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
 			<subType name="u2400" showWarning="false"/>
         </attacherJoint>
 		<attacherJoint node="attacherJointU535" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
             <schema position="0.5 1" rotation="0" invertX="false" />
 			<objectChange node="transNode" visibilityActive="true" visibilityInactive="true"/>
-			<objectChange node="0>0|3|1" visibilityActive="false" visibilityInactive="false"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
 			<subType name="u535" showWarning="false"/>
         </attacherJoint>
 		<attacherJoint node="attacherJointRMCBed" jointType="RMCBed" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
@@ -213,6 +222,7 @@
                 <objectChange node="0>0|2|0|3" visibilityActive="false" visibilityInactive="true"/>
                 <objectChange node="0>0|2|0|4" visibilityActive="false" visibilityInactive="true"/>
                 <objectChange node="0>0|2|0|5" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
 		<attacherJoint node="attacherJointRMCBed" jointType="RMCBed2" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
             <schema position="0.5 1" rotation="0" invertX="false" />
@@ -226,6 +236,7 @@
                 <objectChange node="0>0|2|0|3" visibilityActive="false" visibilityInactive="true"/>
                 <objectChange node="0>0|2|0|4" visibilityActive="false" visibilityInactive="true"/>
                 <objectChange node="0>0|2|0|5" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
 		<attacherJoint node="attacherJointRMCBed" jointType="RMCDump" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
             <schema position="0.5 1" rotation="0" invertX="false" />
@@ -242,34 +253,40 @@
         </attacherJoint>
 		<attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
         <attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
             <subType name="annaburgerAW2216" subTypeShowWarning="false"/>
 			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
         <attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
             <subType name="annaburgerAW2227" subTypeShowWarning="false"/>
 			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
         <attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
             <subType name="annaburgerAW2207" subTypeShowWarning="false"/>
 			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
         <attacherJoint node="attacherJointWIAx2" jointType="82JointTipperX2" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
 			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
         <attacherJoint node="attacherJointWIAx3" jointType="82JointX3" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
 			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+			<objectChange node="0>0|3|1" visibilityActive="true" visibilityInactive="false"/>
         </attacherJoint>
         <attacherJoint node="attacherJointHookliftShort" jointType="hookLift" lowerRotLimit="0 0 0" upperRotLimit="0 0 0" allowsLowering="false">
             <schema position="0 0.95" rotation="0" invertX="false"/>
@@ -397,7 +414,7 @@
         </designConfiguration>
     </designConfigurations>
 
-    <design2Configurations title="$l10n_configuration_beacon" isYesNoOption="false">
+    <design2Configurations title="$l10n_configuration_beacon">
         <design2Configuration name="$l10n_configuration_valueNo">
 		</design2Configuration>
         <design2Configuration name="$l10n_info_tipSideFront">
@@ -408,11 +425,41 @@
 			<objectChange node="beaconFront" visibilityActive="false" visibilityInactive="false"/>
 			<objectChange node="beaconBack" visibilityActive="true" visibilityInactive="false"/>
         </design2Configuration>
-        <design2Configuration name="%s + %s" params="$l10n_info_tipSideFront|$l10n_info_tipSideBack" isDefault="true">
+        <design2Configuration name="%s + %s" params="$l10n_info_tipSideFront|$l10n_info_tipSideBack">
 			<objectChange node="beaconFront" visibilityActive="true" visibilityInactive="false"/>
 			<objectChange node="beaconBack" visibilityActive="true" visibilityInactive="false"/>
         </design2Configuration>
     </design2Configurations>
+
+    <design3Configurations title="$l10n_configuration_attacherJoint">
+        <design3Configuration name="+0.55m">
+			<objectChange node="transNode" translationActive="0 0.55 0"/>
+        </design3Configuration>
+        <design3Configuration name="+0.50m">
+			<objectChange node="transNode" translationActive="0 0.5 0"/>
+        </design3Configuration>
+        <design3Configuration name="+0.25m">
+			<objectChange node="transNode" translationActive="0 0.25 0"/>
+        </design3Configuration>
+        <design3Configuration name="+0.00m" isDefault="true">
+			<objectChange node="transNode" translationActive="0 0 0"/>
+        </design3Configuration>
+        <design3Configuration name="-0.25m">
+			<objectChange node="transNode" translationActive="0 -0.25 0"/>
+        </design3Configuration>
+        <design3Configuration name="-0.50m">
+			<objectChange node="transNode" translationActive="0 -0.5 0"/>
+        </design3Configuration>
+        <design3Configuration name="-0.75m">
+			<objectChange node="transNode" translationActive="0 -0.75 0"/>
+        </design3Configuration>
+        <design3Configuration name="-0.80m">
+			<objectChange node="transNode" translationActive="0 -0.8 0"/>
+        </design3Configuration>
+        <design3Configuration name="-0.90m">
+			<objectChange node="transNode" translationActive="0 -0.9 0"/>
+        </design3Configuration>
+    </design3Configurations>
 
 	<baseColorConfigurations useDefaultColors="true" defaultColorIndex="0">
         <material materialSlotName="frameBlack"/>
@@ -494,7 +541,7 @@
         <i3dMapping id="turnLightRightBack" node="0>0|2|3|1" />
         <i3dMapping id="reverseLightHigh1" node="0>0|2|4|0" />
         <i3dMapping id="transNode" node="0>0|3|0" />
-        <i3dMapping id="trailerAttacherJoint" node="0>0|3|2|0" />
+        <i3dMapping id="trailerAttacherJoint" node="0>0|3|0|0" />
         <i3dMapping id="licensePlateBack" node="0>0|4" />
 		<i3dMapping id="inputAttacherJointRef" node="0>0|7|0"/>
 		<i3dMapping id="3pointVis" node="0>0|0|6"/>

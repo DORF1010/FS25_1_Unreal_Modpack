@@ -37,12 +37,12 @@
             <component centerOfMass="0 -0.1 0" solverIterationCount="20" mass="2000"/>
             <component centerOfMass="0 -0.1 0" solverIterationCount="20" mass="2000"/>
 
-            <joint component1="1" component2="3" node="componentJointCrawlerFrontLeft"  rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="150000 0 0" rotLimitDamping="150 0 0"/>
-            <joint component1="1" component2="4" node="componentJointCrawlerFrontRight" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="150000 0 0" rotLimitDamping="150 0 0"/>
+            <joint component1="1" component2="2" node="componentJointCrawlerFrontLeft"  rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="150000 0 0" rotLimitDamping="150 0 0"/>
+            <joint component1="1" component2="3" node="componentJointCrawlerFrontRight" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="150000 0 0" rotLimitDamping="150 0 0"/>
         </components>
         <schemaOverlay attacherJointPosition="0 0" name="VEHICLE"/>
         <mapHotspot type="TRACTOR"/>
-        <steeringAxle node="1>"/>
+        <!-- <steeringAxle node="1>"/> -->
     </base>
 
     <designConfigurations title="$l10n_configuration_warningSigns">

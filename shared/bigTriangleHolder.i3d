@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="bigTriangleHolder.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.12"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="12" filename="$data/shared/assets/reflectors/lizard/bigTriangle.i3d"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="1" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="13" filename="$data/vehicles/masseyFerguson/series9S/series9SDecals_diffuse.png"/>
+    <File fileId="14" filename="$data/vehicles/masseyFerguson/series9S/series9SDecals_normal.png"/>
+    <File fileId="2" filename="$data/vehicles/masseyFerguson/series9S/series9S_normal.png"/>
+    <File fileId="3" filename="$data/vehicles/masseyFerguson/series9S/series9S_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="series9S_metalPaintedBlack_mat" materialId="5" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="series9SDecals_silverScratched_mat" materialId="6" customShaderId="4" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="15"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bigTriangleHolder.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="warningSignHolderUS" shapeId="1" clipDistance="300" nodeId="10" castsShadows="true" receiveShadows="true" materialIds="5">
+      <ReferenceNode name="bigTriangle" translation="-0.0417336 0.233668 -0.231437" rotation="90 -0 0" referenceId="12" nodeId="18"/>
+      <Shape name="series9S_decals" shapeId="2" clipDistance="30" nodeId="20" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="6"/>
+    </Shape>
+  </Scene>
+
+</i3D>

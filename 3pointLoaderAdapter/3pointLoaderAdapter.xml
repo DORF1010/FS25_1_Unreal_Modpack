@@ -98,7 +98,7 @@
                 <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.45" />
             </xmlOverwrites>
 		</designConfiguration>
-		<designConfiguration name="Q4M/XB 150 (0.55m)">
+		<designConfiguration name="0.55m">
             <xmlOverwrites>
                 <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.55" />
             </xmlOverwrites>
@@ -113,12 +113,12 @@
                 <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.75" />
             </xmlOverwrites>
 		</designConfiguration>
-		<designConfiguration name="Q7M/M77/V7 (0.78m)">
+		<designConfiguration name="0.78m">
             <xmlOverwrites>
                 <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.775" />
             </xmlOverwrites>
 		</designConfiguration>
-		<designConfiguration name="Q6M/XB 190 (0.80m)">
+		<designConfiguration name="0.80m">
             <xmlOverwrites>
                 <set path="vehicle.attachable.inputAttacherJoints.inputAttacherJoint(0).distanceToGround#upper" value="0.8" />
             </xmlOverwrites>

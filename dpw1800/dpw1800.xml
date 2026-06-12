@@ -41,7 +41,7 @@
 					<set path="vehicle.animations.animation(0).part(1)#endTrans" value="0 -0.75 -1" />
 				</xmlOverwrites>
             </componentConfiguration>
-            <componentConfiguration numComponents="1" name="5th %s" params="$l10n_configuration_attacherJoint">
+            <componentConfiguration numComponents="1" name="5th %s %s" params="$l10n_configuration_attacherJoint|$l10n_typeDesc_truck">
                 <component centerOfMass="0 0.7 -2" solverIterationCount="10" mass="1080" inertiaScale="1 1 8"/>
 				<!--<component centerOfMass="0 0 -1" solverIterationCount="10" mass="500" inertiaScale="4 2 2"/>
 				<component centerOfMass="0 0 -1" solverIterationCount="10" mass="300" inertiaScale="2 2 6"/>-->

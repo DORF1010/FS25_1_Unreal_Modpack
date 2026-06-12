@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<vehicle type="forageWagon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+<vehicle type="forageWagonAI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
@@ -224,7 +224,7 @@
     </groundReferenceNodes>
 
     <workAreas>
-        <workArea type="forageWagon" functionName="processForageWagonArea" disableBackwards="true" >
+        <workArea type="forageWagon" functionName="processForageWagonArea" disableBackwards="false" >
             <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight" />
             <groundReferenceNode index="1" />
         </workArea>
@@ -451,8 +451,9 @@
     </turnOnVehicle>
 
     <ai>
-        <allowTurnBackward value="false"/>
+        <!-- <allowTurnBackward value="false"/> -->
         <turningRadiusLimitation radius="7"/>
+        <areaMarkers leftNode="workAreaStart" rightNode="workAreaWidth" backNode="workAreaHeight"/>
         <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.6" height="3" length="6.4" lengthOffset="1.05"/>
     </ai>
 
@@ -464,6 +465,39 @@
 
     <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
     <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+	<designConfigurations title="$l10n_configuration_workWidth">
+		<designConfiguration name="$l10n_configuration_valueDefault">
+			<objectChange node="workAreaStart" translationActive=  "1.5 0 1.8"/>
+			<objectChange node="workAreaHeight" translationActive= "1.5 0 1.061"/>
+			<objectChange node="workAreaWidth" translationActive= "-1.5 0 1.8"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value5M">
+			<objectChange node="workAreaStart" translationActive=  "2.5 0 1.8"/>
+			<objectChange node="workAreaHeight" translationActive= "2.5 0 1.061"/>
+			<objectChange node="workAreaWidth" translationActive= "-2.5 0 1.8"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value10M">
+			<objectChange node="workAreaStart" translationActive=  "5 0 1.8"/>
+			<objectChange node="workAreaHeight" translationActive= "5 0 1.061"/>
+			<objectChange node="workAreaWidth" translationActive= "-5 0 1.8"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value20M">
+			<objectChange node="workAreaStart" translationActive=  "10 0 1.8"/>
+			<objectChange node="workAreaHeight" translationActive= "10 0 1.061"/>
+			<objectChange node="workAreaWidth" translationActive= "-10 0 1.8"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value25M">
+			<objectChange node="workAreaStart" translationActive=  "12.5 0 1.8"/>
+			<objectChange node="workAreaHeight" translationActive= "12.5 0 1.061"/>
+			<objectChange node="workAreaWidth" translationActive= "-12.5 0 1.8"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_value50M">
+			<objectChange node="workAreaStart" translationActive=  "25 0 1.8"/>
+			<objectChange node="workAreaHeight" translationActive= "25 0 1.061"/>
+			<objectChange node="workAreaWidth" translationActive= "-25 0 1.8"/>
+		</designConfiguration>
+	</designConfigurations>
 
 	<baseColorConfigurations useDefaultColors="true">
 		<material materialSlotName="POETTINGER_RED1_mat"/>

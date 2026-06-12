@@ -777,7 +777,7 @@
     </turnOnVehicle>
 
     <ai>
-        <allowTurnBackward value="false"/>
+        <!-- <allowTurnBackward value="false"/> -->
         <areaMarkers leftNode="workAreaStart" rightNode="workAreaWidth" backNode="workAreaHeight"/>
         <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2 3 4" width="3.3" height="3.7" length="8.5" lengthOffset="0"/>
     </ai>
